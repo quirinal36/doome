@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face{
+	font-family:NanumGothic;
+	src:url(/m/fonts/NanumGothic/NanumGothicRegular.eot);
+	src:local(※), url(/m/fonts/NanumGothic/NanumGothicRegular.woff) format('woff');
+}
+@font-face{
+	font-family:NanumGothic;
+	font-weight:600;
+	src:url(/m/fonts/NanumGothic/NanumGothicBold.eot);
+	src:local(※), url(/m/fonts/NanumGothic/NanumGothicBold.woff) format('woff');
+}
+* { margin:0; padding:0; border:none; font-family:NanumGothic; }
+body { position:relative; width:100%; height:100%; font-size:12px; line-height:normal; }
+ul, li { list-style:none; }
+a { text-decoration:none; color:inherit; }
