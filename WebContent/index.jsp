@@ -8,39 +8,6 @@
 <title>두메산골영농조합법인</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi" />
 <link rel="stylesheet" type="text/css" href="css/css.css" media="all" />
-<style>
-#header_wrap { height:60px; border-bottom:1px solid #ddd; }
-#header_wrap > div { width:1000px; margin:0 auto; }
-#header_wrap > div > h1 { float:left; padding-top:20px; font-size:16px; font-weight:600; }
-#gnb_wrap { float:right; }
-#gnb_wrap > ul { font-size:0; }
-#gnb_wrap > ul > li { position:relative; display:inline-block; width:120px; vertical-align:top; text-align:center; }
-#gnb_wrap > ul > li > a { display:block; padding-top:22px; height:38px; font-size:14px; }
-#gnb_wrap > ul > li:hover > a { font-weight:600; }
-#gnb_wrap > ul > li > ul { display:none; position:absolute; top:60px; left:0; width:120px; padding:10px 0; background:#fff; }
-#gnb_wrap > ul > li:hover > ul { display:block; }
-#gnb_wrap > ul > li > ul > li > a { display:block; padding:5px 0; font-size:13px; }
-#gnb_wrap > ul > li > ul > li > a:hover { text-decoration:underline; }
-
-#idxA { width:100%; height:560px; background:url(img/index/idxA_bg.jpg) no-repeat 30% 70%; background-size:cover; }
-#idxB > div { width:1000px; margin:0 auto; padding:80px 0; text-align:center; }
-#idxB > div > h4 { margin-bottom:60px; font-size:24px; font-weight:normal; }
-#idxB > div > ul { font-size:0; }
-#idxB > div > ul > li { display:inline-block; width:28%; margin-left:8%; font-size:12px; }
-#idxB > div > ul > li:first-child { margin-left:0; }
-#idxB > div > ul > li > h5 { margin:20px 0; font-size:16px; font-weight:600; }
-#idxB > div > ul > li > p { text-align:left; color:#777; line-height:160%; }
-
-#idxC > ul { font-size:0; text-align:center; }
-#idxC > ul > li { display:inline-block; width:25%; background:#000; }
-#idxC > ul > li > a { display:block; width:100%; height:240px; padding-top:200px; background-size:cover; background-position:50% 50%; background-repeat:no-repeat; opacity:0.6; font-size:30px; color:#fff; transition:all 1s ease; }
-#idxC1 > a { background-image:url(img/index/idxC1.jpg); }
-#idxC2 > a { background-image:url(img/index/idxC2.jpg); }
-#idxC3 > a { background-image:url(img/index/idxC1.jpg); }
-#idxC4 > a { background-image:url(img/index/idxC2.jpg); }
-#idxC > ul > li > a:hover { opacity:1; }
-</style>
-
 </head>
 <body>
 <div id="header_wrap">
@@ -128,25 +95,24 @@
 	</div>
 </div>
 
+<div id="footer_wrap">
+	<div>
+		<ul>
+			<li>두메산골영농조합법인</li>
+			<li>대표:유현주</li>
+			<li>사업자등록번호:402-82-10559</li>
+			<li>통신판매신고:제2010-4650077-30-2-00045</li>
+		</ul>
+		<ul>
+			<li>주소:[55071]전라북도 전주시 완산구 능안자구길 53</li>
+			<li>TEL:063-211-6884</li>
+			<li>FAX:063-211-6883</li>
+		</ul>
+		<p>ⓒ 2018. 두메산골영농조합법인. All rights reserved.</p>
+	</div>
+</div>
+<style>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
+</style>
 </body>
 </html>
