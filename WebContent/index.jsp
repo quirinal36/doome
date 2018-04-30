@@ -1,6 +1,5 @@
 <%@page import="doome.broccoli.net.Config"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!doctype html>
 <html>
 <head>
@@ -28,6 +27,11 @@
 <link rel="stylesheet" type="text/css" href="css/css.css" media="all" />
 </head>
 <body>
+
+<jsp:include page="inc/header.jsp" flush="true">
+	<jsp:param name="abc" value="abc"/>
+</jsp:include>
+
 <div id="container_wrap">
 	<div id="idxA"></div>
 	<div id="idxB">
@@ -79,5 +83,9 @@
 		</div>
 	</div>
 </div>
+
+<jsp:include page="inc/footer.jsp" flush="true">
+	<jsp:param name="abc" value="abc"/>
+</jsp:include>
 </body>
 </html>
