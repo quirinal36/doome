@@ -14,14 +14,14 @@
 		<meta property="og:site_name" content="두메산골영농조합법인" />
 		<meta property="og:title" content="두메산골영농조합법인" />
 		<meta property="og:description" content="" />
-		<meta property="og:image" content="" />
+		<meta property="og:image" content="http://www.thebroccoli.net/temp/img/comm/og.jpg" />
 		<meta property="og:url" content="" />
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@WEBSITE" />
 		<meta name="twitter:title" content="두메산골영농조합법인" />
 		<meta name="twitter:description" content="" />
 		<meta name="twitter:url" content="" />
-		<meta name="twitter:image" content="" />
+		<meta name="twitter:image" content="http://www.thebroccoli.net/temp/img/comm/og.jpg" />
 		<meta name="format-detection" content="telephone=no" />
 		<title>두메산골영농조합법인</title>
 		<link rel="stylesheet" type="text/css" href="css/css.css" media="all" />
