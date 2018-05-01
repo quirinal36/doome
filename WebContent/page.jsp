@@ -1,6 +1,12 @@
+<%@page import="java.util.logging.Logger"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
+	Logger logger = Logger.getLogger("page.jsp");
+	
 	String content = request.getParameter("link");
+	content = content + ".jsp";
+	
+	logger.info("content::"+content);
 %>
 <!doctype html>
 
