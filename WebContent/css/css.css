@@ -61,7 +61,7 @@ a { text-decoration:none; color:inherit; }
 #idxD > div > a { display:block; margin:0 auto; width:180px; padding:13px 0; background:#4198d6; font-size:14px; color:#fff; transition:all 1s ease; }
 #idxD > div > a:hover { background:#297cb7; }
 
-#footer_wrap { background:#2f2e2e; text-align:center; }
+#footer_wrap { clear:both; background:#2f2e2e; text-align:center; }
 #footer_wrap > div { padding:20px 0; line-height:160%; }
 #footer_wrap > div > ul > li { display:inline; margin-left:20px; color:#999; }
 #footer_wrap > div > ul > li:first-child { margin-left:0; }
