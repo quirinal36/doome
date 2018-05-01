@@ -26,6 +26,7 @@
 		<meta name="format-detection" content="telephone=no" />
 		<title><%=Config.TITLE%></title>
 		<link rel="stylesheet" type="text/css" href="css/css.css" media="all" />
+		<link rel="shortcut icon" href="<%=Config.FAVICON%>">
 	</head>
 <body>
 
