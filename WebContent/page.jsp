@@ -15,10 +15,11 @@
 		<jsp:param name="abc" value="abc"/>
 	</jsp:include>
 	
-	<jsp:include page="<%=content%>" flush="true">
-		<jsp:param name="abc" value="abc"/>
-	</jsp:include>
-	
+	<div id="container_wrap">
+		<jsp:include page="<%=content%>" flush="true">
+			<jsp:param name="abc" value="abc"/>
+		</jsp:include>
+	</div>
 	<jsp:include page="inc/footer.jsp" flush="true">
 		<jsp:param name="abc" value="abc"/>
 	</jsp:include>
