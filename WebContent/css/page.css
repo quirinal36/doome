@@ -1,4 +1,4 @@
-#page_top { background:url(img/comm/top1.jpg) no-repeat 50% 50%; }
+#page_top { width:100%; height:200px; background-repeat:no-repeat; background-position:50% 50%; }
 
 .greeting { font-size:0; }
 .greeting > div { display:inline-block; width:30%; margin-left:5%; vertical-align:top; }
