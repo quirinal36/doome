@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<div class="greeting">
+<div class="greet">
 	<div><h1>디지털<br /> 대변혁의 시대,<br /> <strong>시스코의<br /> 새로운 미래를<br /> 꿈꿉니다.</strong></h1></div>
 	<div>
     	<p>
