@@ -11,5 +11,4 @@ final String headerJsp = "header.jsp";
 	
 	
 	<div id="page_top">
-		
 	</div>
