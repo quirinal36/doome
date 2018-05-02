@@ -11,18 +11,22 @@
 <!doctype html>
 
 <body>
-	<jsp:include page="inc/header.jsp" flush="true">
+<div id="wrap">
+	<jsp:include page="inc/page_header.jsp" flush="true">
 		<jsp:param name="abc" value="abc"/>
 	</jsp:include>
 	
-	<div id="container_wrap">
-		<div id="container">
-			<jsp:include page="<%=content%>" flush="true">
-				<jsp:param name="abc" value="abc"/>
-			</jsp:include>
+	<div id="page_container_wrap">
+		<div id="page_container">
+			<div id="page_view">
+				<jsp:include page="<%=content%>" flush="true">
+					<jsp:param name="abc" value="abc"/>
+				</jsp:include>
+			</div>
 		</div>
 	</div>
 	<jsp:include page="inc/footer.jsp" flush="true">
 		<jsp:param name="abc" value="abc"/>
 	</jsp:include>
+</div>
 </body>

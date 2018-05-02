@@ -1,6 +1,5 @@
 @charset "utf-8";
 /* COMMON */
-
 @font-face{
 	font-family:NanumGothic;
 	src:url(/m/fonts/NanumGothic/NanumGothicRegular.eot);
@@ -13,21 +12,30 @@
 	src:local(※), url(/m/fonts/NanumGothic/NanumGothicBold.woff) format('woff');
 }
 * { margin:0; padding:0; border:none; font-family:NanumGothic; }
+html { height:100%; }
 body { position:relative; width:100%; height:100%; font-size:12px; line-height:normal; }
 ul, li { list-style:none; }
 a { text-decoration:none; color:inherit; }
 
 
 
+#wrap { height:100%; }
+#idx_container_wrap { min-height:100%; margin:-61px 0 -97px 0; }
+#idx_container { padding:61px 0 97px 0; }
+#page_container_wrap { min-height:100%; margin:-61px 0 -97px 0; }
+#page_container { padding:61px 0 97px 0; }
+#page_view { width:1000px; margin:0 auto; padding:60px 0; }
+
+
 
 /* INDEX */
-#header_wrap { height:60px; border-bottom:1px solid #ddd; }
+#header_wrap { height:60px; border-bottom:1px solid #ddd; z-index:10; }
 #header_wrap > div { width:1000px; margin:0 auto; }
 #header_wrap > div > h1 { float:left; padding-top:20px; font-size:16px; font-weight:600; }
 #gnb_wrap { float:right; }
 #gnb_wrap > ul { font-size:0; }
 #gnb_wrap > ul > li { position:relative; display:inline-block; width:120px; vertical-align:top; text-align:center; }
-#gnb_wrap > ul > li > a { display:block; padding-top:22px; height:38px; font-size:14px; }
+#gnb_wrap > ul > li > a { display:block; padding-top:22px; height:39px; font-size:14px; }
 #gnb_wrap > ul > li:hover > a { font-weight:600; }
 #gnb_wrap > ul > li > ul { display:none; position:absolute; top:60px; left:0; width:120px; padding:10px 0; background:#fff; }
 #gnb_wrap > ul > li:hover > ul { display:block; }
@@ -60,8 +68,6 @@ a { text-decoration:none; color:inherit; }
 #idxD > div > ul > li:nth-child(4n-3) { margin-left:0; }
 #idxD > div > a { display:block; margin:0 auto; width:180px; padding:13px 0; background:#4198d6; font-size:14px; color:#fff; transition:all 1s ease; }
 #idxD > div > a:hover { background:#297cb7; }
-
-#container { width:1000px; margin:0 auto; padding:60px 0; }
 
 
 #footer_wrap { clear:both; background:#2f2e2e; text-align:center; }

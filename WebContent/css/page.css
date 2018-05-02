@@ -1,4 +1,6 @@
-.greeting { width:1000px; margin:0 auto; font-size:0; }
+#page_top { background:url(img/comm/top1.jpg) no-repeat 50% 50%; }
+
+.greeting { font-size:0; }
 .greeting > div { display:inline-block; width:30%; margin-left:5%; vertical-align:top; }
 .greeting > div:first-child { margin-left:0; }
 .greeting > div > h1 { font-size:36px; font-weight:normal; line-height:140%; }
