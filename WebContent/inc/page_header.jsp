@@ -17,7 +17,7 @@ Menu menuInfo = conn.getMenuInfo(menuId);
 	<jsp:param name="abc" value="abc"/>
 </jsp:include>
 
-<div id="page_top" style="background:url(../img/comm/<%=menuInfo.getImage()%>)">
+<div id="page_top" style="background-image:url(/img/comm/<%=menuInfo.getImage()%>)">
 	<h2><%=menuInfo.getName() %></h2>
 	<p>사물인터넷과 보안, 클라우드 등 IT 산업을 이끄는 리더로서, 한결 같은 마음으로</p>
 </div>
