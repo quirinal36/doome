@@ -1,7 +1,23 @@
 #page_top { width:100%; height:200px; background-repeat:no-repeat; background-position:50% 50%; }
+#page_top > h2 { padding:65px 0 15px 0; text-align:center; color:#fff; font-size:24px; font-weight:600; }
+#page_top > p { text-align:center; color:#fff; opacity:0.6; font-size:13px; letter-spacing:2px; }
 
-.greeting { font-size:0; }
-.greeting > div { display:inline-block; width:30%; margin-left:5%; vertical-align:top; }
-.greeting > div:first-child { margin-left:0; }
-.greeting > div > h1 { font-size:36px; font-weight:normal; line-height:140%; }
-.greeting > div > p { font-size:12px; color:#777; line-height:160%; text-align:justify; }
+.greet { font-size:0; }
+.greet > div { display:inline-block; width:30%; margin-left:5%; vertical-align:top; }
+.greet > div:first-child { margin-left:0; }
+.greet > div > h1 { font-size:36px; font-weight:normal; line-height:140%; }
+.greet > div > p { font-size:12px; color:#777; line-height:160%; text-align:justify; }
+
+.location_box1 { padding:20px; background:#e0e0e0; text-align:center; }
+.location_box1 > ul > li { display:inline-block; margin-left:60px; font-size:14px; }
+.location_box1 > ul > li:first-child { margin-left:0; }
+
+.products_list > ul { font-size:0; }
+.products_list > ul > li { display:inline-block; width:30%; margin:50px 0 0 5%; vertical-align:top; font-size:16px; }
+.products_list > ul > li:first-child, .products_list > ul > li:nth-child(2), .products_list > ul > li:nth-child(3) { margin-top:0; }
+.products_list > ul > li:nth-child(3n-2) { margin-left:0; }
+.products_list > ul > li > img { display:block; width:100%; }
+.products_list > ul > li > div { padding:20px; background:#eee; }
+.products_list > ul > li > div > h3 { margin-bottom:10px; font-size:16px; }
+.products_list > ul > li > div > p { padding-bottom:12px; margin-bottom:12px; border-bottom:1px solid #555; font-size:13px; }
+.products_list > ul > li > div > span { font-size:12px; }
