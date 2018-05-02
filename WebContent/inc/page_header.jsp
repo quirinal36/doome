@@ -8,4 +8,7 @@ final String headerJsp = "header.jsp";
 	<jsp:param name="abc" value="abc"/>
 </jsp:include>
 
-<div id="page_top" style="background:url(../img/comm/top_greet.jpg)"></div>
+<div id="page_top" style="background:url(../img/comm/top_greet.jpg)">
+	<h2>대표 인사말</h2>
+	<p>사물인터넷과 보안, 클라우드 등 IT 산업을 이끄는 리더로서, 한결 같은 마음으로</p>
+</div>
