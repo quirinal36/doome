@@ -1,6 +1,8 @@
-#page_top { width:100%; height:200px; background-repeat:no-repeat; background-position:50% 50%; }
-#page_top > h2 { padding:65px 0 15px 0; text-align:center; color:#fff; font-size:24px; font-weight:600; }
-#page_top > p { text-align:center; color:#fff; opacity:0.6; font-size:13px; letter-spacing:2px; }
+#page_top { width:100%; height:200px; background-repeat:no-repeat; background-position:50% 50%; background-size:cover; }
+#page_top > div { width:100%; height:200px; background:url(/img/comm/black70.png); }
+#page_top > div > h2 { padding:65px 0 15px 0; text-align:center; color:#fff; font-size:24px; font-weight:600; }
+#page_top > div > p { text-align:center; color:#fff; opacity:0.6; font-size:13px; letter-spacing:2px; }
+
 
 .greet { font-size:0; }
 .greet > div { display:inline-block; width:30%; margin-left:5%; vertical-align:top; }
