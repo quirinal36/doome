@@ -1,15 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<style>
-
-.greeting { width:1000px; margin:0 auto; }
-.greeting > div { float:left; width:30%; margin-left:5%; }
-.greeting > div:first-child { margin-left:0; }
-.greeting > div > h1 { font-size:36px; font-weight:normal; }
-.greeting > div > p { font-size:12px; color:#777; line-height:160%; }
-
-</style>
-
 <div class="greeting">
 	<div><h1>디지털<br /> 대변혁의 시대,<br /> <strong>시스코의<br /> 새로운 미래를<br /> 꿈꿉니다.</strong></h1></div>
 	<div>

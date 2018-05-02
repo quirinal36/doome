@@ -33,6 +33,7 @@ while(iter.hasNext()){
 <!doctype html>
 <html>
 	<head>
+		<META HTTP-EQUIV=”Pragma” CONTENT=”no-cache”>
 		<meta charset="utf-8">
 		<meta name="Title" content="<%=Config.TITLE%>" />
 		<meta name="Description" content="<%=Config.DESCRIPTION%>" />
@@ -55,6 +56,7 @@ while(iter.hasNext()){
 		<meta name="format-detection" content="telephone=no" />
 		<title><%=Config.TITLE%></title>
 		<link rel="stylesheet" type="text/css" href="css/css.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="css/page.css" media="all" />
 		<link rel="shortcut icon" href="<%=Config.FAVICON%>">
 	</head>
 	<body>
