@@ -9,11 +9,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 Logger logger = Logger.getLogger("header.jsp");
-logger.info("contextPath : : "+request.getContextPath());
+
+/*
+메뉴에 들어갈 문구들을 Database 에서 가져온다.
+*/
 DBconn conn = new DBconn();
 JSONObject menuObj = conn.getMenus();
 ArrayList<Menu> menus = conn.getMenus(menuObj);
-ArrayList<Menu> parents = new ArrayList<>();
+ArrayList<Menu> parents = new ArrayList<>();  // 최상단 메뉴들을 저장할 공간
 
 Iterator<Menu> iter = menus.iterator();
 while(iter.hasNext()){
@@ -62,7 +65,7 @@ while(iter.hasNext()){
 	<body>
 		<div id="header_wrap">
 			<div>
-				<h1><a href="<%=request.getContextPath() %>"><%=Config.TITLE %></a></h1>
+				<h1><a href="<%=request.getContextPath()%>/index.jsp"><%=Config.TITLE %></a></h1>
 				<div id="gnb_wrap">
 					<ul>
 					<%
@@ -71,9 +74,8 @@ while(iter.hasNext()){
 							Menu cur = pIter.next();
 							ArrayList<Menu> children = cur.getChildren();
 							Iterator<Menu> cIter = children.iterator();
-							%>
-							
-								<li><a href="<%=request.getContextPath() %>/page.jsp?link=<%=cur.getLink()%>"><%=cur.getName() %></a>
+							%>							
+								<li><a href="<%=request.getContextPath() %>/page.jsp?link=<%=cur.getLink()%>&menu_id=<%=cur.getId()%>"><%=cur.getName() %></a>
 									<%if(children.size() > 0){ %>
 									<ul>
 									<%} %>
@@ -81,7 +83,7 @@ while(iter.hasNext()){
 											while(cIter.hasNext()){
 												Menu subMenu = cIter.next();
 												%>
-													<li><a href="<%=request.getContextPath() %>/page.jsp?link=<%=subMenu.getLink()%>"><%=subMenu.getName()%></a></li>
+													<li><a href="<%=request.getContextPath() %>/page.jsp?link=<%=subMenu.getLink()%>&menu_id=<%=subMenu.getId()%>"><%=subMenu.getName()%></a></li>
 												<%
 											}
 										%>

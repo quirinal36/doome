@@ -2,6 +2,7 @@ package doome.broccoli.net.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -66,21 +67,39 @@ public class DBconn {
 		
 		JSONArray array = new JSONArray();
 		while(rs.next()){
-			int id 		= rs.getInt(Menu.ID_KEY);
-			String name = rs.getString(Menu.NAME_KEY);
-			int upperId = rs.getInt(Menu.UPPERID_KEY);
-			String link = rs.getString(Menu.LINK_KEY);
-			
-			JSONObject item = new JSONObject();
-			item.put(Menu.ID_KEY, id);
-			item.put(Menu.NAME_KEY, name);
-			item.put(Menu.UPPERID_KEY, upperId);
-			item.put(Menu.LINK_KEY, link);
-			
-			array.add(item);
+			array.add(parseToJSON(rs));
 		}
 		resultObj.put("list", array);
 		
 		return resultObj;
+	}
+	private JSONObject parseToJSON(ResultSet rs) throws SQLException {
+		JSONObject item = new JSONObject();
+		int id 		 = rs.getInt(Menu.ID_KEY);
+		String name  = rs.getString(Menu.NAME_KEY);
+		int upperId  = rs.getInt(Menu.UPPERID_KEY);
+		String link  = rs.getString(Menu.LINK_KEY);
+		String image = rs.getString(Menu.IMAGE_KEY);
+		item.put(Menu.ID_KEY, id);
+		item.put(Menu.NAME_KEY, name);
+		item.put(Menu.UPPERID_KEY, upperId);
+		item.put(Menu.LINK_KEY, link);
+		item.put(Menu.IMAGE_KEY, image);
+		return item;
+	}
+	public Menu getMenuInfo(String menuId) throws ClassNotFoundException, SQLException {
+		Menu menu = null;
+		Connection conn;
+		if(menuId!=null && menuId.length() > 0) {
+			conn = getConnection();
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM menus WHERE id = ?");
+			ResultSet rs;
+			stmt.setString(1, menuId);
+			rs = stmt.executeQuery();
+			while(rs.next()) {
+				menu = Menu.parseToMenu(parseToJSON(rs));
+			}
+		}
+		return menu;
 	}
 }

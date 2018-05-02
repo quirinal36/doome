@@ -11,12 +11,14 @@ public class Menu {
 	int upperId;
 	String link;
 	String name;
+	String image;
 	ArrayList<Menu> children;
 	
 	public static final String ID_KEY = "id";
 	public static final String UPPERID_KEY = "upper_id";
 	public static final String NAME_KEY = "name";
 	public static final String LINK_KEY = "link";
+	public static final String IMAGE_KEY = "image";
 	
 	public Menu (){
 		children = new ArrayList<>();
@@ -51,6 +53,12 @@ public class Menu {
 	public void setChildren(ArrayList<Menu> children) {
 		this.children = children;
 	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
 	public static Menu parseToMenu(JSONObject input) {
 		Menu menu = new Menu();
 		
@@ -58,6 +66,7 @@ public class Menu {
 		menu.setUpperId((int)input.get(UPPERID_KEY));
 		menu.setName((String)input.get(NAME_KEY));
 		menu.setLink((String)input.get(LINK_KEY));
+		menu.setImage((String)input.get(IMAGE_KEY));
 		
 		return menu;
 	}
