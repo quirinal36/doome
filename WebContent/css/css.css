@@ -1,17 +1,6 @@
 @charset "utf-8";
 /* COMMON */
-@font-face{
-	font-family:NanumGothic;
-	src:url(/m/fonts/NanumGothic/NanumGothicRegular.eot);
-	src:local(※), url(/m/fonts/NanumGothic/NanumGothicRegular.woff) format('woff');
-}
-@font-face{
-	font-family:NanumGothic;
-	font-weight:600;
-	src:url(/m/fonts/NanumGothic/NanumGothicBold.eot);
-	src:local(※), url(/m/fonts/NanumGothic/NanumGothicBold.woff) format('woff');
-}
-* { margin:0; padding:0; border:none; font-family:NanumGothic; }
+* { margin:0; padding:0; border:none; font-family:'Malgun Gothic', sans-serif; }
 html { height:100%; }
 body { position:relative; width:100%; height:100%; font-size:12px; line-height:normal; }
 ul, li { list-style:none; }
@@ -39,7 +28,7 @@ a { text-decoration:none; color:inherit; }
 #gnb_wrap > ul > li:hover > a { font-weight:600; color:#297cb7; }
 #gnb_wrap > ul > li > ul { display:none; position:absolute; top:52px; left:-20px; width:120px; padding-top:9px; background:url(/img/comm/gnb_arrow.png) no-repeat 50% 0; z-index:1; }
 #gnb_wrap > ul > li:hover > ul { display:block; width:160px; }
-#gnb_wrap > ul > li > ul > li { border-top:1px dashed #297cb7; background:#4198d6; }
+#gnb_wrap > ul > li > ul > li { border-top:1px dashed #5daae0; background:#4198d6; }
 #gnb_wrap > ul > li > ul > li:first-child { border-top:0; }
 #gnb_wrap > ul > li > ul > li > a { display:block; padding:10px 0; font-size:13px; color:#fff; }
 #gnb_wrap > ul > li > ul > li > a:hover { background:#297cb7; color:#fff; font-weight:600; }
