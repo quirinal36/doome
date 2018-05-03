@@ -36,13 +36,14 @@ while(iter.hasNext()){
 <!doctype html>
 <html>
 	<head>
+		<title><%=Config.TITLE%></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi" />
 		<META HTTP-EQUIV=”Pragma” CONTENT=”no-cache”>
 		<meta charset="utf-8">
 		<meta name="Title" content="<%=Config.TITLE%>" />
 		<meta name="Description" content="<%=Config.DESCRIPTION%>" />
 		<meta name="Keywords" content="<%=Config.KEYWORDS%>" />
 		<meta name="Author" content="<%=Config.TITLE%>" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi" />
 		<meta name="robots" content="index, follow" />
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="<%=Config.TITLE%>" />
@@ -57,10 +58,11 @@ while(iter.hasNext()){
 		<meta name="twitter:url" content="<%=Config.URL %>" />
 		<meta name="twitter:image" content="<%=Config.OG_IMG%>" />
 		<meta name="format-detection" content="telephone=no" />
-		<title><%=Config.TITLE%></title>
+		
 		<link rel="stylesheet" type="text/css" href="css/css.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="css/page.css" media="all" />
 		<link rel="shortcut icon" href="<%=Config.FAVICON%>">
+		<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
 	</head>
 	<body>
 		<div id="header_wrap">

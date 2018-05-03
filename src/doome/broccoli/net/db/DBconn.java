@@ -12,6 +12,7 @@ import java.util.Properties;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import doome.broccoli.net.Config;
 import doome.broccoli.net.bean.Menu;
 
 public class DBconn {
@@ -19,7 +20,7 @@ public class DBconn {
 	private String password 	= "789gagul";
 	private String dbms 		= "mysql";
 	private String dbName 		= "doome";
-	private String serverName 	= "35.194.236.5";
+	private String serverName 	= Config.DB_URL;	
 	private int portNumber 		= 3306;
 	
 	public Connection getConnection() throws SQLException, ClassNotFoundException {
@@ -56,21 +57,34 @@ public class DBconn {
 		}
 		return result;
 	}
-	public JSONObject getMenus() throws SQLException, ClassNotFoundException{
+	public JSONObject getMenus() {
 		JSONObject resultObj = new JSONObject();
-		Connection conn;
-		conn = getConnection();
+		Connection conn = null;
+		try {
+			conn = getConnection();
 		
-		Statement stmt = conn.createStatement();
-		ResultSet rs;
-		rs = stmt.executeQuery("SELECT * FROM menus");
-		
-		JSONArray array = new JSONArray();
-		while(rs.next()){
-			array.add(parseToJSON(rs));
+			Statement stmt = conn.createStatement();
+			ResultSet rs;
+			rs = stmt.executeQuery("SELECT * FROM menus");
+			
+			JSONArray array = new JSONArray();
+			while(rs.next()){
+				array.add(parseToJSON(rs));
+			}
+			resultObj.put("list", array);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if(conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 		}
-		resultObj.put("list", array);
-		
 		return resultObj;
 	}
 	private JSONObject parseToJSON(ResultSet rs) throws SQLException {
@@ -87,18 +101,34 @@ public class DBconn {
 		item.put(Menu.IMAGE_KEY, image);
 		return item;
 	}
-	public Menu getMenuInfo(String menuId) throws ClassNotFoundException, SQLException {
+	public Menu getMenuInfo(String menuId) {
 		Menu menu = null;
-		Connection conn;
+		Connection conn = null;
 		if(menuId!=null && menuId.length() > 0) {
-			conn = getConnection();
-			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM menus WHERE id = ?");
-			ResultSet rs;
-			stmt.setString(1, menuId);
-			rs = stmt.executeQuery();
-			while(rs.next()) {
-				menu = Menu.parseToMenu(parseToJSON(rs));
+			try {
+				conn = getConnection();
+			
+				PreparedStatement stmt = conn.prepareStatement("SELECT * FROM menus WHERE id = ?");
+				ResultSet rs;
+				stmt.setString(1, menuId);
+				rs = stmt.executeQuery();
+				while(rs.next()) {
+					menu = Menu.parseToMenu(parseToJSON(rs));
+				}
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				if(conn != null) {
+					try {
+						conn.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				}
 			}
+			
 		}
 		return menu;
 	}

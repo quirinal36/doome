@@ -1,3 +1,5 @@
+<%@page import="doome.broccoli.net.bean.Menu"%>
+<%@page import="doome.broccoli.net.db.DBconn"%>
 <%@page import="java.util.logging.Logger"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
@@ -8,9 +10,11 @@
 	
 	Logger logger = Logger.getLogger("page.jsp");
 	
-	String content = request.getParameter("link");
-	content = content + ".jsp";
+	String menuId = request.getParameter("menu_id");
+	DBconn conn = new DBconn();
+	Menu menuInfo = conn.getMenuInfo(menuId);
 	
+	String content = menuInfo.getLink() + ".jsp";
 %>
 <!doctype html>
 
