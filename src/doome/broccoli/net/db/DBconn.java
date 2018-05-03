@@ -65,7 +65,7 @@ public class DBconn {
 		
 			Statement stmt = conn.createStatement();
 			ResultSet rs;
-			rs = stmt.executeQuery("SELECT * FROM menus");
+			rs = stmt.executeQuery("SELECT * FROM menus WHERE is_category = 1");
 			
 			JSONArray array = new JSONArray();
 			while(rs.next()){
@@ -89,16 +89,20 @@ public class DBconn {
 	}
 	private JSONObject parseToJSON(ResultSet rs) throws SQLException {
 		JSONObject item = new JSONObject();
-		int id 		 = rs.getInt(Menu.ID_KEY);
-		String name  = rs.getString(Menu.NAME_KEY);
-		int upperId  = rs.getInt(Menu.UPPERID_KEY);
-		String link  = rs.getString(Menu.LINK_KEY);
-		String image = rs.getString(Menu.IMAGE_KEY);
+		int id 		 		= rs.getInt(Menu.ID_KEY);
+		String name  		= rs.getString(Menu.NAME_KEY);
+		int upperId  		= rs.getInt(Menu.UPPERID_KEY);
+		String link  		= rs.getString(Menu.LINK_KEY);
+		String image 		= rs.getString(Menu.IMAGE_KEY);
+		String isCategory 	= rs.getString(Menu.IS_CATEGORY_KEY);
+		
 		item.put(Menu.ID_KEY, id);
 		item.put(Menu.NAME_KEY, name);
 		item.put(Menu.UPPERID_KEY, upperId);
 		item.put(Menu.LINK_KEY, link);
 		item.put(Menu.IMAGE_KEY, image);
+		item.put(Menu.IS_CATEGORY_KEY, isCategory);
+		
 		return item;
 	}
 	public Menu getMenuInfo(String menuId) {

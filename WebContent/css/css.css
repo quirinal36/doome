@@ -6,6 +6,24 @@ body { position:relative; width:100%; height:100%; font-size:12px; line-height:n
 ul, li { list-style:none; }
 a { text-decoration:none; color:inherit; }
 
+.ta-l { text-align:left; }
+.ta-r { text-align:right; }
+.ta-c { text-align:center; }
+.ta-j { text-align:justify; }
+
+/* bt */
+.bt_wrap { padding:10px 0 0 0; text-align:right; }
+.bt1 { display:inline-block; width:90px; padding:7px 0; border:0; cursor:pointer; color:#fff; font-size:12px; transition:all .5s ease; }
+.bt1-black { background-color:#999; }
+.bt1-black:hover { background-color:#666; }
+.bt1-red { background-color:#ef6262; }
+.bt1-red:hover { background-color:#d64040; }
+.bt1-green { background-color:#68ab5a; }
+.bt1-green:hover { background-color:#4b8c3d; }
+.bt1-blue { background-color:#5daae0; }
+.bt1-blue:hover { background-color:#4198d6; }
+
+.ipt1 { width:70%; padding:10px; border:0; background:#eee; }
 
 
 #wrap { height:100%; }
@@ -88,18 +106,6 @@ a { text-decoration:none; color:inherit; }
 .board-list-page-num-on { font-weight:600; }
 .board-list-page-num:hover { text-decoration:underline; }
 
-/* bt */
-.bt_wrap { padding:10px 0 0 0; text-align:right; }
-.bt1 { display:inline-block; width:90px; padding:7px 0; border:0; cursor:pointer; color:#fff; font-size:12px; transition:all .5s ease; }
-.bt1-black { background-color:#999; }
-.bt1-black:hover { background-color:#666; }
-.bt1-red { background-color:#ef6262; }
-.bt1-red:hover { background-color:#d64040; }
-.bt1-green { background-color:#68ab5a; }
-.bt1-green:hover { background-color:#4b8c3d; }
-.bt1-blue { background-color:#5daae0; }
-.bt1-blue:hover { background-color:#4198d6; }
-
 /* board-view */
 .board-view-tit { border-top:2px solid #000; }
 .board-view-tit > div { border-bottom:1px solid #eee; }
@@ -117,4 +123,12 @@ a { text-decoration:none; color:inherit; }
 
 .board-view-cont { padding:10px 0; border-bottom:1px solid #eee; font-size:13px; line-height:160%; }
 
+/* board-write */
+.board-write > div { border-bottom:1px solid #eee; }
+.board-write-tit { border-top:2px solid #000; }
+.board-write-tit > dl { font-size:0; }
+.board-write-tit > dl > dt, .board-write-tit > dl > dd { display:inline-block; padding:10px 0; font-size:13px; }
+.board-write-tit > dl > dt { width:15%; text-align:center; font-weight:600; }
+.board-write-tit > dl > dd { width:85%; }
+.board-write-cont { padding:10px 0; font-size:13px; }
 

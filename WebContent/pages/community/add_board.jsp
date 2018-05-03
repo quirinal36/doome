@@ -12,14 +12,21 @@
 </head>
 
 <body>
-    <form name="nse" action="/ActionWrite" method="post">
-    	<div style="padding-bottom:30px;">
-    		<input type="text" name="title" placeholder="제목" style="font-size:20px;"/>
-    	</div>
-    	
-	    <textarea name="ir1" id="ir1" class="nse_content" placeholder="내용"></textarea>
-	    
-	    <input type="submit" value="전송" onclick="submitContents(this)"/>
+	<form name="nse" action="/ActionWrite" method="post">
+		<div class="board-write">
+			<div class="board-write-tit">
+				<dl>
+					<dt>제목</dt>
+					<dd><input type="text" name="title" placeholder="제목을 입력하세요." class="ipt1" /></dd>
+				</dl>
+			</div>
+			
+			<textarea name="ir1" id="ir1" class="board-write-cont nse_content" placeholder="내용"></textarea>
+		</div>
+		<div class="bt_wrap ta-c">
+			<input type="submit" value="작성" class="bt1 bt1-blue" onclick="submitContents(this)"/>
+			<input type="button" value="취소" class="bt1 bt1-black" />
+		</div>
 	</form>
 </body>
 

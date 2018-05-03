@@ -3,6 +3,9 @@
 <!doctype html>
 <html>
 <head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 	<body>
 		<!-- 전체 -->
@@ -28,7 +31,18 @@
 		</div>
 		
 		<div class="bt_wrap">
-			<input type="button" value="글쓰기" class="bt1 bt1-blue" />
+			<input type="button" value="글쓰기" class="bt1 bt1-blue" id="write_button"/>
 		</div>
 	</body>
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		
+	});
+	$("#write_button").click(function(){
+		// console.log("write_button_click");
+		window.location = "<%=request.getContextPath() %>/page.jsp?menu_id=16";
+	});
+	
+	</script>
 </html>

@@ -12,6 +12,7 @@ public class Menu {
 	String link;
 	String name;
 	String image;
+	boolean isCategory;
 	ArrayList<Menu> children;
 	
 	public static final String ID_KEY = "id";
@@ -19,7 +20,7 @@ public class Menu {
 	public static final String NAME_KEY = "name";
 	public static final String LINK_KEY = "link";
 	public static final String IMAGE_KEY = "image";
-	
+	public static final String IS_CATEGORY_KEY = "is_category";
 	public Menu (){
 		children = new ArrayList<>();
 	}
@@ -59,6 +60,12 @@ public class Menu {
 	public void setImage(String image) {
 		this.image = image;
 	}
+	public boolean isCategory() {
+		return isCategory;
+	}
+	public void setCategory(String isCategory) {
+		this.isCategory = Integer.parseInt(isCategory) > 1 ? true : false;
+	}
 	public static Menu parseToMenu(JSONObject input) {
 		Menu menu = new Menu();
 		
@@ -67,6 +74,7 @@ public class Menu {
 		menu.setName((String)input.get(NAME_KEY));
 		menu.setLink((String)input.get(LINK_KEY));
 		menu.setImage((String)input.get(IMAGE_KEY));
+		menu.setCategory((String)input.get(IS_CATEGORY_KEY));
 		
 		return menu;
 	}
