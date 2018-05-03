@@ -1,5 +1,19 @@
+<%@page import="java.util.Iterator"%>
+<%@page import="doome.broccoli.net.board.bean.Board"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="doome.broccoli.net.board.bean.Pagination"%>
+<%@page import="doome.broccoli.net.board.action.BoardAction"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+Pagination paging = new Pagination();
+paging.setFrom(0);
+paging.setTo(10);
 
+BoardAction board = new BoardAction();
+ArrayList<Board> list = board.getBoard(paging);
+Iterator<Board> iter = list.iterator();
+
+%>
 <!doctype html>
 <html>
 <head>
@@ -20,12 +34,17 @@
 			<!-- 리스트 -->
 			<div class="board-list-body">
 		    	<ul>
+		    		<%
+		    		while(iter.hasNext()){
+		    			Board item = iter.next();
+		    		%>
 		        	<li>
-		            	<div class="board-list-body-num">1</div>
-		            	<div class="board-list-body-tit">제목</div>
-		            	<div class="board-list-body-wri">글쓴이</div>
-		            	<div class="board-list-body-dat">날짜</div>
+		            	<div class="board-list-body-num"><%=item.getId() %></div>
+		            	<div class="board-list-body-tit"><%=item.getTitle() %></div>
+		            	<div class="board-list-body-wri"><%=item.getUser() %></div>
+		            	<div class="board-list-body-dat"><%=item.getWriteDate() %></div>
 		            </li>
+		            <%} %>
 		        </ul>
 		    </div>
 		</div>

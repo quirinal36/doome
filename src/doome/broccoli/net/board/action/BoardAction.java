@@ -2,6 +2,7 @@ package doome.broccoli.net.board.action;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -11,7 +12,7 @@ import doome.broccoli.net.db.DBconn;
 
 public class BoardAction {
 
-	public ArrayList<Board> getBoard(Board input, Pagination paging) {
+	public ArrayList<Board> getBoard(Pagination paging) {
 		ArrayList<Board> list = new ArrayList<>();
 		DBconn db = new DBconn();
 		Connection conn = null;
@@ -20,6 +21,11 @@ public class BoardAction {
 			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM board limit ?, ?");
 			stmt.setInt(1, paging.getFrom());
 			stmt.setInt(2, paging.getTo());
+			ResultSet rs = stmt.executeQuery();
+			while(rs.next()) {
+				Board board = Board.parseToBoard(rs);
+				list.add(board);
+			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
