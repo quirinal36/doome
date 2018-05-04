@@ -18,7 +18,7 @@ public class BoardAction {
 		Connection conn = null;
 		try {
 			conn = db.getConnection();
-			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM board limit ?, ?");
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM board WHERE 1=1 order by id desc limit ?, ?");
 			stmt.setInt(1, paging.getFrom());
 			stmt.setInt(2, paging.getTo());
 			ResultSet rs = stmt.executeQuery();

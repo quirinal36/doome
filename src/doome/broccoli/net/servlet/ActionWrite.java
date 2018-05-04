@@ -1,8 +1,11 @@
 package doome.broccoli.net.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
@@ -47,26 +50,40 @@ public class ActionWrite extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		logger.info("doPost");
 		final String editorParam = request.getParameter("ir1");
 		final String title = request.getParameter("title");
 		
-		logger.info("editorParam::"+editorParam +"//title::"+title);
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		Date date = new Date();
 		
 		Board board = new Board(); 
 		board.setContent(editorParam);
 		board.setUser(1);
 		board.setTitle(title);
+		board.setWriteDate(dateFormat.format(date));
 		
 		BoardAction action = new BoardAction();
 		Boolean writeResult = false;
 		writeResult = action.writeBoard(board);
 		
-		try {
-			response.sendRedirect("/page.jsp?menu_id=12&writeResult="+writeResult);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}	
+		if (!writeResult) {
+			try {
+				response.sendRedirect("/page.jsp?menu_id=12&writeResult="+writeResult);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}	
+		} else {
+			PrintWriter out;
+			try {
+				out = response.getWriter();
+				response.setContentType("text/html");
+				out.println("<script type=\"text/javascript\">");
+				out.println("alert('글이 정상적으로 등록되지 않았습니다.');");
+				out.println("</script>");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}  
+		}
 	}
 
 }
