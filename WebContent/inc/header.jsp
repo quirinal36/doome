@@ -34,7 +34,7 @@ while(iter.hasNext()){
 }
 %>
 <!doctype html>
-<html>
+
 	<head>
 		<title><%=Config.TITLE%></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi" />
@@ -63,6 +63,8 @@ while(iter.hasNext()){
 		<link rel="stylesheet" type="text/css" href="css/page.css" media="all" />
 		<link rel="shortcut icon" href="<%=Config.FAVICON%>">
 		<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
+		
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	</head>
 	<body>
 		<div id="header_wrap">
@@ -93,7 +95,6 @@ while(iter.hasNext()){
 									</ul>
 									<%} %>
 								</li>
-							
 							<%
 						}
 					%>
@@ -102,4 +103,3 @@ while(iter.hasNext()){
 			</div>
 		</div>
 	</body>
-</html>
