@@ -60,8 +60,7 @@ a { text-decoration:none; color:inherit; }
 #gnb_wrap > ul > li > div > ul { width:1000px; margin:0 auto; text-align:right; }
 #gnb_wrap > ul > li > div > ul > li { display:inline; margin-left:40px; }
 #gnb_wrap > ul > li > div > ul > li:first-child { margin-left:0; }
-#gnb_wrap > ul > li > div > ul > li > a { color:#fff; opacity:0; transition:all 1s ease; }
-#gnb_wrap > ul > li:hover > div > ul > li > a { opacity:1; }
+#gnb_wrap > ul > li > div > ul > li > a { color:#fff; }
 #gnb_wrap > ul > li > div > ul > li > a:hover { text-decoration:underline; }
 
 
@@ -95,8 +94,8 @@ a { text-decoration:none; color:inherit; }
 #idxD > div > ul { margin:40px 0; font-size:0; text-align:center; }
 #idxD > div > ul > li { display:inline-block; width:22%; margin:5px 0 5px 4%; }
 #idxD > div > ul > li:nth-child(4n-3) { margin-left:0; }
-#idxD > div > a { display:block; margin:0 auto; width:180px; padding:13px 0; background:#4198d6; font-size:14px; color:#fff; transition:all 1s ease; }
-#idxD > div > a:hover { background:#297cb7; }
+#idxD > div > a { display:block; margin:0 auto; width:180px; padding:13px 0; background:#3ba222; font-size:14px; color:#fff; transition:all 1s ease; }
+#idxD > div > a:hover { background:#4b8c3d; }
 
 
 #footer_wrap { clear:both; background:#2f2e2e; text-align:center; }
