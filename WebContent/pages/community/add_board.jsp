@@ -20,7 +20,6 @@
 					<dd><input type="text" name="title" placeholder="제목을 입력하세요." class="ipt1" /></dd>
 				</dl>
 			</div>
-			
 			<textarea name="ir1" id="ir1" class="board-write-cont nse_content" placeholder="내용"></textarea>
 		</div>
 		<div class="bt_wrap ta-c">
