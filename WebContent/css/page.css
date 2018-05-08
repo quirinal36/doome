@@ -39,3 +39,15 @@
 .certi_view > ul > li { position:relative; width:600px; margin:0 auto; }
 .certi_view > ul > li > span { position:absolute; top:0; right:0; width:41px; height:41px; cursor:pointer; opacity:0.5; transition:all .5s ease; }
 .certi_view > ul > li > span:hover { opacity:0.7; }
+
+
+@media screen and ( max-width:999px ) {
+.products_list { width:92%; margin:0 auto; }
+.products_list > ul > li { width:48%; margin:20px 0 0 4%; }
+.products_list > ul > li:nth-child(3) { margin-top:20px; }
+.products_list > ul > li:nth-child(3n-2) { margin-left:4%; }
+.products_list > ul > li:nth-child(2n-1) { margin-left:0; }
+.products_list > ul > li > div > h3 { font-size:14px; }
+.products_list > ul > li > div > p { padding-bottom:10px; margin-bottom:6px; font-size:11px; }
+.products_list > ul > li > div > span { font-size:11px; }
+}
