@@ -87,7 +87,7 @@ Iterator<Board> iter = list.iterator();
 	<a href="javascript:openPage('<%=paging.getFinalPageNo()%>')"><img src="img/board/board-page-last.gif" alt="마지막 페이지로 가기"></span></a>
 </div>
 
-<div class="bt_wrap">
+<div class="bt_wrap ta-r">
 	<input type="button" value="글쓰기" class="bt1 bt1-blue" id="write_button"/>
 </div>
 
