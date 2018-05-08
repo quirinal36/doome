@@ -57,6 +57,9 @@
 					<div id="gnb_menu_open">
 						<div>
 							<h1>두메산골영농조합법인</h1>
+							<jsp:include page="./gnb.jsp" flush="true">
+								<jsp:param name="aaa" value="bbb"/>
+							</jsp:include>
 						</div>
 					</div>
 				</div>
