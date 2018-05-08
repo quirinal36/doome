@@ -26,6 +26,12 @@ a { text-decoration:none; color:inherit; }
 .ipt1 { width:70%; padding:10px; border:0; background:#eee; }
 
 
+@media screen and ( max-width:999px ) {
+.bt_wrap { width:90%; margin:0 auto; }
+.bt1 { width:auto; padding:7px 10px; }
+}
+
+
 #wrap { height:100%; }
 #idx_container_wrap { min-height:100%; margin:-61px 0 -97px 0; }
 #idx_container { padding:61px 0 97px 0; }
