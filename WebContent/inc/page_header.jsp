@@ -20,6 +20,6 @@ Menu menuInfo = conn.getMenuInfo(menuId);
 <div id="page_top" style="background-image:url(/img/comm/<%=menuInfo.getImage()%>)">
 	<div>
 		<h2><%=menuInfo.getName() %></h2>
-		<p><%=menuInfo.getPageDescription() %></p>
+		<p><%=menuInfo.getPageDescription()==null ? "" : menuInfo.getPageDescription() %></p>
 	</div>
 </div>

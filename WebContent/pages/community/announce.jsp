@@ -40,7 +40,10 @@ Iterator<Board> iter = list.iterator();
 		    		%>
 		        	<li>
 		            	<div class="board-list-body-num"><%=item.getId() %></div>
-		            	<div class="board-list-body-tit"><%=item.getTitle() %></div>
+		            	<div class="board-list-body-tit" 
+		            		onclick="javascript:openLink('<%=item.getId() %>')">
+		            		<%=item.getTitle() %>
+		            	</div>
 		            	<div class="board-list-body-wri"><%=item.getUser() %></div>
 		            	<div class="board-list-body-dat"><%=item.getWriteDate() %></div>
 		            </li>
@@ -55,9 +58,10 @@ Iterator<Board> iter = list.iterator();
 	</body>
 	
 	<script type="text/javascript">
-	$(document).ready(function(){
-		
-	});
+	function openLink(board_num){
+		console.log("id::"+board_num);
+		window.location = "<%=request.getContextPath()%>/page.jsp?menu_id=18&board_num="+board_num;
+	}
 	$("#write_button").click(function(){
 		// console.log("write_button_click");
 		window.location = "<%=request.getContextPath() %>/page.jsp?menu_id=16";
