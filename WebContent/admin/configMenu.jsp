@@ -25,7 +25,7 @@ Iterator<Menu> iter = menus.iterator();
 		Menu item = iter.next();
 	%>
 	<tr id="<%=item.getId() %>">
-		<td><input type="text" value="<%=item.getId() %>" name="<%=Menu.ID_KEY%>"/></td>
+		<td><input type="text" value="<%=item.getId() %>" name="<%=Menu.ID_KEY%>" readonly/></td>
 		<td><input type="text" value="<%=item.getName()==null ? "" : item.getName() %>" name="<%=Menu.NAME_KEY%>"/></td>
 		<td><input type="text" value="<%=item.getLink()==null ? "" : item.getLink() %>" name="<%=Menu.LINK_KEY%>"/></td>
 		<td><input type="text" value="<%=item.getImage()==null ? "" : item.getImage() %>" name="<%=Menu.IMAGE_KEY%>"/></td>
