@@ -20,6 +20,6 @@ Menu menuInfo = conn.getMenuInfo(menuId);
 <div id="page_top" style="background-image:url(/img/comm/<%=menuInfo.getImage()%>)">
 	<div>
 		<h2><%=menuInfo.getName() %></h2>
-		<p>사물인터넷과 보안, 클라우드 등 IT 산업을 이끄는 리더로서, 한결 같은 마음으로</p>
+		<p><%=menuInfo.getPageDescription() %></p>
 	</div>
 </div>
