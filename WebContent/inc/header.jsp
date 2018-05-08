@@ -59,7 +59,6 @@ while(iter.hasNext()){
 		<meta name="format-detection" content="telephone=no" />
 		
 		<link rel="stylesheet" type="text/css" href="css/css.css" media="all" />
-		<link rel="stylesheet" type="text/css" href="css/page.css" media="all" />
 		<link rel="shortcut icon" href="<%=Config.FAVICON%>">
 		<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
 		

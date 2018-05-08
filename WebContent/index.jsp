@@ -49,13 +49,12 @@
 		재화 및 서비스의 생산·판매 등 영업활동을 수행하는 기업을 말한다.</p>
 					<ul>
 						<li><img src="img/index/idxD1.jpg" alt=""></li>
-						<li><img src="img/index/idxD1.jpg" alt=""></li>
-						<li><img src="img/index/idxD1.jpg" alt=""></li>
-						<li><img src="img/index/idxD1.jpg" alt=""></li>
-						<li><img src="img/index/idxD1.jpg" alt=""></li>
-						<li><img src="img/index/idxD1.jpg" alt=""></li>
-						<li><img src="img/index/idxD1.jpg" alt=""></li>
-						<li><img src="img/index/idxD1.jpg" alt=""></li>
+						<li><img src="img/index/idxD2.jpg" alt=""></li>
+						<li><img src="img/index/idxD3.jpg" alt=""></li>
+						<li><img src="img/index/idxD4.jpg" alt=""></li>
+						<li><img src="img/index/idxD5.jpg" alt=""></li>
+						<li><img src="img/index/idxD6.jpg" alt=""></li>
+						<li><img src="img/index/idxD7.jpg" alt=""></li>
 					</ul>
 		            <a href="#">납품문의</a>
 				</div>
