@@ -63,6 +63,7 @@ public class Board {
 		result.setTitle(rs.getString(TITLE_KEY));
 		result.setUser(rs.getInt(USER_KEY));
 		result.setWriteDate(rs.getString(WRITE_DATE));
+		result.setContent(rs.getString(CONTENT_KEY));
 		
 		return result;
 	}

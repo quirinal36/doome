@@ -11,7 +11,34 @@ import doome.broccoli.net.board.bean.Pagination;
 import doome.broccoli.net.db.DBconn;
 
 public class BoardAction {
-
+	
+	public Board getBoard(int id) {
+		Board result = new Board();
+		DBconn db = new DBconn();
+		Connection conn = null;
+		
+		try {
+			conn = db.getConnection();
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM board WHERE id=?");
+			stmt.setInt(1, id);
+			ResultSet rs = stmt.executeQuery();
+			while(rs.next()) {
+				result = Board.parseToBoard(rs);
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return result;
+	}
 	public ArrayList<Board> getBoard(Pagination paging) {
 		ArrayList<Board> list = new ArrayList<>();
 		DBconn db = new DBconn();
