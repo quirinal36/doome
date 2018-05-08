@@ -56,7 +56,10 @@
 					</div>
 					<div id="gnb_menu_open">
 						<div>
-							<h1>두메산골영농조합법인</h1>
+							<div id="gnb_menu_open_title">
+								<h1><a href="/">두메산골영농조합법인</a></h1>
+								<img src="/img/comm/gnb_close.png" alt="닫기" />
+							</div>
 							<jsp:include page="./gnb.jsp" flush="true">
 								<jsp:param name="aaa" value="bbb"/>
 							</jsp:include>
@@ -65,4 +68,17 @@
 				</div>
 			</div>
 		</div>
-	</body>
+<script>
+$(function(){
+	$("#gnb_menu img").click(function() {
+		$("#gnb_menu_open").fadeIn();
+	});
+	$("#gnb_menu_open_title img").click(function() {
+		$("#gnb_menu_open").hide();
+	});
+	$("#gnb_menu_open span").click(function() {
+		$(this).toggleClass("gnb_menu_on");
+		$(this).find("~div").stop().slideToggle(300);
+	});
+});
+</script>
