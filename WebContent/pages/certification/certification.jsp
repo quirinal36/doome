@@ -1,3 +1,4 @@
+<%@page import="java.util.HashMap"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="doome.broccoli.net.certification.bean.CertificationInfo"%>
 <%@page import="java.util.ArrayList"%>
@@ -8,127 +9,39 @@
 	Logger logger = Logger.getLogger("certification.jsp");
 	CertificationAction action = new CertificationAction();
 	ArrayList<CertificationInfo> list = action.getCertifications();
-	Iterator<CertificationInfo> iter = list.iterator();
+	HashMap<Integer, String> typesMap = action.getCertificationTypes();
 %>
-<div class="certi_list">
-	<h3>국가경제 - 4개</h3>
-	<p>썸네일 : 1-1.jpg //// 뷰 : 1-1-view.jpg</p>
-	<ul>
-	<%while(iter.hasNext()){
-		CertificationInfo info = iter.next();
+<%
+	for(int key : typesMap.keySet()){
+		String typeName = typesMap.get(key);
+		Iterator<CertificationInfo> iter = list.iterator();
 	%>
-		<li>
-			<img src="img/certification/<%=info.getImg_small() %>" onclick="showLargeImg(this, '<%=info.getImg_large() %>');"/>
-			<span><%=info.getName() %></span>
-		</li>
+	<div class="certi_list">
+		<h3><%= typeName%></h3>
+		<ul>
+		<%while(iter.hasNext()){
+			CertificationInfo info = iter.next();
+			if(info.getType() == key){
+			%>
+			<li>
+				<img src="img/certification/<%=info.getImg_small() %>" onclick="showLargeImg(this, '<%=info.getImg_large() %>');"/>
+				<span><%=info.getName() %></span>
+			</li>
+			<%}
+		}%>
+		</ul>
+	</div>
 	<%} %>
-	</ul>
-</div>
+	<div class="certi_view">
+		<ul>
+			<li>
+				<img src="" />
+				<span class="certi_view-close"><img src="img/certification/bt-close.png" alt="닫기" /></span>
+			</li>
+		</ul>
+	</div>
 
-<div class="certi_view">
-	<ul>
-		<li>
-			<img src="" />
-			<span class="certi_view-close"><img src="img/certification/bt-close.png" alt="닫기" /></span>
-		</li>
-	</ul>
-</div>
 
-<div class="certi_list">
-	<h3>동행 - 4개</h3>
-	<p>인증 내용과 관련된 상세 설명이 들어갑니다.</p>
-	<ul>
-	<%while(iter.hasNext()){
-		CertificationInfo info = iter.next();
-	%>
-		<li>
-			<img src="img/certification/<%=info.getImg_small() %>" onclick="showLargeImg(this, '<%=info.getImg_large() %>');"/>
-			<span><%=info.getName() %></span>
-		</li>
-	<%} %>
-	</ul>
-</div>
-
-<div class="certi_view">
-	<ul>
-		<li>
-			<img src="" />
-			<span class="certi_view-close"><img src="img/certification/bt-close.png" alt="닫기" /></span>
-		</li>
-	</ul>
-</div>
-
-<div class="certi_list">
-	<h3>연구·협업 - 2개</h3>
-	<p>인증 내용과 관련된 상세 설명이 들어갑니다.</p>
-	<ul>
-	<%while(iter.hasNext()){
-		CertificationInfo info = iter.next();
-	%>
-		<li>
-			<img src="img/certification/<%=info.getImg_small() %>" onclick="showLargeImg(this, '<%=info.getImg_large() %>');"/>
-			<span><%=info.getName() %></span>
-		</li>
-	<%} %>
-	</ul>
-</div>
-
-<div class="certi_view">
-	<ul>
-		<li>
-			<img src="" />
-			<span class="certi_view-close"><img src="img/certification/bt-close.png" alt="닫기" /></span>
-		</li>
-	</ul>
-</div>
-
-<div class="certi_list">
-	<h3>위생 - 5개</h3>
-	<p>인증 내용과 관련된 상세 설명이 들어갑니다.</p>
-	<ul>
-	<%while(iter.hasNext()){
-		CertificationInfo info = iter.next();
-	%>
-		<li>
-			<img src="img/certification/<%=info.getImg_small() %>" onclick="showLargeImg(this, '<%=info.getImg_large() %>');"/>
-			<span><%=info.getName() %></span>
-		</li>
-	<%} %>
-	</ul>
-</div>
-
-<div class="certi_view">
-	<ul>
-		<li>
-			<img src="" />
-			<span class="certi_view-close"><img src="img/certification/bt-close.png" alt="닫기" /></span>
-		</li>
-	</ul>
-</div>
-
-<div class="certi_list">
-	<h3>지역경제 - 6개</h3>
-	<p>인증 내용과 관련된 상세 설명이 들어갑니다.</p>
-	<ul>
-	<%while(iter.hasNext()){
-		CertificationInfo info = iter.next();
-	%>
-		<li>
-			<img src="img/certification/<%=info.getImg_small() %>" onclick="showLargeImg(this, '<%=info.getImg_large() %>');"/>
-			<span><%=info.getName() %></span>
-		</li>
-	<%} %>
-	</ul>
-</div>
-
-<div class="certi_view">
-	<ul>
-		<li>
-			<img src="" />
-			<span class="certi_view-close"><img src="img/certification/bt-close.png" alt="닫기" /></span>
-		</li>
-	</ul>
-</div>
 
 <script>
 function showLargeImg(imgTag, imgLarge){
