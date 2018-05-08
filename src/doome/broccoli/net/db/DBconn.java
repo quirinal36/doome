@@ -13,7 +13,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import doome.broccoli.net.Config;
-import doome.broccoli.net.bean.Menu;
+import doome.broccoli.net.menu.bean.Menu;
 
 public class DBconn {
 	private String userName 	= "root";

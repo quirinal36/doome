@@ -1,4 +1,4 @@
-<%@page import="doome.broccoli.net.bean.Menu"%>
+<%@page import="doome.broccoli.net.menu.bean.Menu"%>
 <%@page import="doome.broccoli.net.db.DBconn"%>
 <%@page import="java.util.logging.Logger"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
