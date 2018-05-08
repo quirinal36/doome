@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import doome.broccoli.net.board.bean.Board;
-import doome.broccoli.net.board.bean.Pagination;
+import doome.broccoli.net.board.bean.Paging;
 import doome.broccoli.net.db.DBconn;
 
 public class BoardAction {
@@ -39,15 +39,39 @@ public class BoardAction {
 		
 		return result;
 	}
-	public ArrayList<Board> getBoard(Pagination paging) {
+	public int getBoardCount() {
+		int result = 0;
+		
+		DBconn db = new DBconn();
+		Connection conn = null;
+		
+		try {
+			conn = db.getConnection();
+			PreparedStatement stmt = conn.prepareStatement("SELECT count(*) FROM board");
+			ResultSet rs = stmt.executeQuery();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return result;
+	}
+	public ArrayList<Board> getBoard(Paging paging) {
 		ArrayList<Board> list = new ArrayList<>();
 		DBconn db = new DBconn();
 		Connection conn = null;
 		try {
 			conn = db.getConnection();
 			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM board WHERE 1=1 order by id desc limit ?, ?");
-			stmt.setInt(1, paging.getFrom());
-			stmt.setInt(2, paging.getTo());
+			stmt.setInt(1, paging.getStartPageNo());
+			stmt.setInt(2, paging.getEndPageNo());
 			ResultSet rs = stmt.executeQuery();
 			while(rs.next()) {
 				Board board = Board.parseToBoard(rs);

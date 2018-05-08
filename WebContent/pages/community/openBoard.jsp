@@ -50,11 +50,8 @@ Board board = action.getBoard(boardNumInt);
    <input type="button" value="삭제" class="bt1 bt1-black" id="button_to_delete"/>
 </div>
 
-
 <script type="text/javascript">
 	$("#button_to_list").on("click", function(){
-		console.log("aaaa");
-		
 		window.location.href = "<%=request.getContextPath()%>/page.jsp?menu_id=12";
 	});
 </script>
