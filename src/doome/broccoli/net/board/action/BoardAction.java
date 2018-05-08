@@ -49,7 +49,9 @@ public class BoardAction {
 			conn = db.getConnection();
 			PreparedStatement stmt = conn.prepareStatement("SELECT count(*) FROM board");
 			ResultSet rs = stmt.executeQuery();
-			
+			while(rs.next()) {
+				result = rs.getInt(1);
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
@@ -70,8 +72,9 @@ public class BoardAction {
 		try {
 			conn = db.getConnection();
 			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM board WHERE 1=1 order by id desc limit ?, ?");
-			stmt.setInt(1, paging.getStartPageNo());
-			stmt.setInt(2, paging.getEndPageNo());
+			stmt.setInt(1, paging.getFrom());
+			stmt.setInt(2, paging.getTo());
+			
 			ResultSet rs = stmt.executeQuery();
 			while(rs.next()) {
 				Board board = Board.parseToBoard(rs);

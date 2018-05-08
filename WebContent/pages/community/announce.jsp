@@ -1,3 +1,4 @@
+<%@page import="java.util.logging.Logger"%>
 <%@page import="doome.broccoli.net.board.bean.Paging"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="doome.broccoli.net.board.bean.Board"%>
@@ -5,12 +6,17 @@
 <%@page import="doome.broccoli.net.board.action.BoardAction"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
+String pageNo = request.getParameter("pageNo");
+
 Paging paging = new Paging();
-// paging.setFrom(0);
-// paging.setTo(10);
+Logger logger = Logger.getLogger("announce.jsp");
 
 BoardAction board = new BoardAction();
 int totalCount = board.getBoardCount();
+logger.info("totalCount::"+totalCount);
+paging.setTotalCount(totalCount);
+logger.info(paging.toString());
+
 ArrayList<Board> list = board.getBoard(paging);
 Iterator<Board> iter = list.iterator();
 
@@ -56,11 +62,17 @@ Iterator<Board> iter = list.iterator();
 		<div class="board-list-page">
 			<a href="#"><img src="img/board/board-page-first.gif" alt="맨 처음 페이지로 가기"></a>
 			<a href="#"><img src="img/board/board-page-prev.gif" alt="이전 페이지로 가기"></a>
+			<%
+				for(int i=0; i<paging.getFinalPageNo(); i++){
+					
+				}
+			%>
 			<a href="#" class="board-list-page-num board-list-page-num-on">1</a>
 			<a href="#" class="board-list-page-num">2</a>
 			<a href="#" class="board-list-page-num">3</a>
 			<a href="#" class="board-list-page-num">4</a>
 			<a href="#" class="board-list-page-num">5</a>
+			
 			<a href="#"><img src="img/board//board-page-next.gif" alt="다음 페이지로 가기"></a>
 			<a href="#"><img src="img/board/board-page-last.gif" alt="마지막 페이지로 가기"></span></a>
 		</div>

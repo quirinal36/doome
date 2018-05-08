@@ -13,8 +13,26 @@ public class Paging {
     private int nextPageNo; 	// 다음 페이지 번호
     private int finalPageNo; 	// 마지막 페이지 번호
     private int totalCount; 	// 게시 글 전체 수
+    private int from;
+    private int to;
+    
+    public int getFrom() {
+		return from;
+	}
 
-    /**
+	public void setFrom(int from) {
+		this.from = from;
+	}
+
+	public int getTo() {
+		return to;
+	}
+
+	public void setTo(int to) {
+		this.to = to;
+	}
+
+	/**
      * @return the pageSize
      */
     public int getPageSize() {
@@ -175,6 +193,13 @@ public class Paging {
         this.setStartPageNo(startPage); // 시작 페이지 (페이징 네비 기준)
         this.setEndPageNo(endPage); // 끝 페이지 (페이징 네비 기준)
 
+        this.setFrom((this.getPageNo()-1) * this.getPageSize() + 1);
+        if(isNowFinal) {
+        	this.setTo(this.getFrom() + (this.getTotalCount() - ((this.getPageSize()-1) * this.getPageNo())));
+        }else {
+        	this.setTo(this.getFrom() + this.getPageSize());
+        }
+        
         if (isNowFinal) {
             this.setNextPageNo(finalPage); // 다음 페이지 번호
         } else {

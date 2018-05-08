@@ -37,26 +37,21 @@ while(iter.hasNext()){
 		Menu cur = pIter.next();
 		ArrayList<Menu> children = cur.getChildren();
 		Iterator<Menu> cIter = children.iterator();
-		%>							
-			<li><a href="<%=request.getContextPath() %>/page.jsp?menu_id=<%=cur.getId()%>"><%=cur.getName() %></a>
+		%>
+			<li><%=cur.getName() %>
 				<%if(children.size() > 0){ %>
 				<div>
 					<ul>
-					<%} %>
-						<%
+					<%} %><%
 							while(cIter.hasNext()){
 								Menu subMenu = cIter.next();
-								%>
-									<li><a href="<%=request.getContextPath() %>/page.jsp?link=<%=subMenu.getLink()%>&menu_id=<%=subMenu.getId()%>"><%=subMenu.getName()%></a></li>
+								%><li><a href="<%=request.getContextPath() %>/page.jsp?link=<%=subMenu.getLink()%>&menu_id=<%=subMenu.getId()%>"><%=subMenu.getName()%></a></li>
 								<%
 							}
-						%>
-					<%if(children.size() > 0){ %>
+						%><%if(children.size() > 0){ %>
 					</ul>
 				</div>
-				<%} %>
-			</li>
-		<%
+				<%} %></li><%
 	}
 %>
 </ul>
