@@ -18,6 +18,7 @@
 	%>
 	<div class="certi_list">
 		<h3><%= typeName%></h3>
+		<p></p>
 		<ul>
 		<%while(iter.hasNext()){
 			CertificationInfo info = iter.next();
@@ -40,9 +41,6 @@
 			</li>
 		</ul>
 	</div>
-
-
-
 <script>
 function showLargeImg(imgTag, imgLarge){
 	var newImg = imgTag.src.substring(0, imgTag.src.lastIndexOf("/")+1) + imgLarge;
@@ -53,5 +51,13 @@ $(function(){
 	$(".certi_view-close").click(function(){
 		$(".certi_view").fadeOut();
 	});
+});
+$(document).keyup(function(e) {
+    if (e.keyCode == 27) { 
+       // <DO YOUR WORK HERE>
+       console.log("esc input");
+   }else {
+	   console.log("another");
+   }
 });
 </script>
