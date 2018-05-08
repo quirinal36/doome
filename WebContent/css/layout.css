@@ -12,7 +12,7 @@ a { text-decoration:none; color:inherit; }
 .ta-j { text-align:justify; }
 
 /* bt */
-.bt_wrap { padding:10px 0 0 0; text-align:right; }
+.bt_wrap { padding:10px 0 0 0; }
 .bt1 { display:inline-block; width:90px; padding:7px 0; border:0; cursor:pointer; color:#fff; font-size:12px; transition:all .5s ease; }
 .bt1-black { background-color:#999; }
 .bt1-black:hover { background-color:#666; }
@@ -72,7 +72,7 @@ a { text-decoration:none; color:inherit; }
 
 #gnb_wrap > ul > li:nth-child(1) > div > ul > li:last-child { margin-right:288px; }
 #gnb_wrap > ul > li:nth-child(2) > div > ul > li:last-child { margin-right:175px; }
-#gnb_wrap > ul > li:nth-child(3) > div > ul > li:last-child { margin-right:100px; }
+#gnb_wrap > ul > li:nth-child(3) > div > ul > li:last-child { margin-right:156px; }
 #gnb_wrap > ul > li:nth-child(4) > div > ul > li:last-child { margin-right:0px; }
 
 

@@ -63,6 +63,9 @@
 							<jsp:include page="./gnb.jsp" flush="true">
 								<jsp:param name="aaa" value="bbb"/>
 							</jsp:include>
+							<div id="gnb_banner">
+								<a href="/page.jsp?link=pages/products/chicken&menu_id=8"><img src="/img/comm/gnb_banner1.jpg" alt="닭고기 전체상품보기" /></a>
+							</div>
 						</div>
 					</div>
 				</div>
