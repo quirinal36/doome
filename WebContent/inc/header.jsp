@@ -1,3 +1,4 @@
+<%@page import="java.util.Random"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="doome.broccoli.net.menu.bean.Menu"%>
 <%@page import="java.util.logging.Logger"%>
@@ -8,6 +9,13 @@
 <%@page import="org.json.simple.JSONObject"%>
 <%@page import="doome.broccoli.net.db.DBconn"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+Logger logger = Logger.getLogger("header.jsp");
+
+Random random = new Random();
+int randomNum = random.nextInt(4)+1;
+int menuLinkId= 7 + randomNum;
+%>
 <!doctype html>
 	<head>
 		<title><%=Config.TITLE%></title>
@@ -63,9 +71,11 @@
 							<jsp:include page="./gnb.jsp" flush="true">
 								<jsp:param name="aaa" value="bbb"/>
 							</jsp:include>
+							
 							<div id="gnb_banner">
-								<a href="/page.jsp?link=pages/products/chicken&menu_id=8"><img src="/img/comm/gnb_banner1.jpg" alt="닭고기 전체상품보기" /></a>
+								<a href="/page.jsp?menu_id=<%=menuLinkId%>"><img src="/img/comm/gnb_banner<%=randomNum %>.jpg" alt="닭고기 전체상품보기" /></a>
 							</div>
+							
 						</div>
 					</div>
 				</div>
