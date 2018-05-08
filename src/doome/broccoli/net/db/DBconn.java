@@ -95,6 +95,7 @@ public class DBconn {
 		String link  		= rs.getString(Menu.LINK_KEY);
 		String image 		= rs.getString(Menu.IMAGE_KEY);
 		String isCategory 	= rs.getString(Menu.IS_CATEGORY_KEY);
+		String pageDesc		= rs.getString(Menu.DESCRIPTION_KEY);
 		
 		item.put(Menu.ID_KEY, id);
 		item.put(Menu.NAME_KEY, name);
@@ -102,6 +103,7 @@ public class DBconn {
 		item.put(Menu.LINK_KEY, link);
 		item.put(Menu.IMAGE_KEY, image);
 		item.put(Menu.IS_CATEGORY_KEY, isCategory);
+		item.put(Menu.DESCRIPTION_KEY, pageDesc);
 		
 		return item;
 	}
