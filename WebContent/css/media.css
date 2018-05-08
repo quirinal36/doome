@@ -25,7 +25,7 @@
 #gnb_menu_open > div > ul > li > div { display:none; background:#eee; }
 #gnb_menu_open > div > ul > li > div > ul { padding:5px 0; }
 #gnb_menu_open > div > ul > li > div > ul > li > a { display:block; padding:7px 16px; font-size:13px; }
-
+#gnb_banner > a > img { width:100%; }
 
 #page_top { height:auto; }
 #page_top > div { height:auto; padding:15px 0; }
