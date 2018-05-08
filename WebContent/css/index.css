@@ -8,7 +8,7 @@
 #idxB > div > ul > li > p { text-align:left; color:#777; line-height:160%; text-align:justify; }
 
 #idxC > ul { font-size:0; text-align:center; }
-#idxC > ul > li { display:inline-block; width:25%; background:#000; }
+#idxC > ul > li { display:inline-block; width:25%; background:#000; vertical-align:top; }
 #idxC > ul > li > a { display:block; width:100%; height:240px; padding-top:200px; background-size:cover; background-position:50% 50%; background-repeat:no-repeat; opacity:0.6; font-size:30px; color:#fff; transition:opacity  1s ease; }
 #idxC1 > a { background-image:url(/img/index/idxC1.jpg); }
 #idxC2 > a { background-image:url(/img/index/idxC2.jpg); }
@@ -24,4 +24,4 @@
 #idxD > div > ul > li:nth-child(4n-3) { margin-left:0; }
 #idxD > div > a { display:block; margin:0 auto; width:180px; padding:13px 0; background:#3ba222; font-size:14px; color:#fff; transition:all 1s ease; }
 #idxD > div > a:hover { background:#4b8c3d; }
-#idxD > div > ul > li > img { border:1px solid #eee; }
+#idxD > div > ul > li > img { width:100%; max-width:180px; box-sizing:border-box; border:1px solid #eee; }
