@@ -1,0 +1,47 @@
+/* board-list */
+.board-list-head, .board-list-body > ul > li { width:100%; border-bottom:1px solid #eee; font-size:0; }
+.board-list-head > div, .board-list-body > ul > li > div { display:inline-block; padding:10px 0; font-size:13px; text-align:center; }
+.board-list-head-num, .board-list-body-num { width:5%; }
+.board-list-head-tit, .board-list-body-tit { width:65%; }
+.board-list-head-wri, .board-list-body-wri { width:15%; }
+.board-list-head-dat, .board-list-body-dat { width:15%; }
+
+/* board-list-head */
+.board-list-head { border-top:2px solid #000; }
+.board-list-head > div { font-weight:600; }
+
+/* board-list-body */
+.board-list-body-tit { text-align:left !important; }
+
+/* board-list-page */
+.board-list-page { line-height:100%; }
+.board-list-page > a { display:inline-block; margin:0 5px; text-decoration:none; color:#000; }
+.board-list-page-num-on { font-weight:600; }
+.board-list-page-num:hover { text-decoration:underline; }
+
+/* board-view */
+.board-view-tit { border-top:2px solid #000; }
+.board-view-tit > div { border-bottom:1px solid #eee; }
+.board-view-tit-line1 > dl > dt  { width:15%;  }
+.board-view-tit-line1 > dl > dd  { width:85%;  }
+
+.board-view-tit-line2 > ul { font-size:0; }
+.board-view-tit-line2 > ul > li { display:inline-block; width:50%; }
+.board-view-tit-line2 > ul > li > dl > dt { width:30%; }
+.board-view-tit-line2 > ul > li > dl > dd { width:70%; }
+
+.board-view-tit-line1 > dl, .board-view-tit-line2 > ul > li > dl { font-size:0; }
+.board-view-tit > div > dl > dt, .board-view-tit > div > ul > li > dl > dt { display:inline-block; padding:10px 0; text-align:center; font-weight:600; font-size:13px; }
+.board-view-tit > div > dl > dd, .board-view-tit > div > ul > li > dl > dd { display:inline-block; padding:10px 0; font-size:13px; }
+
+.board-view-cont { padding:10px 0; border-bottom:1px solid #eee; font-size:13px; line-height:160%; }
+
+/* board-write */
+.board-write > div { border-bottom:1px solid #eee; }
+.board-write-tit { border-top:2px solid #000; }
+.board-write-tit > dl { font-size:0; }
+.board-write-tit > dl > dt, .board-write-tit > dl > dd { display:inline-block; padding:10px 0; font-size:13px; }
+.board-write-tit > dl > dt { width:15%; text-align:center; font-weight:600; }
+.board-write-tit > dl > dd { width:85%; }
+.board-write-cont { padding:10px 0; font-size:13px; }
+

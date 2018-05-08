@@ -1,0 +1,27 @@
+#idxA { width:100%; height:560px; background:url(/img/index/idxA_bg.jpg) no-repeat 30% 70%; background-size:cover; }
+#idxB > div { width:1000px; margin:0 auto; padding:80px 0; text-align:center; }
+#idxB > div > h4 { margin-bottom:60px; font-size:24px; font-weight:normal; }
+#idxB > div > ul { font-size:0; }
+#idxB > div > ul > li { display:inline-block; width:28%; margin-left:8%; font-size:12px; vertical-align:top; }
+#idxB > div > ul > li:first-child { margin-left:0; }
+#idxB > div > ul > li > h5 { margin:20px 0; font-size:16px; font-weight:600; }
+#idxB > div > ul > li > p { text-align:left; color:#777; line-height:160%; text-align:justify; }
+
+#idxC > ul { font-size:0; text-align:center; }
+#idxC > ul > li { display:inline-block; width:25%; background:#000; }
+#idxC > ul > li > a { display:block; width:100%; height:240px; padding-top:200px; background-size:cover; background-position:50% 50%; background-repeat:no-repeat; opacity:0.6; font-size:30px; color:#fff; transition:opacity  1s ease; }
+#idxC1 > a { background-image:url(/img/index/idxC1.jpg); }
+#idxC2 > a { background-image:url(/img/index/idxC2.jpg); }
+#idxC3 > a { background-image:url(/img/index/idxC3.jpg); }
+#idxC4 > a { background-image:url(/img/index/idxC4.jpg); }
+#idxC > ul > li > a:hover { opacity:1; font-weight:600; }
+
+#idxD > div { width:1000px; margin:0 auto; padding:80px 0; text-align:center; }
+#idxD > div > h4 { margin-bottom:30px; font-size:24px; font-weight:normal; letter-spacing:10px; }
+#idxD > div > p { width:70%; margin:0 auto; font-size:13px; line-height:160%; color:#777; }
+#idxD > div > ul { margin:40px 0; font-size:0; text-align:center; }
+#idxD > div > ul > li { display:inline-block; width:22%; margin:5px 0 5px 4%; }
+#idxD > div > ul > li:nth-child(4n-3) { margin-left:0; }
+#idxD > div > a { display:block; margin:0 auto; width:180px; padding:13px 0; background:#3ba222; font-size:14px; color:#fff; transition:all 1s ease; }
+#idxD > div > a:hover { background:#4b8c3d; }
+#idxD > div > ul > li > img { border:1px solid #eee; }
