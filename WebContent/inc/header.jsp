@@ -1,6 +1,6 @@
 <%@page import="java.util.logging.Logger"%>
 <%@page import="java.util.Iterator"%>
-<%@page import="doome.broccoli.net.bean.Menu"%>
+<%@page import="doome.broccoli.net.menu.bean.Menu"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="doome.broccoli.net.Config"%>
 <%@page import="org.json.simple.JSONArray"%>
@@ -9,7 +9,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 Logger logger = Logger.getLogger("header.jsp");
-
 /*
 메뉴에 들어갈 문구들을 Database 에서 가져온다.
 */

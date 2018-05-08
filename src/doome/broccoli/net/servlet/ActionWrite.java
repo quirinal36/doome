@@ -44,8 +44,11 @@ public class ActionWrite extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)  {
+		response.setCharacterEncoding("UTF-8"); 
+		response.setContentType("text/html; charset=UTF-8");
+		
 		try {
-			request.setCharacterEncoding("utf-8");
+			request.setCharacterEncoding("UTF-8");
 		} catch (UnsupportedEncodingException e1) {
 			e1.printStackTrace();
 		}
@@ -71,7 +74,7 @@ public class ActionWrite extends HttpServlet {
 				response.sendRedirect("/page.jsp?menu_id=12&writeResult="+writeResult);
 			} catch (IOException e) {
 				e.printStackTrace();
-			}	
+			}
 		} else {
 			PrintWriter out;
 			try {
@@ -79,6 +82,7 @@ public class ActionWrite extends HttpServlet {
 				response.setContentType("text/html");
 				out.println("<script type=\"text/javascript\">");
 				out.println("alert('글이 정상적으로 등록되지 않았습니다.');");
+				out.println("history.back();");
 				out.println("</script>");
 			} catch (IOException e) {
 				e.printStackTrace();

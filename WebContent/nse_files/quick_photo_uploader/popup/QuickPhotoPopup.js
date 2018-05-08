@@ -477,7 +477,7 @@
  	 */
  	function callFileUploader (){
  		oFileUploader = new jindo.FileUploader(jindo.$("uploadInputBox"),{
- 			sUrl  : 'http://test.naver.com/Official-trunk/workspace/popup/quick_photo/FileUploader.php',	//샘플 URL입니다.
+ 			sUrl  : '',	//샘플 URL입니다.
  	        sCallback : location.href.replace(/\/[^\/]*$/, '') + '/callback.html',	//업로드 이후에 iframe이 redirect될 콜백페이지의 주소
  	    	sFiletype : "*.jpg;*.png;*.bmp;*.gif",						//허용할 파일의 형식. ex) "*", "*.*", "*.jpg", 구분자(;)	
  	    	sMsgNotAllowedExt : 'JPG, GIF, PNG, BMP 확장자만 가능합니다',	//허용할 파일의 형식이 아닌경우에 띄워주는 경고창의 문구
@@ -492,7 +492,7 @@
 // 	    			sMsgNotAllowedExt (String) 허용되지 않는 파일 형식인 경우 띄워줄 경고메세지
 // 	    		}
 //  				선택된 파일의 형식이 허용되는 경우만 처리 
-console.log(1);
+ 	    		console.log(1);
  	    		if(oCustomEvent.bAllowed === true){
  		    		goStartMode();
  		    	}else{
