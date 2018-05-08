@@ -22,7 +22,10 @@ int totalCount = board.getBoardCount();
 	
 	<script type="text/javascript">
 	$(document).ready(function(){
-		openPage(1);
+		// openPage(1);
+		var url  = '/pages/community/announce_list.jsp';
+		var data = 'pageNo=1' +'&totalCnt=<%=totalCount%>';
+		$("#list").load(url + "?" + data);
 	});
 	function openPage(pageNum){
 		$("#list").fadeOut();
@@ -41,6 +44,5 @@ int totalCount = board.getBoardCount();
 				$("#list").fadeIn();
 			}
 		});
-		// $("#list").load('/pages/community/announce_list.jsp?pageNo='+pageNum +'&totalCnt=<%=totalCount%>');
 	}
 	</script>

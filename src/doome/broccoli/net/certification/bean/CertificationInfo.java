@@ -11,11 +11,15 @@ public class CertificationInfo {
 	public static final String NAME_KEY = "NAME";
 	public static final String IMG_SMALL_KEY = "IMG_SMALL";
 	public static final String IMG_LARGE_KEY = "IMG_LARGE";
+	public static final String TYPE_KEY = "TYPE";
+	public static final String TYPE_NAME_KEY = "TYPE_NAME";
 	
 	int id;
 	String name;
 	String img_small;
 	String img_large;
+	int type;
+	String typeName;
 	
 	public int getId() {
 		return id;
@@ -41,6 +45,18 @@ public class CertificationInfo {
 	public void setImg_large(String img_large) {
 		this.img_large = img_large;
 	}
+	public int getType() {
+		return type;
+	}
+	public void setType(int type) {
+		this.type = type;
+	}
+	public String getTypeName() {
+		return typeName;
+	}
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
 	public static CertificationInfo parseToCertificationInfo(ResultSet rs) throws SQLException {
 		CertificationInfo result = new CertificationInfo();
 		
@@ -48,6 +64,7 @@ public class CertificationInfo {
 		result.setImg_large(rs.getString(IMG_LARGE_KEY));
 		result.setImg_small(rs.getString(IMG_SMALL_KEY));
 		result.setName(rs.getString(NAME_KEY));
+		result.setType(rs.getInt(TYPE_KEY));
 		
 		return result;
 	}

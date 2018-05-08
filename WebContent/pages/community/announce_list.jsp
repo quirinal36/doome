@@ -9,11 +9,9 @@
 Logger logger = Logger.getLogger("announce.jsp");
 
 String pageNo = request.getParameter("pageNo");
-logger.info("pageNo::"+pageNo);
 pageNo = (pageNo == null || pageNo.equals("null")) ? "1" : pageNo;
 
 String totalCntStr = request.getParameter("totalCnt");
-logger.info("pageNo::"+pageNo +"::totalCntStr::"+totalCntStr);
 
 int totalCount = Integer.parseInt(totalCntStr);
 
@@ -29,8 +27,6 @@ if(pageNo !=null && pageNo.length()>0){
 	paging.setPageNo(1);
 }
 paging.setTotalCount(totalCount);
-
-logger.info(paging.toString());
 
 ArrayList<Board> list = board.getBoard(paging);
 Iterator<Board> iter = list.iterator();
@@ -93,7 +89,6 @@ Iterator<Board> iter = list.iterator();
 
 <script type="text/javascript">
 function openLink(board_num){
-	console.log("id::"+board_num);
 	window.location = "<%=request.getContextPath()%>/page.jsp?menu_id=18&board_num="+board_num;
 }
 $("#write_button").click(function(){
