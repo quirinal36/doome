@@ -10,6 +10,13 @@
 #header_wrap > div { width:auto; }
 #header_wrap > div > h1 { float:none; padding-top:15px; font-size:13px; text-align:center; }
 #gnb_wrap { display:none; }
+#gnb_wrap_mobile { display:block; }
+#gnb_menu { position:absolute; top:0; left:0; }
+#gnb_menu > img { padding:19px; cursor:pointer; }
+#gnb_menu_open { position:fixed; top:0; left:0; width:100%; height:100%; background:url(/img/comm/black70.png); z-index:100; }
+#gnb_menu_open > div { width:60%; height:100%; background:#fff; }
+#gnb_menu_open > div > h1 { padding:16px; font-size:15px; font-weight:600; }
+
 
 
 #idxA { height:300px; }

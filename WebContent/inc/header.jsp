@@ -100,6 +100,16 @@ while(iter.hasNext()){
 					%>
 					</ul>
 				</div>
+				<div id="gnb_wrap_mobile">
+					<div id="gnb_menu">
+						<img src="/img/comm/gnb_menu.png" alt="메뉴 열기" />
+					</div>
+					<div id="gnb_menu_open">
+						<div>
+							<h1>두메산골영농조합법인</h1>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
