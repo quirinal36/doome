@@ -1,6 +1,6 @@
+<%@page import="doome.broccoli.net.menu.bean.Menu"%>
 <%@page import="java.util.logging.Logger"%>
 <%@page import="java.util.Iterator"%>
-<%@page import="doome.broccoli.net.menu.bean.Menu"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="doome.broccoli.net.Config"%>
 <%@page import="org.json.simple.JSONArray"%>
