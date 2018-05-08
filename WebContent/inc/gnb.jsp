@@ -38,7 +38,7 @@ while(iter.hasNext()){
 		ArrayList<Menu> children = cur.getChildren();
 		Iterator<Menu> cIter = children.iterator();
 		%>
-			<li><%=cur.getName() %>
+			<li><span><%=cur.getName() %></span>
 				<%if(children.size() > 0){ %>
 				<div>
 					<ul>

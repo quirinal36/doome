@@ -63,16 +63,18 @@ Iterator<Board> iter = list.iterator();
 			<a href="#"><img src="img/board/board-page-first.gif" alt="맨 처음 페이지로 가기"></a>
 			<a href="#"><img src="img/board/board-page-prev.gif" alt="이전 페이지로 가기"></a>
 			<%
-				for(int i=0; i<paging.getFinalPageNo(); i++){
-					
+				for(int i=1; i<=paging.getFinalPageNo(); i++){
+					if(paging.getPageNo() == i){
+						%>
+						<a href="#" class="board-list-page-num board-list-page-num-on"><%=i%></a>
+						<%
+					}else{
+						%>
+						<a href="#" class="board-list-page-num"><%=i%></a>
+						<%
+					}
 				}
 			%>
-			<a href="#" class="board-list-page-num board-list-page-num-on">1</a>
-			<a href="#" class="board-list-page-num">2</a>
-			<a href="#" class="board-list-page-num">3</a>
-			<a href="#" class="board-list-page-num">4</a>
-			<a href="#" class="board-list-page-num">5</a>
-			
 			<a href="#"><img src="img/board//board-page-next.gif" alt="다음 페이지로 가기"></a>
 			<a href="#"><img src="img/board/board-page-last.gif" alt="마지막 페이지로 가기"></span></a>
 		</div>
