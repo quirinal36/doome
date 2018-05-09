@@ -13,13 +13,12 @@ BoardAction board = new BoardAction();
 int totalCount = board.getBoardCount();
 %>
 <!doctype html>
-
+<!--
 <div class="media_list">
 	<ul>
 		<li>
 			<form>
 				<input id="media_input" type="text" placeholder="please input link hear"/>
-				
 				<div id="meta_target">
 					<div style="width: 100px; float: left;">
 						<img id="media_add_icon" style="width: 90px;" />
@@ -43,25 +42,51 @@ int totalCount = board.getBoardCount();
 		</li>
 	</ul>
 </div>
+-->
 <div class="media_list">
 	<ul>
 		<li>
-			<h6>홀로서기 성공한 두메산골 영농조합법인 - 전북도민일보</h6>
-			<span>2018.05.09</span>
-			<p>창사 21년을 맞는 두메산골 영농조합법인(대표 유현주).지난 2011년 사회적 약자를 돕기위해 사회적기업이 돼 2년 전 지원기간을 마치고 이제는 당당히 홀로 섰다.고령자, 장애우, 결혼이주여성, 저소득층 등 취약계층을 포함한 60명이 생업에 종사하며 연일 구슬 땀을 흘리고 있다.현재 매출규모가 수십억원이 되기까지 앞에서 진두지휘한 유현주 대표의 작품이라 해 </p>
-			<div class="bt_wrap"><a href="#" target="_blank" class="bt1 bt1-green">원문보기</a></div>
+			<form id="media_input_wrap">
+				<input id="media_input" type="text" placeholder="복사하신 링크를 이곳에 붙여넣고 잠시만 기다리세요."/>
+				<div class="media_ipt_view">
+					<img src="http://www.domin.co.kr/news/thumbnail/201708/1163859_293079_852_v150.jpg" />
+					<div>
+						<h6><input type="text" value="" placeholder="제목을 입력하세요."></h6>
+						<span><input type="text" value="" placeholder="날짜를 입력하세요."></span>
+						<p><input type="text" value="" placeholder="내용을 입력하세요."></p>
+					</div>
+					<div class="bt_wrap ta-r">
+						<a href="#" target="_blank" class="bt1 bt1-green">저장</a>
+					</div>
+				</div>
+			</form>
 		</li>
 		<li>
-			<h6>보도자료 제목</h6>
-			<span>2018.05.09</span>
-			<p>보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 </p>
-			<div class="bt_wrap"><a href="#" target="_blank" class="bt1 bt1-green">원문보기</a></div>
+			<img src="http://www.domin.co.kr/news/thumbnail/201708/1163859_293079_852_v150.jpg" />
+			<div>
+				<h6>홀로서기 성공한 두메산골 영농조합법인 - 전북도민일보</h6>
+				<span>2018.05.09</span>
+				<p>창사 21년을 맞는 두메산골 영농조합법인(대표 유현주).지난 2011년 사회적 약자를 돕기위해 사회적기업이 돼 2년 전 지원기간을 마치고 이제는 당당히 홀로 섰다.고령자, 장애우, 결혼이주여성, 저소득층 등 취약계층을 포함한 60명이 생업에 종사하며 연일 구슬 땀을 흘리고 있다.현재 매출규모가 수십억원이 되기까지 앞에서 진두지휘한 유현주 대표의 작품이라 해 </p>
+				<div class="bt_wrap"><a href="#" target="_blank" class="bt1 bt1-green">원문보기</a></div>
+			</div>
 		</li>
 		<li>
-			<h6>보도자료 제목</h6>
-			<span>2018.05.09</span>
-			<p>보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 보도자료 내용 </p>
-			<div class="bt_wrap"><a href="#" target="_blank" class="bt1 bt1-green">원문보기</a></div>
+			<img src="http://www.domin.co.kr/news/thumbnail/201708/1163859_293079_852_v150.jpg" />
+			<div>
+				<h6>홀로서기 성공한 두메산골 영농조합법인 - 전북도민일보</h6>
+				<span>2018.05.09</span>
+				<p>창사 21년을 맞는 두메산골 영농조합법인(대표 유현주).지난 2011년 사회적 약자를 돕기위해 사회적기업이 돼 2년 전 지원기간을 마치고 이제는 당당히 홀로 섰다.고령자, 장애우, 결혼이주여성, 저소득층 등 취약계층을 포함한 60명이 생업에 종사하며 연일 구슬 땀을 흘리고 있다.현재 매출규모가 수십억원이 되기까지 앞에서 진두지휘한 유현주 대표의 작품이라 해 </p>
+				<div class="bt_wrap"><a href="#" target="_blank" class="bt1 bt1-green">원문보기</a></div>
+			</div>
+		</li>
+		<li>
+			<img src="http://www.domin.co.kr/news/thumbnail/201708/1163859_293079_852_v150.jpg" />
+			<div>
+				<h6>홀로서기 성공한 두메산골 영농조합법인 - 전북도민일보</h6>
+				<span>2018.05.09</span>
+				<p>창사 21년을 맞는 두메산골 영농조합법인(대표 유현주).지난 2011년 사회적 약자를 돕기위해 사회적기업이 돼 2년 전 지원기간을 마치고 이제는 당당히 홀로 섰다.고령자, 장애우, 결혼이주여성, 저소득층 등 취약계층을 포함한 60명이 생업에 종사하며 연일 구슬 땀을 흘리고 있다.현재 매출규모가 수십억원이 되기까지 앞에서 진두지휘한 유현주 대표의 작품이라 해 </p>
+				<div class="bt_wrap"><a href="#" target="_blank" class="bt1 bt1-green">원문보기</a></div>
+			</div>
 		</li>
 	</ul>
 </div>
