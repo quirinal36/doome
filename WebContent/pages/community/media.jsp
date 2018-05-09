@@ -1,3 +1,4 @@
+<%@page import="doome.broccoli.net.Config"%>
 <%@page import="java.util.logging.Logger"%>
 <%@page import="doome.broccoli.net.board.bean.Paging"%>
 <%@page import="java.util.Iterator"%>
@@ -71,7 +72,7 @@ $(document).ready(function(){
 $("#media_input").on('change',function(){
 	var url = $(this).val();	
 	var urlEncoded = encodeURIComponent(url);
-	var apiKey = '5af2733f59a222f23d352153'; 
+	var apiKey = '<%=Config.OPEN_GRAPH_API%>'; 
 
 	// The entire request is just a simple get request with optional query parameters
 	var requestUrl = "https://opengraph.io/api/1.1/site/" + urlEncoded + '?app_id=' + apiKey;

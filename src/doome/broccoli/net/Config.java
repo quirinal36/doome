@@ -9,4 +9,5 @@ public class Config {
 	public static final String OG_IMG = "http://www.thebroccoli.net/temp/img/comm/og.jpg";
 	public static final String FAVICON = "http://www.thebroccoli.net/temp/img/comm/favicon.ico";
 	public static final String DB_URL = "35.194.236.5";
+	public static final String OPEN_GRAPH_API = "5af2733f59a222f23d352153";
 }
