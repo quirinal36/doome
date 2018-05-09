@@ -48,6 +48,12 @@
 .media_list > ul > li > p { margin-bottom:10px; }
 .media_list > ul > li > .bt_wrap { width:auto; }
 
+.faq_wrap > dl > dt { border:1px solid #ddd; border-top:0; background:url(/img/community/faq_arrow_off.gif) no-repeat 15px 50%; padding:1.2em 1em 1.2em 42px; font-size:14px; font-weight:600; cursor:pointer; }
+.faq_wrap > dl:first-child > dt { border-top:1px solid #ddd; cursor:pointer; }
+.faq_wrap > dl > dd { display:none; padding:1em; background:#f5f5f5; border:1px solid #ddd; border-top:0; }
+.faq_wrap > dl > dt.dl1_dt_on { background-image:url(/img/community/faq_arrow_on.gif); color:#3ba222; }
+
+
 @media screen and ( max-width:999px ) {
 .products_list { width:92%; margin:0 auto; }
 .products_list > ul > li { width:48%; margin:20px 0 0 4%; }
@@ -70,6 +76,9 @@
 .certi_view > ul > li { width:80%; max-width:600px; }
 
 .media_list { width:92%; margin:0 auto; }
+
+.faq_wrap { width:92%; margin:0 auto; }
+.faq_wrap > dl > dt { font-size:13px; }
 }
 @media screen and ( max-width:499px ) {
 .certi_list > ul > li { width:48%; margin-left:4%; }
