@@ -46,19 +46,23 @@
 function showLargeImg(imgTag, imgLarge){
 	var newImg = imgTag.src.substring(0, imgTag.src.lastIndexOf("/")+1) + imgLarge;
 	$(".certi_view > ul > li > img").attr("src", newImg);
-	$(".certi_view").fadeIn();
+	setVisible(true);
 }
 $(function(){
 	$(".certi_view-close").click(function(){
-		$(".certi_view").fadeOut();
+		setVisible(false);
 	});
 });
 $(document).keyup(function(e) {
     if (e.keyCode == 27) { 
-       // <DO YOUR WORK HERE>
-       console.log("esc input");
-   }else {
-	   console.log("another");
+       setVisible(false);
    }
 });
+function setVisible(isVisible){
+	if(isVisible){
+		$(".certi_view").fadeIn();		
+	}else{
+		$(".certi_view").fadeOut();
+	}
+}
 </script>

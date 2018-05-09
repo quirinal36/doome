@@ -41,6 +41,13 @@
 .certi_view > ul > li > span:hover { opacity:0.7; }
 .certi_view > ul > li > img { width:100%; }
 
+.media_list > ul > li { position:relative; margin-top:20px; padding:20px; border:1px solid #e5e5e5; border-bottom:2px solid #e5e5e5; border-radius:5px; }
+.media_list > ul > li:first-child { margin-top:0; }
+.media_list > ul > li > h6 { margin-bottom:12px; font-size:20px; font-weight:600; }
+.media_list > ul > li > span { display:block; margin-bottom:12px; color:#999; }
+.media_list > ul > li > p { margin-bottom:10px; }
+.media_list > ul > li > .bt_wrap { width:auto; }
+
 @media screen and ( max-width:999px ) {
 .products_list { width:92%; margin:0 auto; }
 .products_list > ul > li { width:48%; margin:20px 0 0 4%; }
@@ -61,6 +68,8 @@
 
 .certi_view > ul { top:17%; margin-top:0; }
 .certi_view > ul > li { width:80%; max-width:600px; }
+
+.media_list { width:92%; margin:0 auto; }
 }
 @media screen and ( max-width:499px ) {
 .certi_list > ul > li { width:48%; margin-left:4%; }

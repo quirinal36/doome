@@ -6,7 +6,7 @@
 <%@page import="java.util.logging.Logger"%>
 <%@page import="doome.broccoli.net.board.bean.Paging"%>
 <%
-Logger logger = Logger.getLogger("announce.jsp");
+Logger logger = Logger.getLogger("announce_list.jsp");
 
 String pageNo = request.getParameter("pageNo");
 pageNo = (pageNo == null || pageNo.equals("null")) ? "1" : pageNo;
