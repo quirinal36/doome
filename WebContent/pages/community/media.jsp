@@ -34,9 +34,11 @@ int totalCount = board.getBoardCount();
 					<a href="#" target="_blank" class="bt1 bt1-green">저장</a>
 				</div>
 				
-				<input type="hidden" name="meta_img" 		id="meta_img"/>
-				<input type="hidden" name="meta_title" 		id="meta_title"/>
-				<input type="hidden" name="meta_content" 	id="meta_content"/>
+				<input type="hidden" name="meta_img" 			id="meta_img"/>
+				<input type="hidden" name="meta_title" 			id="meta_title"/>
+				<input type="hidden" name="meta_content" 		id="meta_content"/>
+				<input type="hidden" name="meta_published_time" id="meta_published_time"/>
+				<input type="hidden" name="meta_url"			id="meta_url"/>
 			</form>
 		</li>
 	</ul>
@@ -89,6 +91,8 @@ $("#media_input").on('change',function(){
 	    $("#meta_img").val(json.hybridGraph.image);
 	    $("#meta_title").val(json.hybridGraph.title);
 	    $("#meta_content").val(json.hybridGraph.description);
+	    $("#meta_published_time").val(json.hybridGraph.articlePublishedTime);
+	    $("#meta_url").val(json.hybridGraph.url);
 	});
 });
 function openPage(pageNum){
