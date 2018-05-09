@@ -22,17 +22,18 @@ int totalCount = board.getBoardCount();
 				
 				<div id="meta_target">
 					<div style="width: 100px; float: left;">
-						<img id="icon" style="width: 90px;" />
+						<img id="media_add_icon" style="width: 90px;" />
 					</div>
 					<div>
-						<h2 id="title"></h2>
-						<span id="description"></span>
+						<h2 id="media_add_title"></h2>
+						<p id="media_add_description"></p>
 					</div>
 				</div>
 				
-				<div class="bt_wrap">
+				<div class="bt_wrap ta-r">
 					<a href="#" target="_blank" class="bt1 bt1-green">저장</a>
 				</div>
+				
 				<input type="hidden" name="meta_img" 		id="meta_img"/>
 				<input type="hidden" name="meta_title" 		id="meta_title"/>
 				<input type="hidden" name="meta_content" 	id="meta_content"/>
@@ -81,9 +82,9 @@ $("#media_input").on('change',function(){
 	    // Throw the object in the console to see what it looks like!
 	    console.log('json', json);
 	    // Update the HTML elements!
-	    $('#title').text(json.hybridGraph.title);
-	    $('#description').text(json.hybridGraph.description);
-	    $('#icon').attr('src', json.hybridGraph.image);
+	    $('#media_add_title').text(json.hybridGraph.title);
+	    $('#media_add_description').text(json.hybridGraph.description);
+	    $('#media_add_icon').attr('src', json.hybridGraph.image);
 	    
 	    $("#meta_img").val(json.hybridGraph.image);
 	    $("#meta_title").val(json.hybridGraph.title);
