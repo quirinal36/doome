@@ -13,6 +13,7 @@ public class CertificationInfo {
 	public static final String IMG_LARGE_KEY = "IMG_LARGE";
 	public static final String TYPE_KEY = "TYPE";
 	public static final String TYPE_NAME_KEY = "TYPE_NAME";
+	public static final String CERT_DESC_KEY = "CERT_DESC";
 	
 	int id;
 	String name;
@@ -20,6 +21,7 @@ public class CertificationInfo {
 	String img_large;
 	int type;
 	String typeName;
+	String certDesc;
 	
 	public int getId() {
 		return id;
@@ -56,6 +58,12 @@ public class CertificationInfo {
 	}
 	public void setTypeName(String typeName) {
 		this.typeName = typeName;
+	}
+	public String getCertDesc() {
+		return certDesc;
+	}
+	public void setCertDesc(String certDesc) {
+		this.certDesc = certDesc;
 	}
 	public static CertificationInfo parseToCertificationInfo(ResultSet rs) throws SQLException {
 		CertificationInfo result = new CertificationInfo();

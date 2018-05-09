@@ -11,7 +11,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 Logger logger = Logger.getLogger("header.jsp");
-
 Random random = new Random();
 int randomNum = random.nextInt(4)+1;
 int menuLinkId= 7 + randomNum;
