@@ -13,7 +13,7 @@ a { text-decoration:none; color:inherit; }
 
 /* bt */
 .bt_wrap { padding:10px 0 0 0; }
-.bt1 { display:inline-block; width:90px; padding:7px 0; border:0; cursor:pointer; color:#fff; font-size:12px; transition:all .5s ease; }
+.bt1 { display:inline-block; min-width:70px; padding:7px; border:0; cursor:pointer; color:#fff; font-size:12px; text-align:center;  transition:all .5s ease; }
 .bt1-black { background-color:#999; }
 .bt1-black:hover { background-color:#666; }
 .bt1-red { background-color:#ef6262; }
