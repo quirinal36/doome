@@ -7,38 +7,32 @@
 FAQAction action = new FAQAction();
 ArrayList<Faq> list = action.getBoard();
 Iterator<Faq> iter = list.iterator();
-boolean isFirst = true;
 %>
-<form name="faq_add_form" method="post" onsubmit="return isValidForm(this);">
-	<div class="faq_wrap">
-	    <dl>
-	    	<dt>
-	    		<input type="text" placeholder="제목" name="faq_input_title">
-	    	</dt>
-	    	<dd>
-	    		<input type="text" placeholder="내용" name="faq_input_content">
-	    		<input type="submit" value="저장" class="bt1 bt1-blue">
-	    	</dd>
-	    </dl>
-	    <%while(iter.hasNext()) {
-	    	Faq item = iter.next();
-	    	if(isFirst){
-		    %>
+<div id="faq_wrap">
+	<form name="faq_add_form" method="post" onsubmit="return isValidForm(this);">
+		<div id="faq_add">
+		    <dl>
+		    	<dt>
+		    		<input type="text" placeholder="제목" name="faq_input_title">
+		    	</dt>
+		    	<dd>
+		    		<input type="text" placeholder="내용" name="faq_input_content">
+		    		<input type="submit" value="저장" class="bt1 bt1-blue">
+		    	</dd>
+		    </dl>
+		</div>
+		<div class="faq_list">
+		    <%while(iter.hasNext()) {
+		    	Faq item = iter.next();
+			    %>
 			    <dl>
 			        <dt><%=item.getTitle() %></dt>
 			        <dd><%=item.getContent() %></dd>
 			    </dl>
-		    <%}else{ %>
-			    <dl>
-			        <dt><%=item.getTitle() %></dt>
-			        <dd><%=item.getContent() %></dd>
-			    </dl>
-	    	<%
-	    	}
-	    	isFirst = false;
-	    } %>
-	</div>
-</form>
+		    <%} %>
+		</div>
+	</form>
+</div>
 <script>
 $(function(){
 	// FAQ
@@ -47,7 +41,10 @@ $(function(){
 		$(this).find('~dd').stop().slideToggle();
 	});
 });
-
+$(document).ready(function(){
+	$("#faq_add dt, .faq_list > dl:first-child dt").addClass("dl1_dt_on");
+	$("#faq_add dd, .faq_list > dl:first-child dd").show();
+});
 function isValidForm(clickedObj){
 	if(confirm("저장하시겠습니까?")){
 		clickedObj.action = "/ActionFaq";
