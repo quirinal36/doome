@@ -54,7 +54,6 @@
 .certi_list { width:92%; margin:0 auto 20px auto; }
 .certi_list > h3 { margin-bottom:10px; font-size:16px; }
 .certi_list > p { text-align:justify; font-size:11px; }
-.certi_list > ul > li { text-align:left; }
 .certi_list > ul > li > span { font-size:11px; word-break:keep-all; }
 .certi_list > ul > li { width:22%; margin-left:4%; }
 .certi_list > ul > li:nth-child(6n-5) { margin-left:4%; }
