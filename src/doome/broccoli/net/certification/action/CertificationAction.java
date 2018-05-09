@@ -9,12 +9,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import doome.broccoli.net.certification.bean.CertificationInfo;
+import doome.broccoli.net.certification.bean.CertificationType;
 import doome.broccoli.net.db.DBconn;
 
 public class CertificationAction {
 
-	public HashMap<Integer, String> getCertificationTypes(){
-		HashMap<Integer, String> result = new HashMap<>();
+	public HashMap<Integer, CertificationType> getCertificationTypes(){
+		HashMap<Integer, CertificationType> result = new HashMap<>();
 		DBconn db = new DBconn();
 		Connection conn = null;
 		
@@ -23,7 +24,8 @@ public class CertificationAction {
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM CertificationType");
 			while(rs.next()) {
-				result.put(rs.getInt("ID"), rs.getString("name"));
+				CertificationType type = CertificationType.parseToCertificationInfo(rs);
+				result.put(rs.getInt("ID"), type);
 			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();

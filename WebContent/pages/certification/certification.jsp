@@ -1,3 +1,4 @@
+<%@page import="doome.broccoli.net.certification.bean.CertificationType"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="doome.broccoli.net.certification.bean.CertificationInfo"%>
@@ -9,16 +10,16 @@
 	Logger logger = Logger.getLogger("certification.jsp");
 	CertificationAction action = new CertificationAction();
 	ArrayList<CertificationInfo> list = action.getCertifications();
-	HashMap<Integer, String> typesMap = action.getCertificationTypes();
+	HashMap<Integer, CertificationType> typesMap = action.getCertificationTypes();
 %>
 <%
 	for(int key : typesMap.keySet()){
-		String typeName = typesMap.get(key);
+		CertificationType type = typesMap.get(key);
 		Iterator<CertificationInfo> iter = list.iterator();
 	%>
 	<div class="certi_list">
-		<h3><%= typeName%></h3>
-		<p>두메산골영농조합법인은 정책수행, 일자리 창출지원 등  다양한 노력을 통해 국가경제 발전에 기여하고 있습니다. 두메산골영농조합법인은 정책수행, 일자리 창출지원 등  다양한 노력을 통해 국가경제 발전에 기여하고 있습니다. 두메산골영농조합법인은 정책수행, 일자리 창출지원 등  다양한 노력을 통해 국가경제 발전에 기여하고 있습니다. 두메산골영농조합법인은 정책수행, 일자리 창출지원 등  다양한 노력을 통해 국가경제 발전에 기여하고 있습니다. </p>
+		<h3><%= type.getName()%></h3>
+		<p><%= type.getCertDesc() %></p>
 		<ul>
 		<%while(iter.hasNext()){
 			CertificationInfo info = iter.next();

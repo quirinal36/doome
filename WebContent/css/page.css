@@ -39,7 +39,7 @@
 .certi_view > ul > li { position:relative; width:600px; margin:0 auto; }
 .certi_view > ul > li > span { position:absolute; top:0; right:0; width:41px; height:41px; cursor:pointer; opacity:0.5; transition:all .5s ease; }
 .certi_view > ul > li > span:hover { opacity:0.7; }
-
+.certi_view > ul > li > img { width:100%; }
 
 @media screen and ( max-width:999px ) {
 .products_list { width:92%; margin:0 auto; }
@@ -50,4 +50,21 @@
 .products_list > ul > li > div > h3 { font-size:14px; }
 .products_list > ul > li > div > p { padding-bottom:10px; margin-bottom:6px; font-size:11px; }
 .products_list > ul > li > div > span { font-size:11px; }
+
+.certi_list { width:92%; margin:0 auto 20px auto; }
+.certi_list > h3 { margin-bottom:10px; font-size:16px; }
+.certi_list > p { text-align:justify; font-size:11px; }
+.certi_list > ul > li { text-align:left; }
+.certi_list > ul > li > span { font-size:11px; word-break:keep-all; }
+.certi_list > ul > li { width:22%; margin-left:4%; }
+.certi_list > ul > li:nth-child(6n-5) { margin-left:4%; }
+.certi_list > ul > li:nth-child(4n-3) { margin-left:0%; }
+
+.certi_view > ul { top:10%; margin-top:0; }
+.certi_view > ul > li { width:70%; max-width:600px; }
+}
+@media screen and ( max-width:499px ) {
+.certi_list > ul > li { width:48%; margin-left:4%; }
+.certi_list > ul > li:nth-child(4n-1) { margin-left:4%; }
+.certi_list > ul > li:nth-child(2n-1) { margin-left:0%; }
 }
