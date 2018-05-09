@@ -49,8 +49,8 @@ a { text-decoration:none; color:inherit; }
 #gnb_wrap { float:right; }
 #gnb_wrap > ul { font-size:0; }
 #gnb_wrap > ul > li { display:inline-block; width:120px; vertical-align:top; text-align:center; }
-#gnb_wrap > ul > li > span { display:block; padding-top:22px; height:39px; font-size:14px; }
-#gnb_wrap > ul > li:hover > a { font-weight:600; color:#3ba222; }
+#gnb_wrap > ul > li > span { display:block; padding-top:22px; height:39px; font-size:14px; cursor:default; }
+#gnb_wrap > ul > li:hover > span { font-weight:600; color:#3ba222; }
 
 /*
 #gnb_wrap > ul > li > ul { display:none; position:absolute; top:52px; left:-20px; width:120px; padding-top:9px; background:url(/img/comm/gnb_arrow.png) no-repeat 50% 0; z-index:1; }
