@@ -10,14 +10,14 @@ Iterator<Faq> iter = list.iterator();
 %>
 <div id="faq_wrap">
 	<form name="faq_add_form" method="post" onsubmit="return isValidForm(this);">
-		<div id="faq_add">
+		<div class="faq_add">
 		    <dl>
 		    	<dt>
-		    		<input type="text" placeholder="제목" name="faq_input_title">
+		    		<input type="text" placeholder="제목을 입력하세요." name="faq_input_title" class="ipt2">
 		    	</dt>
 		    	<dd>
-		    		<input type="text" placeholder="내용" name="faq_input_content">
-		    		<input type="submit" value="저장" class="bt1 bt1-blue">
+		    		<input type="text" placeholder="내용을 입력하세요." name="faq_input_content" class="ipt2">
+		    		<input type="submit" value="저장" class="bt1 bt1-green">
 		    	</dd>
 		    </dl>
 		</div>
@@ -36,7 +36,7 @@ Iterator<Faq> iter = list.iterator();
 <script>
 $(function(){
 	// FAQ
-	$(".faq_wrap dt").click(function(){
+	$(".faq_list dt").click(function(){
 		$(this).toggleClass("dl1_dt_on");
 		$(this).find('~dd').stop().slideToggle();
 	});
