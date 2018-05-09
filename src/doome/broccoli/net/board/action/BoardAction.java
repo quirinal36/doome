@@ -96,6 +96,8 @@ public class BoardAction {
 		return list;
 	}
 	public boolean writeBoard(Board input) {
+		boolean result = false;
+		
 		DBconn db = new DBconn();
 		Connection conn = null;
 		try {
@@ -112,12 +114,8 @@ public class BoardAction {
 			stmt.setString(4, input.getAttach());
 			stmt.setInt(5, input.getUser());
 
-			//		ResultSet rs;
-			int result = stmt.executeUpdate();
-			conn.close();
-
-			if(result > 0) {
-				return true;
+			if(stmt.executeUpdate() > 0) {
+				result = true;
 			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
@@ -132,6 +130,6 @@ public class BoardAction {
 				}
 			}
 		}
-		return false;
+		return result;
 	}
 }
