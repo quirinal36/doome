@@ -1,10 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-
-
-
-
-
 <div id="map"></div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d30331ef7fcd809654f0a1bf994b5284"></script>
@@ -29,6 +24,11 @@ var marker = new daum.maps.Marker({
 // 마커가 지도 위에 표시되도록 설정합니다
 marker.setMap(map);  
 </script>
+
+
+
+
+
 
 <div class="location_box1">
 	<ul>
