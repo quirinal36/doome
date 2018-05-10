@@ -3,26 +3,26 @@
 <div class="products_list">
 	<ul>
 		<li>
-			<img src="/img/products/duck/2001.jpg" />
+			<img src="/img/products/duck/2001.jpg" alt="생오리 통"/>
 			<div>
 				<h3>생오리(통)</h3>
-				<p>보양음식에 훌륭한 오리</p>
+				<p>남이 먹으면 뺏어먹으라는 말까지 있을 정도로 우리 몸에 정말 좋은 생오리</p>
 				<span>100g, 200g</span>
 			</div>
 		</li>
 		<li>
-			<img src="/img/products/duck/2002.jpg" />
+			<img src="/img/products/duck/2002.jpg" alt="생오리 절단"/>
 			<div>
 				<h3>생오리(절단)</h3>
-				<p>체내에 쌓인 독소를 없애주는 훌륭한 오리</p>
+				<p>성인병 예방과 콜레스테롤 수치를 낮춰주는 오리를 편하게 부위별로 즐기실 수 있는 생오리절단</p>
 				<span>100g, 200g</span>
 			</div>
 		</li>
 		<li>
-			<img src="/img/products/duck/2003.jpg" />
+			<img src="/img/products/duck/2003.jpg" alt="오리정육슬라이스"/>
 			<div>
 				<h3>오리정육슬라이스</h3>
-				<p>여성 피부미용에 탁월한 오리</p>
+				<p>다른 육류와 달리 알카리성을 띠고 있어 여성 피부미용에도 탁월한 오리</p>
 				<span>100g, 200g</span>
 			</div>
 		</li>
