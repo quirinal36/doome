@@ -24,7 +24,7 @@ int totalCount = board.getBoardCount();
 	$(document).ready(function(){
 		// openPage(1);
 		var url  = '/pages/community/announce_list.jsp';
-		var data = 'pageNo=1' +'&totalCnt=<%=totalCount%>';
+		var data = 'pageNo=1' +'&totalCnt=<%=totalCount%>';		
 		$("#list").load(url + "?" + data);
 	});
 	function openPage(pageNum){
