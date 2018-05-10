@@ -42,6 +42,8 @@
 #footer_wrap > div > p { margin-left:10px; }
 
 #idxA { height:300px; }
+#idxA > div { width:auto; text-align:center; }
+#idxA > div > img { height:150px; margin-top:75px; }
 #idxB > div { width:90%; padding:30px 0; }
 #idxB > div > h4 { margin-bottom:30px; word-break:keep-all; font-size:14px; }
 #idxB > div > ul > li > p { display:none; }
