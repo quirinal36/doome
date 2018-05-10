@@ -3,6 +3,7 @@ package doome.broccoli.net.board.action.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +20,8 @@ import doome.broccoli.net.board.bean.Media;
 @WebServlet("/ActionMedia")
 public class ActionMedia extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    Logger logger = Logger.getLogger(ActionMedia.class.getSimpleName());
+    
     /**
      * @see HttpServlet#HttpServlet()
      */

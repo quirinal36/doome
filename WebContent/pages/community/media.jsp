@@ -55,7 +55,7 @@ Iterator<Media> iter = list.iterator();
 			<img src="<%=item.getImage() %>" />
 			<div>
 				<h6><%=item.getTitle() %></h6>
-				<span><%=item.getDate() %></span>
+				<span><%=item.getDate()%></span>
 				<p>
 					<%=item.getContent() %>
 				</p>
@@ -68,7 +68,7 @@ Iterator<Media> iter = list.iterator();
 </div>
 <script type="text/javascript">
 
-$("#media_input").on('change',function(){
+$("#media_input").on('input',function(){
 	var url = $(this).val();	
 	var urlEncoded = encodeURIComponent(url);
 	var apiKey = '<%=Config.OPEN_GRAPH_API%>'; 
@@ -79,15 +79,18 @@ $("#media_input").on('change',function(){
 	$.getJSON(requestUrl, function( json ) {
 	    // Throw the object in the console to see what it looks like!
 	    // Update the HTML elements!
+	    var iso8601date = new Date(json.hybridGraph.articlePublishedTime);
+	    var simpleDate = iso8601date.getFullYear() + "-" + (iso8601date.getMonth()+1) + "-" + iso8601date.getDate();
+	    
 	    $('#media_add_title').val(json.hybridGraph.title);
 	    $('#media_add_description').val(json.hybridGraph.description);
 	    $('#media_add_icon').attr('src', json.hybridGraph.image);
-	    $('#media_add_date').val(json.hybridGraph.articlePublishedTime);
+	    $('#media_add_date').val(simpleDate);
 	    
 	    $("#meta_img").val(json.hybridGraph.image);
 	    $("#meta_title").val(json.hybridGraph.title);
 	    $("#meta_content").val(json.hybridGraph.description);
-	    $("#meta_published_time").val(json.hybridGraph.articlePublishedTime);
+	    $("#meta_published_time").val(simpleDate);
 	    $("#meta_url").val(json.hybridGraph.url);
 	});
 });
