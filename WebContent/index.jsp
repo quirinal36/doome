@@ -59,6 +59,7 @@
 						<li><img src="img/index/idxD5.jpg" alt=""></li>
 						<li><img src="img/index/idxD6.jpg" alt=""></li>
 						<li><img src="img/index/idxD7.jpg" alt=""></li>
+						<li><img src="img/index/idxD8.jpg" alt=""></li>
 					</ul>
 		            <a href="#">납품문의</a>
 				</div>
