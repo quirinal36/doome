@@ -52,7 +52,7 @@ input[type=button], input[type=submit] { border-radius:0; -webkit-border-radius:
 #gnb_wrap > ul > li { display:inline-block; width:120px; vertical-align:top; text-align:center; }
 #gnb_wrap > ul > li > span { display:block; padding-top:22px; height:39px; font-size:14px; cursor:default; }
 #gnb_wrap > ul > li:hover > span { font-weight:600; color:#3ba222; }
-#gnb_wrap > ul > li > div { display:none; position:absolute; top:60px; left:0; width:100%; padding:16px 0; background:url(/img/comm/gnb_bg.png); font-size:12px; text-align:right; }
+#gnb_wrap > ul > li > div { display:none; position:absolute; top:60px; left:0; width:100%; padding:16px 0; background:url(/img/comm/gnb_bg.png); font-size:12px; text-align:right; z-index:1; }
 #gnb_wrap > ul > li:hover > div { display:block; }
 #gnb_wrap > ul > li > div > ul { width:1000px; margin:0 auto; text-align:right; }
 #gnb_wrap > ul > li > div > ul > li { display:inline; margin-left:40px; }
