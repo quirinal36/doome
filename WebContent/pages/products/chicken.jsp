@@ -100,11 +100,3 @@
 		</li>
 	</ul>
 </div>
-
-<div class="bt_wrap ta-c">
-	<a href="#" class="bt1 bt1-green">주문하기</a>
-</div>
-
-
-
-

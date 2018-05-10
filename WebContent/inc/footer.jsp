@@ -15,3 +15,7 @@
 		<p>ⓒ 2018. 두메산골영농조합법인. All rights reserved.</p>
 	</div>
 </div>
+
+<div id="banner_kakaotalk">
+	<a href="https://pf.kakao.com/_VskFC" target="_blank">카톡주문</a>
+</div>
