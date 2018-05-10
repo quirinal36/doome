@@ -19,7 +19,7 @@
 			</div>
 			<div id="idxB">
 				<div>
-					<h4>두메산골은 전라북도의 자랑스러운 브랜드입니다.</h4>
+					<h4>"두메산골은 대한민국의 자랑스러운 브랜드입니다."</h4>
 					<ul>
 						<li>
 							<img src="img/index/idxB1.jpg" alt="사회적기업">
