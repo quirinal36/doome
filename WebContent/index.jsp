@@ -52,14 +52,14 @@
 					<h4>PARTNERSHIP</h4>
 		            <p>두메산골영농조합법인의 우수품질 닭고기와 오리고기는 전라북도 완주군에 위치하고 있는 현대자동차 공장, KCC공장, 전북대학교 생활관, 전주동물원에 납품되고 있으며, 식재료 검수가 까다롭기도 유명한 전주시와 완주군의 초,중,고등학교에 우리 소중한 아이들이 먹을 건강한 제품이 납품되고 있습니다. 이마트,농협하나로마트, 로컬푸드등에서 두메산골영농조합법인의 제품을 만나실 수 있습니다.</p>
 					<ul>
-						<li><img src="img/index/idxD1.jpg" alt=""></li>
-						<li><img src="img/index/idxD2.jpg" alt=""></li>
-						<li><img src="img/index/idxD3.jpg" alt=""></li>
-						<li><img src="img/index/idxD4.jpg" alt=""></li>
-						<li><img src="img/index/idxD5.jpg" alt=""></li>
-						<li><img src="img/index/idxD6.jpg" alt=""></li>
-						<li><img src="img/index/idxD7.jpg" alt=""></li>
-						<li><img src="img/index/idxD8.jpg" alt=""></li>
+						<li><img src="img/index/idxD1.jpg" alt="현대자동차"></li>
+						<li><img src="img/index/idxD2.jpg" alt="KCC"></li>
+						<li><img src="img/index/idxD3.jpg" alt="Emart"></li>
+						<li><img src="img/index/idxD4.jpg" alt="농협하나로마트"></li>
+						<li><img src="img/index/idxD5.jpg" alt="로컬푸드"></li>
+						<li><img src="img/index/idxD6.jpg" alt="완주군"></li>
+						<li><img src="img/index/idxD7.jpg" alt="전주시"></li>
+						<li><img src="img/index/idxD8.jpg" alt="전북대학교"></li>
 					</ul>
 		            <a href="#">납품문의</a>
 				</div>
