@@ -17,5 +17,5 @@
 </div>
 
 <div id="banner_kakaotalk">
-	<a href="https://pf.kakao.com/_VskFC" target="_blank">카톡주문</a>
+	<a href="https://pf.kakao.com/_VskFC" target="_blank"><img src="/img/comm/fixed-banner-kakaoicon.gif" alt="카톡주문"></a>
 </div>
