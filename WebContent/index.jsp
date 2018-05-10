@@ -11,7 +11,12 @@
 	
 	<div id="idx_container_wrap">
 		<div id="idx_container">
-			<div id="idxA"><div><img src="/img/index/idxA_text.png" /></div></div>
+			<div id="idxA">
+				<video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+					<source src="http://www.thebroccoli.net/img/index/mov01.mp4">
+				</video>
+				<div><img src="/img/index/idxA_text.png" /></div>
+			</div>
 			<div id="idxB">
 				<div>
 					<h4>두메산골은 전라북도의 자랑스러운 브랜드입니다.</h4>
