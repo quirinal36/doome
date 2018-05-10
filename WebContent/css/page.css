@@ -52,7 +52,7 @@
 .media_list > ul > li > div > .bt_wrap { width:auto; }
 
 #media_input { width:100%; padding:7px; margin-bottom:20px; box-sizing:border-box; background:#efe23b; }
-.media_ipt_view input { padding:7px; background:#f5f5f5; box-sizing:border-box; }
+.media_ipt_view input[type=text] { padding:7px; background:#f5f5f5; box-sizing:border-box; }
 .media_ipt_view > img { float:left; width:100px; height:100px; }
 .media_ipt_view > div { padding-left:130px; }
 .media_ipt_view > div > h6 { margin-bottom:12px; font-size:20px; font-weight:600; }
