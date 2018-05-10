@@ -28,8 +28,6 @@ marker.setMap(map);
 
 
 
-
-
 <div class="location_box1">
 	<ul>
 		<li><strong>주소</strong>. [55071]전라북도 전주시 완산구 능안자구길 53</li>
