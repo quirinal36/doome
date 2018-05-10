@@ -1,5 +1,5 @@
-#idxA { position:relative; width:100%; background-size:cover; }
-#idxA > video { width:100%; }
+#idxA { position:relative; width:100%; background-size:cover; background-color:#000; font-size:0; }
+#idxA > video { width:100%; opacity:0.8; }
 #idxA > div { position:absolute; top:50%; left:0; width:100%; text-align:center; }
 #idxA > div > img { margin-top:-130px; }
 #idxB > div { width:1000px; margin:0 auto; padding:80px 0; text-align:center; }
