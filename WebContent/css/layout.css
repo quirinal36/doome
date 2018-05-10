@@ -5,7 +5,7 @@ html { height:100%; }
 body { position:relative; width:100%; height:100%; font-size:12px; line-height:normal; }
 ul, li { list-style:none; }
 a { text-decoration:none; color:inherit; }
-
+input { -webkit-appearance:none; }
 .ta-l { text-align:left; }
 .ta-r { text-align:right; }
 .ta-c { text-align:center; }
