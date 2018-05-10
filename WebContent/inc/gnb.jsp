@@ -1,7 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="org.json.simple.JSONObject"%>
 <%@page import="doome.broccoli.net.db.DBconn"%>
 <%@page import="java.util.logging.Logger"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="doome.broccoli.net.menu.bean.Menu"%>
 <%@page import="java.util.Iterator"%>
@@ -45,7 +45,7 @@ while(iter.hasNext()){
 					<%} %><%
 							while(cIter.hasNext()){
 								Menu subMenu = cIter.next();
-								%><li><a href="<%=request.getContextPath() %>/page.jsp?link=<%=subMenu.getLink()%>&menu_id=<%=subMenu.getId()%>"><%=subMenu.getName()%></a></li>
+								%><li><a href="<%=request.getContextPath() %>/page.jsp?menu_id=<%=subMenu.getId()%>"><%=subMenu.getName()%></a></li>
 								<%
 							}
 						%><%if(children.size() > 0){ %>

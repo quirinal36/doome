@@ -10,16 +10,16 @@ import doome.broccoli.net.board.bean.Board;
 import doome.broccoli.net.board.bean.Paging;
 import doome.broccoli.net.db.DBconn;
 
-public class BoardAction {
-	
-	public Board getBoard(int id) {
+public class QuestionAction {
+
+	public Board getQuestion(int id) {
 		Board result = new Board();
 		DBconn db = new DBconn();
 		Connection conn = null;
 		
 		try {
 			conn = db.getConnection();
-			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM board WHERE id=?");
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM question WHERE id=?");
 			stmt.setInt(1, id);
 			ResultSet rs = stmt.executeQuery();
 			while(rs.next()) {
@@ -39,7 +39,7 @@ public class BoardAction {
 		
 		return result;
 	}
-	public int getBoardCount() {
+	public int getQuestionCount() {
 		int result = 0;
 		
 		DBconn db = new DBconn();
@@ -47,7 +47,7 @@ public class BoardAction {
 		
 		try {
 			conn = db.getConnection();
-			PreparedStatement stmt = conn.prepareStatement("SELECT count(*) FROM board");
+			PreparedStatement stmt = conn.prepareStatement("SELECT count(*) FROM question");
 			ResultSet rs = stmt.executeQuery();
 			while(rs.next()) {
 				result = rs.getInt(1);
@@ -65,13 +65,13 @@ public class BoardAction {
 		}
 		return result;
 	}
-	public ArrayList<Board> getBoard(Paging paging) {
+	public ArrayList<Board> getQuestion(Paging paging) {
 		ArrayList<Board> list = new ArrayList<>();
 		DBconn db = new DBconn();
 		Connection conn = null;
 		try {
 			conn = db.getConnection();
-			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM board WHERE 1=1 order by id desc limit ?, ?");
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM question WHERE 1=1 order by id desc limit ?, ?");
 			stmt.setInt(1, paging.getFrom());
 			stmt.setInt(2, paging.getTo());
 			
@@ -104,7 +104,7 @@ public class BoardAction {
 			conn = db.getConnection();
 		
 			StringBuilder query = new StringBuilder();
-			query.append("Insert into board (title, content, write_date, attach, user)")
+			query.append("Insert into question (title, content, write_date, attach, user)")
 			.append("values (?,?,?,?,?)");
 
 			PreparedStatement stmt = conn.prepareStatement(query.toString());

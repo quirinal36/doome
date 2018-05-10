@@ -193,9 +193,13 @@ public class Paging {
         this.setStartPageNo(startPage); // 시작 페이지 (페이징 네비 기준)
         this.setEndPageNo(endPage); // 끝 페이지 (페이징 네비 기준)
 
-        this.setFrom((this.getPageNo()-1) * this.getPageSize() + 1);
+        this.setFrom((this.getPageNo()-1) * this.getPageSize());
         if(isNowFinal) {
-        	this.setTo(this.getFrom() + (this.getTotalCount() - ((this.getPageSize()-1) * this.getPageNo())));
+        	if(totalCount < 10) {
+        		this.setTo(totalCount);
+        	}else {
+        		this.setTo(this.getFrom() + (this.getTotalCount() - ((this.getPageSize()-1) * this.getPageNo())));
+        	}
         }else {
         	this.setTo(this.getFrom() + this.getPageSize());
         }

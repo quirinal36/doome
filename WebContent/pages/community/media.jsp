@@ -1,3 +1,5 @@
+<%@page import="doome.broccoli.net.board.bean.Media"%>
+<%@page import="doome.broccoli.net.board.action.MediaAction"%>
 <%@page import="doome.broccoli.net.Config"%>
 <%@page import="java.util.logging.Logger"%>
 <%@page import="doome.broccoli.net.board.bean.Paging"%>
@@ -9,28 +11,29 @@
 <%
 Logger logger = Logger.getLogger("announce.jsp");
 
-BoardAction board = new BoardAction();
-int totalCount = board.getBoardCount();
+MediaAction action = new MediaAction();
+
+ArrayList<Media> list = action.getMedia();
+Iterator<Media> iter = list.iterator();
+
 %>
 <!doctype html>
-<!--
+
 <div class="media_list">
 	<ul>
 		<li>
-			<form>
-				<input id="media_input" type="text" placeholder="please input link hear"/>
-				<div id="meta_target">
-					<div style="width: 100px; float: left;">
-						<img id="media_add_icon" style="width: 90px;" />
-					</div>
+			<form name="media_add_form" method="post" onsubmit="return isValidForm(this);">
+				<input id="media_input" type="text" placeholder="복사하신 링크를 이곳에 붙여넣고 잠시만 기다리세요."/>
+				<div class="media_ipt_view">
+					<img src="" id="media_add_icon"/>
 					<div>
-						<h2 id="media_add_title"></h2>
-						<p id="media_add_description"></p>
+						<h6><input id="media_add_title" 		name="media_add_title" type="text" value="" placeholder="제목을 입력하세요."></h6>
+						<span><input id="media_add_date" 		name="media_add_date" type="text" value="" placeholder="날짜를 입력하세요."></span>
+						<p><input id="media_add_description" 	name="media_add_description" type="text" value="" placeholder="내용을 입력하세요."></p>
 					</div>
-				</div>
-				
-				<div class="bt_wrap ta-r">
-					<a href="#" target="_blank" class="bt1 bt1-green">저장</a>
+					<div class="bt_wrap ta-r">
+						<input type="submit" class="bt1 bt1-green" value="저장">
+					</div>
 				</div>
 				
 				<input type="hidden" name="meta_img" 			id="meta_img"/>
@@ -42,62 +45,30 @@ int totalCount = board.getBoardCount();
 		</li>
 	</ul>
 </div>
--->
+
 <div class="media_list">
 	<ul>
+		<%while(iter.hasNext()){
+			Media item = iter.next();
+		%>
 		<li>
-			<form id="media_input_wrap">
-				<input id="media_input" type="text" placeholder="복사하신 링크를 이곳에 붙여넣고 잠시만 기다리세요."/>
-				<div class="media_ipt_view">
-					<img src="http://www.domin.co.kr/news/thumbnail/201708/1163859_293079_852_v150.jpg" />
-					<div>
-						<h6><input type="text" value="" placeholder="제목을 입력하세요."></h6>
-						<span><input type="text" value="" placeholder="날짜를 입력하세요."></span>
-						<p><input type="text" value="" placeholder="내용을 입력하세요."></p>
-					</div>
-					<div class="bt_wrap ta-r">
-						<a href="#" target="_blank" class="bt1 bt1-green">저장</a>
-					</div>
-				</div>
-			</form>
-		</li>
-		<li>
-			<img src="http://www.domin.co.kr/news/thumbnail/201708/1163859_293079_852_v150.jpg" />
+			<img src="<%=item.getImage() %>" />
 			<div>
-				<h6>홀로서기 성공한 두메산골 영농조합법인 - 전북도민일보</h6>
-				<span>2018.05.09</span>
-				<p>창사 21년을 맞는 두메산골 영농조합법인(대표 유현주).지난 2011년 사회적 약자를 돕기위해 사회적기업이 돼 2년 전 지원기간을 마치고 이제는 당당히 홀로 섰다.고령자, 장애우, 결혼이주여성, 저소득층 등 취약계층을 포함한 60명이 생업에 종사하며 연일 구슬 땀을 흘리고 있다.현재 매출규모가 수십억원이 되기까지 앞에서 진두지휘한 유현주 대표의 작품이라 해 </p>
-				<div class="bt_wrap"><a href="#" target="_blank" class="bt1 bt1-green">원문보기</a></div>
+				<h6><%=item.getTitle() %></h6>
+				<span><%=item.getDate()%></span>
+				<p>
+					<%=item.getContent() %>
+				</p>
+				<div class="bt_wrap">
+				<a href="<%=item.getUrl()%>" target="_blank" class="bt1 bt1-green">원문보기</a></div>
 			</div>
 		</li>
-		<li>
-			<img src="http://www.domin.co.kr/news/thumbnail/201708/1163859_293079_852_v150.jpg" />
-			<div>
-				<h6>홀로서기 성공한 두메산골 영농조합법인 - 전북도민일보</h6>
-				<span>2018.05.09</span>
-				<p>창사 21년을 맞는 두메산골 영농조합법인(대표 유현주).지난 2011년 사회적 약자를 돕기위해 사회적기업이 돼 2년 전 지원기간을 마치고 이제는 당당히 홀로 섰다.고령자, 장애우, 결혼이주여성, 저소득층 등 취약계층을 포함한 60명이 생업에 종사하며 연일 구슬 땀을 흘리고 있다.현재 매출규모가 수십억원이 되기까지 앞에서 진두지휘한 유현주 대표의 작품이라 해 </p>
-				<div class="bt_wrap"><a href="#" target="_blank" class="bt1 bt1-green">원문보기</a></div>
-			</div>
-		</li>
-		<li>
-			<img src="http://www.domin.co.kr/news/thumbnail/201708/1163859_293079_852_v150.jpg" />
-			<div>
-				<h6>홀로서기 성공한 두메산골 영농조합법인 - 전북도민일보</h6>
-				<span>2018.05.09</span>
-				<p>창사 21년을 맞는 두메산골 영농조합법인(대표 유현주).지난 2011년 사회적 약자를 돕기위해 사회적기업이 돼 2년 전 지원기간을 마치고 이제는 당당히 홀로 섰다.고령자, 장애우, 결혼이주여성, 저소득층 등 취약계층을 포함한 60명이 생업에 종사하며 연일 구슬 땀을 흘리고 있다.현재 매출규모가 수십억원이 되기까지 앞에서 진두지휘한 유현주 대표의 작품이라 해 </p>
-				<div class="bt_wrap"><a href="#" target="_blank" class="bt1 bt1-green">원문보기</a></div>
-			</div>
-		</li>
+		<%} %>
 	</ul>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){
-	// openPage(1);
-	var url  = '/pages/community/announce_list.jsp';
-	var data = 'pageNo=1' +'&totalCnt=<%=totalCount%>';
-	$("#list").load(url + "?" + data);
-});
-$("#media_input").on('change',function(){
+
+$("#media_input").on('input',function(){
 	var url = $(this).val();	
 	var urlEncoded = encodeURIComponent(url);
 	var apiKey = '<%=Config.OPEN_GRAPH_API%>'; 
@@ -107,35 +78,28 @@ $("#media_input").on('change',function(){
 
 	$.getJSON(requestUrl, function( json ) {
 	    // Throw the object in the console to see what it looks like!
-	    console.log('json', json);
 	    // Update the HTML elements!
-	    $('#media_add_title').text(json.hybridGraph.title);
-	    $('#media_add_description').text(json.hybridGraph.description);
+	    var iso8601date = new Date(json.hybridGraph.articlePublishedTime);
+	    var simpleDate = iso8601date.getFullYear() + "-" + (iso8601date.getMonth()+1) + "-" + iso8601date.getDate();
+	    
+	    $('#media_add_title').val(json.hybridGraph.title);
+	    $('#media_add_description').val(json.hybridGraph.description);
 	    $('#media_add_icon').attr('src', json.hybridGraph.image);
+	    $('#media_add_date').val(simpleDate);
 	    
 	    $("#meta_img").val(json.hybridGraph.image);
 	    $("#meta_title").val(json.hybridGraph.title);
 	    $("#meta_content").val(json.hybridGraph.description);
-	    $("#meta_published_time").val(json.hybridGraph.articlePublishedTime);
+	    $("#meta_published_time").val(simpleDate);
 	    $("#meta_url").val(json.hybridGraph.url);
 	});
 });
-function openPage(pageNum){
-	$("#list").fadeOut();
-	
-	var url  = '/pages/community/announce_list.jsp';
-	var data = 'pageNo='+pageNum +'&totalCnt=<%=totalCount%>';
-	
-	$.ajax({
-		type : "get",
-		url : url,
-		data : data,
-		success : function(response, textStatus, jqXHR){
-			$("#list").html(response);
-		}, 
-		complete : function(){
-			$("#list").fadeIn();
-		}
-	});
+
+function isValidForm(clickedObj){
+	if(confirm("저장하시겠습니까?")){
+		clickedObj.action = "/ActionMedia";
+	}else{
+		return false;
+	}
 }
 </script>

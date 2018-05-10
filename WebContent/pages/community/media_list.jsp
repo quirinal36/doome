@@ -28,6 +28,6 @@ if(pageNo != null && pageNo.length()>0){
 }
 
 paging.setTotalCount(totalCount);
-ArrayList<Media> list = action.getMedia(paging);
+ArrayList<Media> list = action.getMedia();
 Iterator<Media> iter = list.iterator();
 %>
