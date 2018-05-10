@@ -11,8 +11,6 @@ Logger logger = Logger.getLogger("announce.jsp");
 
 QuestionAction board = new QuestionAction();
 int totalCount = board.getQuestionCount();
-
-logger.info("totalCount::"+totalCount);
 %>
 	<!doctype html>
 
@@ -25,7 +23,6 @@ logger.info("totalCount::"+totalCount);
 	
 	<script type="text/javascript">
 	$(document).ready(function(){
-		// openPage(1);
 		var url  = '/pages/community/question_list.jsp';
 		var data = 'pageNo=1' +'&totalCnt=<%=totalCount%>';		
 		$("#list").load(url + "?" + data);
