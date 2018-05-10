@@ -84,11 +84,14 @@ input { -webkit-appearance:none; }
 #footer_wrap > div > p { color:#999; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #banner_kakaotalk { position:fixed; right:0; bottom:10%; width:80px; height:80px; }
 #banner_kakaotalk > a > img { width:100%; }
 @media screen and ( max-width:999px ) {
 #banner_kakaotalk { width:50px; height:50px; }
 }
+=======
+>>>>>>> parent of a011d8e... d
 =======
 >>>>>>> parent of a011d8e... d

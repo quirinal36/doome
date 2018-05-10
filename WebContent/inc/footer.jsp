@@ -15,10 +15,13 @@
 		<p>ⓒ 2018. 두메산골영농조합법인. All rights reserved.</p>
 	</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </div>
 
 <div id="banner_kakaotalk">
 	<a href="https://pf.kakao.com/_VskFC" target="_blank"><img src="/img/comm/fixed-banner-kakaoicon.gif" alt="카톡주문"></a>
+=======
+>>>>>>> parent of a011d8e... d
 =======
 >>>>>>> parent of a011d8e... d
 </div>
