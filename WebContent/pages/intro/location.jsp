@@ -28,12 +28,11 @@ marker.setMap(map);
 
 
 
-
-
 <div class="location_box1">
 	<ul>
 		<li><strong>주소</strong>. [55071]전라북도 전주시 완산구 능안자구길 53</li>
 		<li><strong>TEL</strong>. 063-211-6884</li>
 		<li><strong>FAX</strong>. 063-211-6883</li>
+		<li><strong>MAIL</strong>. dyj1012@hanmail.net</li>
 	</ul>
 </div>
