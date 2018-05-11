@@ -56,7 +56,7 @@ int menuLinkId= 7 + randomNum;
 					</jsp:include>
 				</div>
 				<div id="gnb_login">
-					<a href="/admin/login.jsp"><img src="/img/comm/gnb_login.gif" alt="로그인" /></a>
+					<a href="/page.jsp?menu_id=22"><img src="/img/comm/gnb_login.gif" alt="로그인" /></a>
 				</div>
 				<div id="gnb_wrap_mobile">
 					<div id="gnb_menu">
