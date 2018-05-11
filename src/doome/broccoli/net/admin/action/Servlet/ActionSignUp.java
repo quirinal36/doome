@@ -1,4 +1,4 @@
-package doome.broccoli.net.admin.action;
+package doome.broccoli.net.admin.action.Servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -27,6 +27,7 @@ import javax.servlet.http.HttpSession;
 
 import org.json.simple.JSONObject;
 
+import doome.broccoli.net.admin.action.SignUpWorker;
 import doome.broccoli.net.admin.bean.User;
 
 /**

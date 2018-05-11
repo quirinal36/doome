@@ -61,9 +61,17 @@ logger.info("isLogin::"+isLogin);
 						<jsp:param name="aaa" value="bbb"/>
 					</jsp:include>
 				</div>
+				
+				<%if(!isLogin){ %>
 				<div id="gnb_login">
 					<a href="/admin/login.jsp"><img src="/img/comm/gnb_login.gif" alt="로그인" /></a>
 				</div>
+				<%}else{ %>
+					<div id="gnb_login">
+						<a href="javascript:logout()">logout</a>
+					</div>
+				<%} %>
+				
 				<div id="gnb_wrap_mobile">
 					<div id="gnb_menu">
 						<img src="/img/comm/gnb_menu.png" alt="메뉴 열기" />
