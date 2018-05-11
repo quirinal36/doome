@@ -59,9 +59,9 @@ input[type=button], input[type=submit] { border-radius:0; -webkit-border-radius:
 #gnb_wrap > ul > li > div > ul > li:first-child { margin-left:0; }
 #gnb_wrap > ul > li > div > ul > li > a { color:#fff; }
 #gnb_wrap > ul > li > div > ul > li > a:hover { text-decoration:underline; }
-#gnb_wrap > ul > li:nth-child(1) > div > ul > li:last-child { margin-right:288px; }
-#gnb_wrap > ul > li:nth-child(2) > div > ul > li:last-child { margin-right:175px; }
-#gnb_wrap > ul > li:nth-child(3) > div > ul > li:last-child { margin-right:156px; }
+#gnb_wrap > ul > li:nth-child(1) > div > ul > li:last-child { margin-right:369px; }
+#gnb_wrap > ul > li:nth-child(2) > div > ul > li:last-child { margin-right:257px; }
+#gnb_wrap > ul > li:nth-child(3) > div > ul > li:last-child { margin-right:237px; }
 #gnb_wrap > ul > li:nth-child(4) > div > ul > li:last-child { margin-right:0px; }
 
 #gnb_login { float:right; padding-top:22px; }

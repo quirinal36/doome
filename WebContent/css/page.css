@@ -35,7 +35,7 @@
 .certi_list > ul > li > img:hover { border-color:#aaa; }
 .certi_list > ul > li > span { font-size:12px; color:#777; }
 
-.certi_view { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:black; }
+.certi_view { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:black; z-index:100; }
 .certi_view > ul { position:absolute; top:50%; width:100%; margin-top:-413px; }
 .certi_view > ul > li { position:relative; width:600px; margin:0 auto; }
 .certi_view > ul > li > span { position:absolute; top:0; right:0; width:41px; height:41px; cursor:pointer; opacity:0.5; transition:all .5s ease; }
