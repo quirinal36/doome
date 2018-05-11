@@ -55,7 +55,7 @@
 #idxC > ul > li { width:50%; }
 #idxC > ul > li > a { height:95px; padding-top:65px; font-size:20px; opacity:0.9; }
 #idxD > div { width:90%; padding:30px 0; }
-#idxD > div > h4 { margin-bottom:20px; font-size:14px; }
+#idxD > div > h4 { margin-bottom:20px; padding-top:50px; background-size:40px; font-size:14px; }
 #idxD > div > p { width:auto; font-size:11px; }
 #idxD > div > ul { margin:20px 0; }
 #idxD > div > a { width:120px; padding:10px 0; font-size:12px; }
