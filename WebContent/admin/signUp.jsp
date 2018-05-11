@@ -30,7 +30,7 @@
 				success : function(data){
 					console.log(data);
 					alert("회원가입이 승인되었습니다.");
-					
+					location.href = "<%=request.getContextPath()%>/index.jsp";
 				}
 			});
 			return true;

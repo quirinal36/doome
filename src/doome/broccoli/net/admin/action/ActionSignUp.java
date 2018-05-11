@@ -23,6 +23,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.simple.JSONObject;
 
@@ -65,15 +66,18 @@ public class ActionSignUp extends HttpServlet {
 		SignUpWorker signUp = new SignUpWorker();
 		boolean result = signUp.makeSignUp(user);
 		
+		JSONObject json = new JSONObject();
+		json.put("result", result);
 		
-		if (result) {
-			JSONObject json = new JSONObject();
-			json.put("result", result);
-			
-			PrintWriter out;
-			out = response.getWriter();
-			response.setContentType("text/html");
-			out.print(json.toJSONString());
+		PrintWriter out;
+		out = response.getWriter();
+		response.setContentType("text/html");
+		out.print(json.toJSONString());
+		
+		HttpSession session = request.getSession();
+		if (result && session != null) {
+			logger.info("result : " + result);
+			session.setAttribute("login_result", result);
 		}
 	}
 }
