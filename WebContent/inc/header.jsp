@@ -15,8 +15,13 @@ Random random = new Random();
 int randomNum = random.nextInt(4)+1;
 int menuLinkId= 7 + randomNum;
 
-boolean isLogin = (Boolean)session.getAttribute("login_result");
-logger.info("isLogin::"+isLogin);
+boolean isLogin = false;
+try{
+	isLogin = (Boolean)session.getAttribute("login_result");
+	logger.info("isLogin::"+isLogin);
+}catch(NullPointerException e){
+	e.printStackTrace();
+}
 
 %>
 <!doctype html>
