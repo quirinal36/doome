@@ -2,7 +2,7 @@
 #idxA > video { width:100%; opacity:0.8; }
 #idxA > div { position:absolute; top:50%; left:0; width:100%; text-align:center; }
 #idxA > div > img { margin-top:-130px; }
-#idxB > div { width:1000px; margin:0 auto; padding:80px 0; text-align:center; }
+#idxB > div { width:1000px; margin:0 auto; padding:60px 0; text-align:center; }
 #idxB > div > h4 { margin-bottom:60px; font-size:24px; font-weight:normal; }
 #idxB > div > ul { font-size:0; }
 #idxB > div > ul > li { display:inline-block; width:28%; margin-left:8%; font-size:12px; vertical-align:top; }
@@ -19,8 +19,8 @@
 #idxC4 > a { background-image:url(/img/index/idxC4.jpg); }
 #idxC > ul > li > a:hover { opacity:1; font-weight:600; }
 
-#idxD > div { width:1000px; margin:0 auto; padding:80px 0; text-align:center; }
-#idxD > div > h4 { margin-bottom:30px; font-size:24px; font-weight:normal; letter-spacing:10px; }
+#idxD > div { width:1000px; margin:0 auto; padding:60px 0; text-align:center; }
+#idxD > div > h4 { margin-bottom:30px; padding-top:60px; background:url(/img/index/idxD_tit.gif) no-repeat 50% 0%; font-size:24px; font-weight:normal; letter-spacing:6px; }
 #idxD > div > p { text-align:justify; font-size:13px; line-height:160%; color:#777; }
 #idxD > div > ul { margin:40px 0; font-size:0; text-align:center; }
 #idxD > div > ul > li { display:inline-block; width:22%; margin:5px 0 5px 4%; }

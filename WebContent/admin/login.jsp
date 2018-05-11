@@ -18,25 +18,23 @@
 	
 	</head>
 	
-	<body>
-		<div id="wrap">
-			<div id="login_wrap">
-				<div id="login_box">
-					<form method="post" id="login_form">
-						<a href="/">두메산골영농조합법인</a>
-						<input type="text" placeholder="아이디를 입력하세요." class="ipt2" />
-						<input id="login_pwd" type="password" placeholder="비밀번호를 입력하세요." class="ipt2" />
-						<input type="button" value="LOGIN" class="bt1 bt1-green" onclick="buttonClick();"/>
-						<div>
-							<a href="./signUp.jsp">회원가입</a>
-							<a href="javascript:history.back();">이전 페이지로 이동</a>
-						</div>
-						<input type="hidden" id="para_pwd" name="login_pwd">
-					</form>
+	
+<div id="wrap">
+	<div id="login_wrap">
+		<div id="login_box">
+			<form>
+				<a href="/">두메산골영농조합법인</a>
+				<input type="text" placeholder="아이디를 입력하세요." class="ipt2" />
+				<input type="password" placeholder="비밀번호를 입력하세요." class="ipt2" />
+				<input type="submit" value="LOGIN" class="bt1 bt1-green" />
+				<div>
+					<a href="./signUp.jsp">회원가입</a>
+					<a href="javascript:history.back();">이전 페이지로 이동</a>
 				</div>
-			</div>
+			</form>
 		</div>
-	</body>
+	</div>
+</div>
 
 	
 	<script type="text/javascript">
