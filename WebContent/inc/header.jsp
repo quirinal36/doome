@@ -18,11 +18,10 @@ int menuLinkId= 7 + randomNum;
 boolean isLogin = false;
 try{
 	isLogin = (Boolean)session.getAttribute("login_result");
-	logger.info("isLogin::"+isLogin);
 }catch(NullPointerException e){
-	e.printStackTrace();
+	// e.printStackTrace();
 }
-
+logger.info("isLogin::"+isLogin);
 %>
 <!doctype html>
 	<head>
@@ -63,7 +62,7 @@ try{
 					</jsp:include>
 				</div>
 				<div id="gnb_login">
-					<a href="/page.jsp?menu_id=22"><img src="/img/comm/gnb_login.gif" alt="로그인" /></a>
+					<a href="/admin/login.jsp"><img src="/img/comm/gnb_login.gif" alt="로그인" /></a>
 				</div>
 				<div id="gnb_wrap_mobile">
 					<div id="gnb_menu">
@@ -80,7 +79,7 @@ try{
 							</jsp:include>
 							
 							<div id="gnb_banner">
-								<a href="/admin/login.jsp?"><img src="/img/comm/gnb_banner<%=randomNum %>.jpg" alt="닭고기 전체상품보기" /></a>
+								<a href="/page.jsp?menu_id=<%=menuLinkId%>"><img src="/img/comm/gnb_banner<%=randomNum %>.jpg" alt="닭고기 전체상품보기" /></a>
 							</div>
 						</div>
 					</div>
