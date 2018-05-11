@@ -47,7 +47,7 @@ int menuLinkId= 7 + randomNum;
 	<body>
 		<div id="header_wrap">
 			<div>
-				<h1><a href="<%=request.getContextPath()%>/index.jsp"><%=Config.TITLE %></a></h1>
+				<h1><a href="<%=request.getContextPath()%>/index.jsp"><img src="/img/comm/logo.png" alt="<%=Config.TITLE %>" /></a></h1>
 				<div id="gnb_wrap">
 					<jsp:include page="./gnb.jsp" flush="true">
 						<jsp:param name="aaa" value="bbb"/>
@@ -63,7 +63,7 @@ int menuLinkId= 7 + randomNum;
 					<div id="gnb_menu_open">
 						<div>
 							<div id="gnb_menu_open_title">
-								<h1><a href="/">두메산골영농조합법인</a></h1>
+								<h1><a href="/"><img src="/img/comm/logo.png" alt="두메산골영농조합법인" /></a></h1>
 								<img src="/img/comm/gnb_close.png" alt="닫기" />
 							</div>
 							<jsp:include page="./gnb.jsp" flush="true">

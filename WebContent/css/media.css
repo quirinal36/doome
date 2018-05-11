@@ -8,7 +8,8 @@
 
 #header_wrap { height:50px; }
 #header_wrap > div { width:auto; }
-#header_wrap > div > h1 { float:none; padding-top:13px; margin-right:0; font-size:16px; text-align:center; }
+#header_wrap > div > h1 { float:none; padding-top:10px; margin-right:0; font-size:16px; text-align:center; }
+#header_wrap > div > h1 > a > img { width:100px; }
 #gnb_wrap { display:none; }
 #gnb_login { display:none; }
 #gnb_wrap_mobile { display:block; }
