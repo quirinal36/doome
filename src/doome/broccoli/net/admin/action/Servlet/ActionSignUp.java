@@ -2,6 +2,7 @@ package doome.broccoli.net.admin.action.Servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.security.DigestException;
 import java.security.InvalidAlgorithmParameterException;
@@ -67,18 +68,18 @@ public class ActionSignUp extends HttpServlet {
 		SignUpWorker signUp = new SignUpWorker();
 		boolean result = signUp.makeSignUp(user);
 		
-		JSONObject json = new JSONObject();
-		json.put("result", result);
-		
 		PrintWriter out;
 		out = response.getWriter();
 		response.setContentType("text/html");
-		out.print(json.toJSONString());
 		
 		HttpSession session = request.getSession();
 		if (result && session != null) {
 			logger.info("result : " + result);
 			session.setAttribute("login_result", result);
+			
+			JSONObject json = new JSONObject();
+			json.put("result", result);
+			out.print(json.toJSONString());
 		}
 	}
 }

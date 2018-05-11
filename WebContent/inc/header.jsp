@@ -17,11 +17,10 @@ int menuLinkId= 7 + randomNum;
 
 boolean isLogin = false;
 try{
-	isLogin = (Boolean)session.getAttribute("login_result");
+	isLogin = (Boolean)session.getAttribute(Config.SESSION_IS_LOGIN);
 }catch(NullPointerException e){
 	// e.printStackTrace();
 }
-logger.info("isLogin::"+isLogin);
 %>
 <!doctype html>
 	<head>
@@ -109,4 +108,14 @@ $(function(){
 		$(this).find("~div").stop().slideToggle(300);
 	});
 });
+function logout(){
+	$.ajax({
+		type 	: "GET",
+		url		: "/ActionLogout",
+		success : function(data){
+			alert("로그아웃 되었습니다.");
+			location.reload();
+		} 
+	});
+}
 </script>

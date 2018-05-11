@@ -4,6 +4,11 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 public class User {
+	public static final String ID_KEY = "ID";
+	public static final String NAME_KEY = "NAME";
+	public static final String EMAIL_KEY = "EMAIL";
+	public static final String PASSWORD_KEY = "PASSWORD";
+	
 	int id;
 	String login;
 	String pwd;

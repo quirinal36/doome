@@ -1,3 +1,4 @@
+<%@page import="doome.broccoli.net.Config"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="doome.broccoli.net.board.bean.Faq"%>
 <%@page import="java.util.ArrayList"%>
@@ -7,9 +8,17 @@
 FAQAction action = new FAQAction();
 ArrayList<Faq> list = action.getBoard();
 Iterator<Faq> iter = list.iterator();
+
+boolean isLogin = false;
+try{
+	isLogin = (Boolean)session.getAttribute(Config.SESSION_IS_LOGIN);
+}catch(NullPointerException e){
+	// e.printStackTrace();
+}
 %>
 <div id="faq_wrap">
 	<form name="faq_add_form" method="post" onsubmit="return isValidForm(this);">
+		<%if(isLogin){ %>
 		<div class="faq_add">
 		    <dl>
 		    	<dt>
@@ -21,6 +30,8 @@ Iterator<Faq> iter = list.iterator();
 		    	</dd>
 		    </dl>
 		</div>
+	</form>
+		<%} %>
 		<div class="faq_list">
 		    <%while(iter.hasNext()) {
 		    	Faq item = iter.next();
@@ -31,7 +42,7 @@ Iterator<Faq> iter = list.iterator();
 			    </dl>
 		    <%} %>
 		</div>
-	</form>
+	
 </div>
 <script>
 $(function(){

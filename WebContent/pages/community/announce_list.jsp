@@ -1,3 +1,4 @@
+<%@page import="doome.broccoli.net.Config"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="doome.broccoli.net.board.bean.Board"%>
 <%@page import="java.util.Iterator"%>
@@ -30,6 +31,13 @@ paging.setTotalCount(totalCount);
 
 ArrayList<Board> list = board.getBoard(paging);
 Iterator<Board> iter = list.iterator();
+
+boolean isLogin = false;
+try{
+	isLogin = (Boolean)session.getAttribute(Config.SESSION_IS_LOGIN);
+}catch(NullPointerException e){
+	// e.printStackTrace();
+}
 %>
 
 <div class="board-list">
@@ -83,10 +91,11 @@ Iterator<Board> iter = list.iterator();
 	<a href="javascript:openPage('<%=paging.getFinalPageNo()%>')"><img src="img/board/board-page-last.gif" alt="마지막 페이지로 가기"></span></a>
 </div>
 
+<%if(isLogin){ %>
 <div class="bt_wrap ta-r">
 	<input type="button" value="글쓰기" class="bt1 bt1-blue" id="write_button"/>
 </div>
-
+<%} %>
 <script type="text/javascript">
 function openLink(board_num){
 	window.location = "<%=request.getContextPath()%>/page.jsp?menu_id=18&board_num="+board_num;

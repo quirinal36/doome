@@ -1,3 +1,4 @@
+<%@page import="doome.broccoli.net.Config"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <head>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
@@ -26,7 +27,7 @@
 					<dt>이메일</dt>
 					<dd><input type="email" name="login_email" placeholder="이메일을 입력하세요." class="ipt2" /></dd>
 				</dl>
-				<input type="submit" onclick="buttonClick();" value="가입" class="bt1 bt1-green" />
+				<input type="button" onclick="buttonClick();" value="가입" class="bt1 bt1-green" />
 				<div>
 					<a href="javascript:history.back();">이전 페이지로 이동</a>
 				</div>
@@ -35,10 +36,9 @@
 	</div>
 </div>
 
-
 <script type="text/javascript">
 	function buttonClick(){
-		var passphrase = "12341234";
+		var passphrase = "<%=Config.PASSPHRASE%>";
 		var hash = CryptoJS.AES.encrypt($("#login_pwd").val(), passphrase);
 		$("#para_pwd").val(hash);
 		validForm();
@@ -52,7 +52,6 @@
 				url : "/ActionSignUp",
 				data : param,
 				success : function(data){
-					console.log(data);
 					alert("회원가입이 승인되었습니다.");
 					location.href = "<%=request.getContextPath()%>/index.jsp";
 				}

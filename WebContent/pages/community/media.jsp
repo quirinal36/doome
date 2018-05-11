@@ -16,9 +16,16 @@ MediaAction action = new MediaAction();
 ArrayList<Media> list = action.getMedia();
 Iterator<Media> iter = list.iterator();
 
+boolean isLogin = false;
+try{
+	isLogin = (Boolean)session.getAttribute(Config.SESSION_IS_LOGIN);
+}catch(NullPointerException e){
+	// e.printStackTrace();
+}
 %>
 <!doctype html>
 
+<%if(isLogin){ %>
 <div class="media_list">
 	<ul>
 		<li>
@@ -45,6 +52,7 @@ Iterator<Media> iter = list.iterator();
 		</li>
 	</ul>
 </div>
+<%} %>
 
 <div class="media_list">
 	<ul>

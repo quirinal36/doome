@@ -10,4 +10,7 @@ public class Config {
 	public static final String FAVICON = "http://www.thebroccoli.net/temp/img/comm/favicon.ico";
 	public static final String DB_URL = "35.194.236.5";
 	public static final String OPEN_GRAPH_API = "5af2733f59a222f23d352153";
+	public static final String PASSPHRASE = "doome0409";
+	
+	public static final String SESSION_IS_LOGIN = "login_result";
 }

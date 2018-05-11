@@ -3,17 +3,19 @@
 <!doctype html>
 <html>
 	<head>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<link rel="stylesheet" type="text/css" href="/css/css.css" media="all" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
 	</head>
 		
 	<div id="wrap">
 		<div id="login_wrap">
 			<div id="login_box">
-				<form>
+				<form method="POST" onsubmit="return validForm(this);">
 					<a href="/">두메산골영농조합법인</a>
-					<input type="text" placeholder="아이디를 입력하세요." class="ipt2" />
-					<input type="password" placeholder="비밀번호를 입력하세요." class="ipt2" />
-					<input type="submit" value="LOGIN" class="bt1 bt1-green" />
+					<input type="text" name="login_id" placeholder="아이디를 입력하세요." class="ipt2" />
+					<input type="password" name="login_pwd" placeholder="비밀번호를 입력하세요." class="ipt2" />
+					<input type="submit" value="LOGIN" class="bt1 bt1-green"/>
 					<div>
 						<a href="./signUp.jsp">회원가입</a>
 						<a href="javascript:history.back();">이전 페이지로 이동</a>
@@ -25,29 +27,10 @@
 
 	
 	<script type="text/javascript">
-	function buttonClick(){
-		var passphrase = "12341234";
-		var hash = CryptoJS.AES.encrypt($("#login_pwd").val(), passphrase);
-		$("#para_pwd").val(hash);
-		validForm();
-	}
-	function validForm(){
-		var param = $("#login_form").serialize();
+	
+	function validForm(form){
 		if(confirm("로그인 하시겠습니까?")){
-			$.ajax({
-				type:"POST",
-				url : "/ActionLogin",
-				data : param,
-				success : function(data){
-					if(data == 'true'){
-						alert("로그인 성공.");
-						location.href = "<%=request.getContextPath()%>/index.jsp";
-					}else{
-						alert("로그인 실패");
-					}
-				}
-			});
-			return true;
+			form.action = "/ActionLogin";
 		}else{
 			return false;
 		}
