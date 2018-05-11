@@ -1,7 +1,7 @@
 #idxA { position:relative; width:100%; background-size:cover; background-color:#000; font-size:0; }
 #idxA > video { width:100%; opacity:0.8; }
 #idxA > div { position:absolute; top:50%; left:0; width:100%; text-align:center; }
-#idxA > div > img { margin-top:-130px; background:url(/img/index/idxD_tit.gif)_no-repeat 50% 0%; }
+#idxA > div > img { margin-top:-130px; background:url(/img/index/idxB_tit.gif)_no-repeat 50% 0%; }
 #idxB > div { width:1000px; margin:0 auto; padding:60px 0; text-align:center; }
 #idxB > div > h4 { margin-bottom:60px; font-size:24px; font-weight:normal; }
 #idxB > div > ul { font-size:0; }
