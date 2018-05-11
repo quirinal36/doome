@@ -71,7 +71,7 @@ int menuLinkId= 7 + randomNum;
 							</jsp:include>
 							
 							<div id="gnb_banner">
-								<a href="/page.jsp?menu_id=<%=menuLinkId%>"><img src="/img/comm/gnb_banner<%=randomNum %>.jpg" alt="닭고기 전체상품보기" /></a>
+								<a href="/admin/login.jsp?"><img src="/img/comm/gnb_banner<%=randomNum %>.jpg" alt="닭고기 전체상품보기" /></a>
 							</div>
 						</div>
 					</div>
