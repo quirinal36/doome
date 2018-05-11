@@ -16,10 +16,11 @@
 #gnb_menu { position:absolute; top:0; left:0; }
 #gnb_menu > img { padding:19px; cursor:pointer; }
 #gnb_menu_open { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:url(/img/comm/black70.png); z-index:100; }
-#gnb_menu_open > div { width:80%; max-width:300px; height:100%; background:#fff; }
-#gnb_menu_open_title { position:relative; }
+#gnb_menu_open > div { width:80%; max-width:300px; height:100%; }
+#gnb_menu_open_title { position:relative; background:#fff; }
 #gnb_menu_open_title > h1 { padding:16px; font-size:16px; font-weight:600; }
 #gnb_menu_open_title > img { position:absolute; top:20px; right:20px; cursor:pointer; }
+#gnb_menu_open > div > ul { background:#fff; }
 #gnb_menu_open > div > ul > li { border-bottom:1px solid #ddd; }
 #gnb_menu_open > div > ul > li:first-child { border-top:1px solid #ddd; }
 #gnb_menu_open > div > ul > li > span { display:block; padding:10px 16px; font-weight:600; font-size:14px; cursor:pointer; }

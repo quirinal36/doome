@@ -51,6 +51,8 @@ logger.info("isLogin::"+isLogin);
 		<link rel="shortcut icon" href="<%=Config.FAVICON%>">
 		<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		
+		<meta name="naver-site-verification" content="81112cd0053fc6414d893da455041cda6d31a207"/>
 	</head>
 	<body>
 		<div id="header_wrap">
