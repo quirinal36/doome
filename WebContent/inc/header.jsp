@@ -39,11 +39,9 @@ int menuLinkId= 7 + randomNum;
 		<meta name="twitter:url" content="<%=Config.URL %>" />
 		<meta name="twitter:image" content="<%=Config.OG_IMG%>" />
 		<meta name="format-detection" content="telephone=no" />
-		
 		<link rel="stylesheet" type="text/css" href="css/css.css" media="all" />
 		<link rel="shortcut icon" href="<%=Config.FAVICON%>">
 		<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
-		
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	</head>
 	<body>
