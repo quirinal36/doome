@@ -28,7 +28,9 @@
 				url : "/ActionSignUp",
 				data : param,
 				success : function(data){
-					alert(data);
+					console.log(data);
+					alert("회원가입이 승인되었습니다.");
+					
 				}
 			});
 			return true;
