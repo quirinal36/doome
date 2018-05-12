@@ -17,7 +17,7 @@ import doome.broccoli.net.menu.bean.Menu;
 
 public class DBconn {
 	private String userName 	= "root";
-	private String password 	= "789gagul";
+	private String password 	= "enap0409";
 	private String dbms 		= "mysql";
 	private String dbName 		= "doome";
 	private String serverName 	= Config.DB_URL;	
