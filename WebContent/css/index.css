@@ -21,7 +21,7 @@
 #idxC > ul > li > a:hover { opacity:1; font-weight:600; }
 
 #idxD > div { width:1000px; margin:0 auto; padding:60px 0; text-align:center; }
-#idxD > div > h4 { margin-bottom:30px; padding-top:60px; background:url(/img/index/idxD_tit.gif) no-repeat 50% 0%; font-size:24px; font-weight:normal; letter-spacing:6px; }
+#idxD > div > h4 { margin-bottom:30px; padding-top:60px; background:url(/img/index/idxD_tit.gif) no-repeat 50% 0%; font-size:24px; font-weight:normal;  }
 #idxD > div > p { text-align:justify; font-size:13px; line-height:160%; color:#777; }
 #idxD > div > ul { margin:40px 0; font-size:0; text-align:center; }
 #idxD > div > ul > li { display:inline-block; width:22%; margin:5px 0 5px 4%; }
