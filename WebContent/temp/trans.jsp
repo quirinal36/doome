@@ -17,16 +17,24 @@ span { color:red; font-weight:600; }
 <body>
 
 	<div id="wrap">
-		<p>1 EUR = 119.33 CEP</p>
+		<p>1 EUR = 119.33 CFP</p>
 		<form>
-			1유로가 <input type="text" /> 원일 때<br />
-			<input type="text" id="input_won"> 원은 <span>123</span> CEP<br />
-			<input type="text" id="input_pcf"> CEP는 <span>123</span> 원
+			1유로가 <input type="text" value="1275"/> 원일 때<br />
+			<input type="text" id="input_won"> 원은 <span id="target_cfp"></span> CFP<br />
+			<input type="text" id="input_pcf"> CFP는 <span id="target_krw"></span> 원
 		</form>
 	</div>
 </body>
 
 <script type="text/javascript">
+
+$("#input_won").on("input", function(event){
+	$("#target_cfp").html($("#input_won").val() * 0.094);
+});
+$("#input_pcf").on("input", function(event){
+	$("#target_krw").html($("#input_pcf").val() * 10.68);
+});
+
 function transKor(){
 	var input = $("#input_won").val();
 	
