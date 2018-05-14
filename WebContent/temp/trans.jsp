@@ -1,25 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html>
+<head>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-
+<style>
+* { padding:0; margin:0; border:0; text-decoration:none; list-style:none; }
+html { height:100%; }
+body { height:100%; background-color:#eee; }
+#wrap { width:100%; max-width:700px; min-width:320px; margin:0 auto; background:#fff; box-sizing:border-box; }
+#wrap > p { background:#82a3ff; color:#fff; padding:30px; font-weight:600; }
+#wrap > form { line-height:180%; padding:30px; }
+input[type=text] { width:100px; margin:10px 0; padding:10px; border:1px solid #ddd; }
+span { color:red; font-weight:600; }
+</style>
+</head>
 <body>
-	<form>
-		<table>
-			<tr>
-				<th><input type="text" placeholder="한국돈입력" id="input_won"></th>
-				<td><input type="button" value="환전(원->유로/프랑)" onclick="transKor()"></td>
-			</tr>
-			<tr>
-				<th><input type="text" placeholder="유로화" id="input_euro"></th>
-				<td><input type="button" value="환전(유로->원/프랑)" onclick="transEu()"></td>
-			</tr>
-			<tr>
-				<th><input type="text" placeholder="퍼시픽프랑" id="input_pcf"></th>
-				<td><input type="button" value="환전(프랑->원/유로)" onclick="transPcf()"></td>
-			</tr>
-		</table>
-	</form>
+
+	<div id="wrap">
+		<p>1 EUR = 119.33 CEP</p>
+		<form>
+			1유로가 <input type="text" /> 원일 때<br />
+			<input type="text" id="input_won"> 원은 <span>123</span> CEP<br />
+			<input type="text" id="input_pcf"> CEP는 <span>123</span> 원
+		</form>
+	</div>
 </body>
 
 <script type="text/javascript">
