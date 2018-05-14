@@ -45,7 +45,7 @@ Board board = action.getQuestion(boardNumInt);
 </div>
 
 <div class="bt_wrap ta-r">
-   <input type="button" value="목록" class="bt1 bt1-blue" id="button_to_list"/>
+   <input type="button" value="목록" class="bt1 bt1-green" id="button_to_list"/>
    <input type="button" value="수정" class="bt1 bt1-black" id="button_to_update"/>
    <input type="button" value="삭제" class="bt1 bt1-black" id="button_to_delete"/>
 </div>

@@ -53,9 +53,6 @@ public class ActionLogin extends HttpServlet {
 		String id = request.getParameter("login_id");
 		String pwd = request.getParameter("login_pwd");
 		
-		logger.info("id::"+id);
-		logger.info("pwd: " + pwd);
-		
 		User user = new User();
 		user.setLogin(id);
 		user.setPwd(pwd);
