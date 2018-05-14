@@ -17,27 +17,30 @@
 	String content = menuInfo.getLink() + ".jsp";
 %>
 <!doctype html>
+<head>
+	<%@ include file="/inc/head.jsp" %>
+</head>
 
 <body>
-	<div id="wrap">
+<div id="wrap">
+
+	<jsp:include page="<%=pageHeaderJsp %>" flush="true">
+		<jsp:param name="abc" value="abc"/>
+	</jsp:include>
 	
-		<jsp:include page="<%=pageHeaderJsp %>" flush="true">
-			<jsp:param name="abc" value="abc"/>
-		</jsp:include>
-		
-		<div id="page_container_wrap">
-			<div id="page_container">
-				<div id="page_view">
-					<jsp:include page="<%=content%>" flush="true">
-						<jsp:param name="abc" value="abc"/>
-					</jsp:include>
-				</div>
+	<div id="page_container_wrap">
+		<div id="page_container">
+			<div id="page_view">
+				<jsp:include page="<%=content%>" flush="true">
+					<jsp:param name="abc" value="abc"/>
+				</jsp:include>
 			</div>
 		</div>
-		
-		<jsp:include page="<%=pageFooterJsp %>" flush="true">
-			<jsp:param name="abc" value="abc"/>
-		</jsp:include>
-		
 	</div>
+	
+	<jsp:include page="<%=pageFooterJsp %>" flush="true">
+		<jsp:param name="abc" value="abc"/>
+	</jsp:include>
+	
+</div>
 </body>
