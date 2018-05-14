@@ -19,7 +19,7 @@
 			<textarea name="ir1" id="ir1" class="board-write-cont nse_content" placeholder="내용"></textarea>
 		</div>
 		<div class="bt_wrap ta-c">
-			<input type="submit" value="작성" class="bt1 bt1-blue"/>
+			<input type="submit" value="작성" class="bt1 bt1-green"/>
 			<input type="button" value="취소" class="bt1 bt1-black" />
 		</div>
 	</form>

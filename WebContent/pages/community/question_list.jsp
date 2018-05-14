@@ -84,7 +84,7 @@ Iterator<Board> iter = list.iterator();
 </div>
 
 <div class="bt_wrap ta-r">
-	<input type="button" value="글쓰기" class="bt1 bt1-blue" id="write_button"/>
+	<input type="button" value="글쓰기" class="bt1 bt1-green" id="write_button"/>
 </div>
 
 <script type="text/javascript">
