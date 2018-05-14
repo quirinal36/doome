@@ -64,6 +64,8 @@ public class ActionLogin extends HttpServlet {
 		
 		if(loginedUser != null && loginedUser.getId()>0) {
 			session.setAttribute(Config.SESSION_IS_LOGIN, true);
+			session.setAttribute(Config.SESSION_LOGIN_USERID, loginedUser.getId());
+			session.setAttribute(Config.SESSION_LOGIN_USERNAME, loginedUser.getLogin());
 			response.sendRedirect("/index.jsp");
 		}else {
 			session.setAttribute(Config.SESSION_IS_LOGIN, false);
