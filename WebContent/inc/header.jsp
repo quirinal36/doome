@@ -124,4 +124,12 @@ function logout(){
 		} 
 	});
 }
+$(document).on({
+    "contextmenu": function(e) {
+        console.log("ctx menu button:", e.which); 
+        if(e.which == 3){
+        	e.preventDefault();
+        }
+    }
+});
 </script>
