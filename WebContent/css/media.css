@@ -16,7 +16,7 @@
 #gnb_menu { position:absolute; top:0; left:0; }
 #gnb_menu > img { padding:19px; cursor:pointer; }
 #gnb_menu_open { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:url(/img/comm/black70.png); z-index:100; }
-#gnb_menu_open > div { width:80%; max-width:300px; height:100%; }
+#gnb_menu_open > div { width:80%; max-width:300px; height:100%; background:#333; }
 #gnb_menu_open_title { position:relative; background:#fff; }
 #gnb_menu_open_title > h1 { padding:16px; font-size:16px; font-weight:600; }
 #gnb_menu_open_title > img { position:absolute; top:20px; right:20px; cursor:pointer; }
@@ -42,7 +42,7 @@
 #footer_wrap > div { line-height:140%; }
 #footer_wrap > div > ul > li { display:inline-block; margin-left:10px; font-size:11px; }
 #footer_wrap > div > ul > li:first-child { margin-left:10px; }
-#footer_wrap > div > p { margin-left:10px; }
+#footer_wrap > div > p { margin-left:10px; font-size:11px; }
 
 #idxA { height:300px; background:url(/img/index/idxA_bg.jpg) no-repeat 50% 50%; background-size:cover; }
 #idxA > video { display:none; }
