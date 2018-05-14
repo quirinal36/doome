@@ -33,18 +33,24 @@ try{
 		<meta name="Keywords" content="<%=Config.KEYWORDS%>" />
 		<meta name="Author" content="<%=Config.TITLE%>" />
 		<meta name="robots" content="index, follow" />
-		<meta property="og:type" content="website" />
+		<link rel="canonical" href="http://www.thebroccoli.net">
+		<meta name="robots" content="index, follow" />
+
+		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="<%=Config.TITLE%>" />
-		<meta property="og:title" content="<%=Config.TITLE%>" />
-		<meta property="og:description" content="<%=Config.DESCRIPTION%>" />
-		<meta property="og:image" content="<%=Config.OG_IMG%>"/>
-		<meta property="og:url" content="<%=Config.URL %>" />
-		<meta name="twitter:card" content="summary" />
+		<meta property="og:title" content="<%=Config.TITLE%>">
+		<meta property="og:description" content="<%=Config.DESCRIPTION%>">
+		<meta property="og:image" content="<%=Config.OG_IMG%>">
+		<meta property="og:url" content="<%=Config.URL %>">
+		
+		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="@WEBSITE" />
-		<meta name="twitter:title" content="<%=Config.TITLE%>" />
-		<meta name="twitter:description" content="<%=Config.DESCRIPTION%>" />
-		<meta name="twitter:url" content="<%=Config.URL %>" />
-		<meta name="twitter:image" content="<%=Config.OG_IMG%>" />
+		<meta name="twitter:title" content="<%=Config.TITLE%>">
+		<meta name="twitter:description" content="<%=Config.DESCRIPTION%>">
+		<meta name="twitter:image" content="<%=Config.OG_IMG%>">
+		<meta name="twitter:domain" content="<%=Config.URL %>">
+		
+		
 		<meta name="format-detection" content="telephone=no" />
 		<link rel="stylesheet" type="text/css" href="css/css.css" media="all" />
 		<link rel="shortcut icon" href="<%=Config.FAVICON%>">
