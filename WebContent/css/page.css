@@ -76,26 +76,12 @@
 
 /************************************** ~999 **************************************/
 @media screen and ( max-width:999px ) {
-<<<<<<< HEAD
-	
-.greet > div > p { color:red; display:block; margin: auto;}	
-	
-	
-=======
 .greet { width:92%; margin:0 auto; }
 .greet > div { display:block; width:auto; }
 .greet > div:first-child { display:block; width:auto; margin-bottom:30px; }
 .greet > div > h1 { word-break:keep-all; font-size:26px; }
 .greet > div > h1 > span { display:inline; }
 
-<<<<<<< HEAD
-.brandstory1 { padding:30px 0; }
-.brandstory1 > h5 { margin-bottom:6px; font-size:20px; }
-.brandstory1 > span { font-size:14px; }
-
-=======
->>>>>>> e0f714bbeadb890a53ad72119c1fef5ad05fbcdc
->>>>>>> 628e7b099513509f90c8a19503fbc5ec4b44a43c
 #map { height:280px; }
 .location_box1 { border:0; background:#f5f5f5; text-align:left; line-height:180%; }
 .location_box1 > ul > li { display:block; margin-left:0; font-size:12px; }
