@@ -12,9 +12,12 @@
 	
 	String menuId = request.getParameter("menu_id");
 	DBconn conn = new DBconn();
-	Menu menuInfo = conn.getMenuInfo(menuId);
 	
-	String content = menuInfo.getLink() + ".jsp";
+	String content = new String();
+	if(menuId !=null){
+		Menu menuInfo = conn.getMenuInfo(menuId);
+		content = menuInfo.getLink() + ".jsp";
+	}
 %>
 <!doctype html>
 <head>

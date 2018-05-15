@@ -81,6 +81,13 @@ public class BoardAction {
 		}
 		return result;
 	}
+	
+	/**
+	 * 공지사항 리스트 받아오기
+	 * 
+	 * @param paging
+	 * @return
+	 */
 	public ArrayList<Board> getBoard(Paging paging) {
 		ArrayList<Board> list = new ArrayList<>();
 		DBconn db = new DBconn();
@@ -88,10 +95,17 @@ public class BoardAction {
 		try {
 			conn = db.getConnection();
 
+			StringBuilder builder = new StringBuilder();
+			builder.append("SELECT a.*, b.name ");
+			builder.append("	FROM board a, User b");
+			builder.append("	WHERE a.user = b.id");
+			builder.append("	order by a.id desc ");
+			builder.append("	limit ?, ?");
+			
 			// board 에 user 는 
 			// User 테이블의 id 의 Foreign Key
 			// User 테이블의 name 을 가져와서 저장한다
-			PreparedStatement stmt = conn.prepareStatement("SELECT a.*, b.name FROM board a, User b WHERE a.user = b.id order by a.id desc limit ?, ?");
+			PreparedStatement stmt = conn.prepareStatement(builder.toString());
 			stmt.setInt(1, paging.getFrom());
 			stmt.setInt(2, paging.getTo());
 			
@@ -100,6 +114,7 @@ public class BoardAction {
 				Board board = Board.parseToBoard(rs);
 				list.add(board);
 			}
+			
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
@@ -115,6 +130,12 @@ public class BoardAction {
 		}
 		return list;
 	}
+	
+	/**
+	 * 
+	 * @param input
+	 * @return
+	 */
 	public boolean writeBoard(Board input) {
 		boolean result = false;
 		

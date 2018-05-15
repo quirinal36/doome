@@ -45,11 +45,6 @@ public class LoginWorker {
 				result.setLogin(rs.getString(User.NAME_KEY));
 				result.setPwd(rs.getString(User.PASSWORD_KEY));
 			}
-			
-			final String decryptedPwd = getDecryptedPwd(result.getPwd());
-			if(!user.getPwd().equals(decryptedPwd)){
-				result = null;
-			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {

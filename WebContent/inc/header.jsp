@@ -23,10 +23,12 @@ try{
 	isLogin 	= (Boolean)session.getAttribute(Config.SESSION_IS_LOGIN);
 	loginUserId = (Integer)session.getAttribute(Config.SESSION_LOGIN_USERID);
 	userLogin	= (String)session.getAttribute(Config.SESSION_LOGIN_USERNAME);
-	
 }catch(Exception e){
 	// e.printStackTrace();
 }
+
+String menuId = request.getParameter(Menu.MENUID_KEY);
+logger.info("menuId::"+menuId);
 %>
 <!doctype html>
 <div id="header_wrap">
