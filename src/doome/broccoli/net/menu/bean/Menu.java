@@ -9,6 +9,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import org.json.simple.JSONObject;
 
 public class Menu {
+	
 	int id;
 	int upperId;
 	String link;
@@ -18,6 +19,7 @@ public class Menu {
 	ArrayList<Menu> children;
 	String pageDescription;
 	
+	public static final String MENUID_KEY = "menu_id";
 	public static final String ID_KEY = "id";
 	public static final String UPPERID_KEY = "upper_id";
 	public static final String NAME_KEY = "name";

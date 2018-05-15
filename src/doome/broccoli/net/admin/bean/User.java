@@ -4,6 +4,13 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 public class User {
+	public static final int NO_LOGIN = 0;
+	public static final int PWD_INVALID = 1;
+	public static final int SUCCESS_LOGIN = 2;
+	
+	public static final String PWD_INVALID_TXT	= "비밀번호가 맞지 않습니다.";
+	public static final String NO_LOGIN_TXT		= "아이디가 존재하지 않습니다.";
+	
 	public static final String ID_KEY = "ID";
 	public static final String NAME_KEY = "NAME";
 	public static final String EMAIL_KEY = "EMAIL";

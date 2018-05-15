@@ -46,7 +46,7 @@ try{
         <div class="board-list-head-num">번호</div>
         <div class="board-list-head-tit">제목</div>
         <div class="board-list-head-wri">글쓴이</div>
-        <div class="board-list-head-dat">날짜</div>
+        <div class="board-list-head-dat">작성일</div>
     </div>
 	<!-- 리스트 -->
 	<div class="board-list-body">

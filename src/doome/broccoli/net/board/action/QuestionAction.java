@@ -19,8 +19,25 @@ public class QuestionAction {
 		
 		try {
 			conn = db.getConnection();
-			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM question WHERE id=?");
+			
+			StringBuilder sb = new StringBuilder();
+			sb.append("SELECT " ); 
+			sb.append("    a.id,");
+			sb.append("    a.title,");
+			sb.append("    a.content,"); 
+			sb.append("    a.write_date,"); 
+			sb.append("    a.attach,"); 
+			sb.append("    a.user,"); 
+			sb.append("    b.name"); 
+			sb.append("		FROM"); 
+			sb.append("    question a,"); 
+			sb.append("    User b"); 
+			sb.append("		WHERE"); 
+			sb.append("    a.id = ? AND a.user = b.id");
+			
+			PreparedStatement stmt = conn.prepareStatement(sb.toString());
 			stmt.setInt(1, id);
+			
 			ResultSet rs = stmt.executeQuery();
 			while(rs.next()) {
 				result = Board.parseToBoard(rs);
@@ -71,7 +88,14 @@ public class QuestionAction {
 		Connection conn = null;
 		try {
 			conn = db.getConnection();
-			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM question WHERE 1=1 order by id desc limit ?, ?");
+			StringBuilder sb = new StringBuilder();
+			sb.append("SELECT a.*, b.name ");
+			sb.append("	FROM question a, User b");
+			sb.append("	WHERE a.user = b.id");
+			sb.append("	order by a.id desc");
+			sb.append("	limit ?, ?");
+			
+			PreparedStatement stmt = conn.prepareStatement(sb.toString());
 			stmt.setInt(1, paging.getFrom());
 			stmt.setInt(2, paging.getTo());
 			
