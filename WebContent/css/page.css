@@ -11,6 +11,11 @@
 .greet > div > h1 > span { display:block; }
 .greet > div > p { font-size:12px; color:#777; line-height:160%; word-break:keep-all; text-align:justify; }
 
+.history { padding:50px 0; background:#f5f5f5; text-align:center; }
+.history > h5 { margin-bottom:12px; font-size:28px; }
+.history > span { text-align:center; color:#777; font-size:16px; }
+.history > img { width:100%; }
+
 #map { width:100%; height:350px; }
 .location_box1 { padding:20px; border:1px solid #e5e5e5; border-top:0; text-align:center; }
 .location_box1 > ul > li { display:inline-block; margin-left:40px; font-size:14px; }
@@ -76,6 +81,11 @@
 .greet > div:first-child { display:block; width:auto; margin-bottom:30px; }
 .greet > div > h1 { word-break:keep-all; font-size:26px; }
 .greet > div > h1 > span { display:inline; }
+
+
+.history { padding:20px 0; }
+.history > h5 { margin-bottom:6px; font-size:20px; }
+.history > span { font-size:14px; letter-spacing:2px; }
 
 #map { height:280px; }
 .location_box1 { border:0; background:#f5f5f5; text-align:left; line-height:180%; }
