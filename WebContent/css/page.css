@@ -8,7 +8,8 @@
 .greet > div { display:inline-block; width:60%; vertical-align:top; }
 .greet > div:first-child { width:40%; margin-left:0; }
 .greet > div > h1 { font-size:36px; font-weight:normal; line-height:140%; }
-.greet > div > p { font-size:12px; color:#777; line-height:160%; word-break:keep-all; }
+.greet > div > h1 > span { display:block; }
+.greet > div > p { font-size:12px; color:#777; line-height:160%; word-break:keep-all; text-align:justify; }
 
 #map { width:100%; height:350px; }
 .location_box1 { padding:20px; border:1px solid #e5e5e5; border-top:0; text-align:center; }
@@ -68,7 +69,14 @@
 .faq_add { padding:20px; border:5px solid #efe23b; margin-bottom:20px; }
 .faq_add > dl > dt, .faq_add > dl > dd > input:first-child { margin-bottom:12px; }
 
+/************************************** ~999 **************************************/
 @media screen and ( max-width:999px ) {
+.greet { width:92%; margin:0 auto; }
+.greet > div { display:block; width:auto; }
+.greet > div:first-child { display:block; width:auto; margin-bottom:30px; }
+.greet > div > h1 { word-break:keep-all; font-size:26px; }
+.greet > div > h1 > span { display:inline; }
+
 #map { height:280px; }
 .location_box1 { border:0; background:#f5f5f5; text-align:left; line-height:180%; }
 .location_box1 > ul > li { display:block; margin-left:0; font-size:12px; }
@@ -98,7 +106,11 @@
 #faq_wrap { width:92%; margin:0 auto; }
 #faq_wrap dt { font-size:13px; }
 }
+
+/************************************** ~499 **************************************/
 @media screen and ( max-width:499px ) {
+.greet > div > h1 { font-size:24px; }
+.greet > div > p { text-align:left; word-break:normal; }
 .certi_list > ul > li { width:48%; margin-left:4%; }
 .certi_list > ul > li:nth-child(4n-1) { margin-left:4%; }
 .certi_list > ul > li:nth-child(2n-1) { margin-left:0%; }
