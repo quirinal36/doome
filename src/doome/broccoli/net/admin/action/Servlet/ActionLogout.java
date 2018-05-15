@@ -32,6 +32,8 @@ public class ActionLogout extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		session.removeAttribute(Config.SESSION_IS_LOGIN);
+		session.removeAttribute(Config.SESSION_LOGIN_USERID);
+		session.removeAttribute(Config.SESSION_LOGIN_USERNAME);
 		
 		PrintWriter out;
 		out = response.getWriter();

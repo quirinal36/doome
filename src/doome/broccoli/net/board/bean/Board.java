@@ -13,6 +13,7 @@ public class Board {
 	public static final String CONTENT_KEY = "CONTENT";
 	public static final String ATTACH_KEY = "ATTACH";
 	public static final String WRITE_DATE = "WRITE_DATE";
+	public static final String WRITER_NAME = "NAME";
 	
 	int id;
 	int user;
@@ -20,6 +21,7 @@ public class Board {
 	String content;
 	String attach;
 	String writeDate;
+	String writerName;
 	
 	public int getId() {
 		return id;
@@ -57,13 +59,22 @@ public class Board {
 	public void setWriteDate(String writeDate) {
 		this.writeDate = writeDate;
 	}
+	public String getWriterName() {
+		return writerName;
+	}
+	public void setWriterName(String writerName) {
+		this.writerName = writerName;
+	}
+	
 	public static Board parseToBoard(ResultSet rs) throws SQLException {
 		Board result = new Board();
+		
 		result.setId(rs.getInt(ID_KEY));
 		result.setTitle(rs.getString(TITLE_KEY));
 		result.setUser(rs.getInt(USER_KEY));
 		result.setWriteDate(rs.getString(WRITE_DATE));
 		result.setContent(rs.getString(CONTENT_KEY));
+		result.setWriterName(rs.getString(WRITER_NAME));
 		
 		return result;
 	}

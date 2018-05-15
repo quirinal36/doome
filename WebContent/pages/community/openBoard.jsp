@@ -1,3 +1,4 @@
+<%@page import="doome.broccoli.net.Config"%>
 <%@page import="doome.broccoli.net.board.bean.Board"%>
 <%@page import="doome.broccoli.net.board.action.BoardAction"%>
 <%@page import="java.util.logging.Logger"%>
@@ -13,6 +14,12 @@ try{
 
 BoardAction action = new BoardAction();
 Board board = action.getBoard(boardNumInt);
+int loginUserId = -1;
+try{
+	loginUserId = (Integer)session.getAttribute(Config.SESSION_LOGIN_USERID);
+}catch(NullPointerException e){
+	
+}
 %>
 <div class="board-view">
 	<div class="board-view-tit">
@@ -27,7 +34,7 @@ Board board = action.getBoard(boardNumInt);
 				<li>
 					<dl>
 						<dt>글쓴이</dt>
-						<dd><%=board.getUser() %></dd>
+						<dd><%=board.getWriterName() %></dd>
 					</dl>
 				</li>
 				<li>
@@ -46,8 +53,10 @@ Board board = action.getBoard(boardNumInt);
 
 <div class="bt_wrap ta-r">
    <input type="button" value="목록" class="bt1 bt1-green" id="button_to_list"/>
-   <input type="button" value="수정" class="bt1 bt1-black" id="button_to_update"/>
-   <input type="button" value="삭제" class="bt1 bt1-black" id="button_to_delete"/>
+   <%if(board.getUser() == loginUserId){ %>
+	   <input type="button" value="수정" class="bt1 bt1-black" id="button_to_update"/>
+	   <input type="button" value="삭제" class="bt1 bt1-black" id="button_to_delete"/>
+   <%} %>
 </div>
 
 <script type="text/javascript">

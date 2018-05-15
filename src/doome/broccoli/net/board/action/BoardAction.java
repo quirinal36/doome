@@ -17,9 +17,25 @@ public class BoardAction {
 		DBconn db = new DBconn();
 		Connection conn = null;
 		
+		StringBuilder sb = new StringBuilder();
+		sb.append("SELECT " ); 
+		sb.append("    a.id,");
+		sb.append("    a.title,");
+		sb.append("    a.content,"); 
+		sb.append("    a.write_date,"); 
+		sb.append("    a.attach,"); 
+		sb.append("    a.user,"); 
+		sb.append("    b.name"); 
+		sb.append("		FROM"); 
+		sb.append("    board a,"); 
+		sb.append("    User b"); 
+		sb.append("		WHERE"); 
+		sb.append("    a.id = ? AND a.user = b.id");
+				
 		try {
 			conn = db.getConnection();
-			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM board WHERE id=?");
+			
+			PreparedStatement stmt = conn.prepareStatement(sb.toString());
 			stmt.setInt(1, id);
 			ResultSet rs = stmt.executeQuery();
 			while(rs.next()) {
@@ -71,7 +87,11 @@ public class BoardAction {
 		Connection conn = null;
 		try {
 			conn = db.getConnection();
-			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM board WHERE 1=1 order by id desc limit ?, ?");
+
+			// board 에 user 는 
+			// User 테이블의 id 의 Foreign Key
+			// User 테이블의 name 을 가져와서 저장한다
+			PreparedStatement stmt = conn.prepareStatement("SELECT a.*, b.name FROM board a, User b WHERE a.user = b.id order by a.id desc limit ?, ?");
 			stmt.setInt(1, paging.getFrom());
 			stmt.setInt(2, paging.getTo());
 			
