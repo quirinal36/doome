@@ -4,6 +4,8 @@
 #login_box > form > a { display:block; margin-bottom:10px; font-size:15px; font-weight:600; }
 #login_box > form > input { margin-bottom:10px; }
 #login_box > form > input[type=submit] { width:100%; }
+#login_box > form > input[type=button] { width:100%; }
+#login_box > form > span { color:#ff0000; }
 #login_box > form > div > a { font-size:12px; color:#777; }
 #login_box > form > div > a:first-child { margin-right:25px; color:#000; }
 

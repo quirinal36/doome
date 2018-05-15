@@ -1,3 +1,4 @@
+<%@page import="doome.broccoli.net.Config"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="doome.broccoli.net.board.bean.Board"%>
 <%@page import="java.util.Iterator"%>
@@ -30,6 +31,13 @@ paging.setTotalCount(totalCount);
 
 ArrayList<Board> list = board.getQuestion(paging);
 Iterator<Board> iter = list.iterator();
+
+boolean isLogin = false;
+try{
+	isLogin = (Boolean)session.getAttribute(Config.SESSION_IS_LOGIN);
+}catch(NullPointerException e){
+	// e.printStackTrace();
+}
 %>
 
 <div class="board-list">
@@ -38,7 +46,7 @@ Iterator<Board> iter = list.iterator();
         <div class="board-list-head-num">번호</div>
         <div class="board-list-head-tit">제목</div>
         <div class="board-list-head-wri">글쓴이</div>
-        <div class="board-list-head-dat">날짜</div>
+        <div class="board-list-head-dat">작성일</div>
     </div>
 	<!-- 리스트 -->
 	<div class="board-list-body">
@@ -53,7 +61,7 @@ Iterator<Board> iter = list.iterator();
             		onclick="javascript:openLink('<%=item.getId() %>')">
             		<%=item.getTitle() %>
             	</div>
-            	<div class="board-list-body-wri"><%=item.getUser() %></div>
+            	<div class="board-list-body-wri"><%=item.getWriterName() %></div>
             	<div class="board-list-body-dat"><%=item.getWriteDate() %></div>
             </li>
             <%} %>
