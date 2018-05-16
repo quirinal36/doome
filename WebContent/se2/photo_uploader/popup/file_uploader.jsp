@@ -1,3 +1,7 @@
+<%@page import="java.awt.Image"%>
+<%@page import="doome.broccoli.net.util.ImageUtil"%>
+<%@page import="javax.imageio.ImageIO"%>
+<%@page import="java.awt.image.BufferedImage"%>
 <%@page import="java.util.logging.Logger"%>
 <%@page import="doome.broccoli.net.Config"%>
 <%@page import="java.util.Date"%>
@@ -38,14 +42,23 @@ if(request.getContentLength() > 10*1024*1024 ){
 			String fileExt = upfile.substring(upfile.lastIndexOf(".") + 1);
 			File sourceFile = new File(path + File.separator + upfile);
 			File targetFile = new File(path + File.separator + moveFileName);
-			sourceFile.renameTo(targetFile);
+			BufferedImage img = ImageIO.read(sourceFile);
+			int type = img.getType() == 0? BufferedImage.TYPE_INT_ARGB : img.getType();
+			BufferedImage scaledImg = new ImageUtil().resizeImage(img, type);
+			ImageIO.write(scaledImg, "jpg", targetFile);
+			
+			
+			
+			// sourceFile.renameTo(targetFile);
 			filename = moveFileName;
+			
+			/*
 			System.out.println("upfile : " + upfile);
 			System.out.println("targetFile : " + targetFile);
 			System.out.println("moveFileName : " + moveFileName);
 			System.out.println("filename : " + filename);
 			System.out.println("moveFileName : " + moveFileName);
-			
+			*/
 			sourceFile.delete();
 			
 			%>

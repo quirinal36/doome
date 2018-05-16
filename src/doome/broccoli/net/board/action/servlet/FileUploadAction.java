@@ -1,6 +1,7 @@
 package doome.broccoli.net.board.action.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Logger;
 
@@ -40,23 +41,6 @@ public class FileUploadAction extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		try {
-			response.setCharacterEncoding("UTF-8");
-			request.setCharacterEncoding("UTF-8");
-			//response.setContentType("multipart/form-data; charset=UTF-8");
-		} catch (UnsupportedEncodingException e1) {
-			e1.printStackTrace();
-		}
-		
-		String path = getServletContext().getRealPath("/");
-		
-		logger.info("path::"+path);
-		
-		MultipartRequest multi=new MultipartRequest(request, path, 15*1024*1024, "UTF-8", new DefaultFileRenamePolicy());
-		String upFile = multi.getFilesystemName("Filedata");
-		if(!upFile.equals("")) {
-			logger.info("upFile::"+upFile);
-		}
 	}
 
 }

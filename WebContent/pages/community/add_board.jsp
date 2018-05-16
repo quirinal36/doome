@@ -19,13 +19,13 @@
 				</dl>
 			</div>
 			
-			<textarea name="ir1" id="textAreaContent" 
+			<textarea name="ir1" id="textAreaContent" cols="150"
 					class="board-write-cont nse_content" placeholder="내용">
 			</textarea>
 		</div>
 		<div class="bt_wrap ta-c">
 			<input type="submit" value="작성" class="bt1 bt1-green"/>
-			<input type="button" value="취소" class="bt1 bt1-black" />
+			<input type="button" value="취소" class="bt1 bt1-black" onclick="javascript:window.close();"/>
 		</div>
 	</form>
 </body>
@@ -39,6 +39,7 @@
 	    sSkinURI: "<%=request.getContextPath()%>/se2/SmartEditor2Skin.html",
 	    fCreator: "createSEditor2"
 	});
+	
 	function isValidForm(clickedObj){
 		if(confirm("완료하시겠습니까?")){			
 			clickedObj.action = "/ActionWrite";
@@ -47,9 +48,10 @@
 			return false;
 		}
 	}
+	
 	// textArea에 이미지 첨부
 	function pasteHTML(filepath){
-	    var sHTML = '<img src="<%=Config.URL%>/upload/'+filepath+'">';
+	    var sHTML = '<img src="<%=Config.URL%>/upload/'+filepath+'" >';
 	    oEditors.getById["textAreaContent"].exec("PASTE_HTML", [sHTML]);
 	}
 </script>
