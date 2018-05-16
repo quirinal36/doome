@@ -14,7 +14,7 @@ String menuId = request.getParameter(Menu.MENUID_KEY);
 	<link rel="stylesheet" type="text/css" href="/css/css.css" media="all" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
 	</head>
-		
+	
 	<div id="wrap">
 		<div id="login_wrap">
 			<div id="login_box">

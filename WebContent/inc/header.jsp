@@ -28,7 +28,6 @@ try{
 }
 
 String menuId = request.getParameter(Menu.MENUID_KEY);
-logger.info("menuId::"+menuId);
 %>
 <!doctype html>
 <div id="header_wrap">

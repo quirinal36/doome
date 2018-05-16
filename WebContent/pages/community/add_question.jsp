@@ -4,7 +4,7 @@
 <html>
 <head>
 
-<script type="text/javascript" src="/nse_files/js/HuskyEZCreator.js" charset="utf-8"></script>
+<script type="text/javascript" src="/se2/js/HuskyEZCreator.js" charset="utf-8"></script>
 </head>
 
 <body>
