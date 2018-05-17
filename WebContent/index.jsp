@@ -64,7 +64,7 @@
 						<li><img src="img/index/idxD7.jpg" alt="전주시"></li>
 						<li><img src="img/index/idxD8.jpg" alt="전북대학교"></li>
 					</ul>
-		            <a href="#">납품문의</a>
+		            <a href="/page.jsp?menu_id=15">납품문의</a>
 				</div>
 			</div>
 		</div>
