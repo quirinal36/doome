@@ -70,7 +70,7 @@
 		</div>
 	</div>
 	
-	<jsp:include page="inc/footer.jsp" flush="true">
+	<jsp:include page="/inc/footer.jsp" flush="true">
 		<jsp:param name="abc" value="abc"/>
 	</jsp:include>
 </div>

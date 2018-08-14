@@ -7,7 +7,7 @@
 <%@page import="doome.broccoli.net.board.action.BoardAction"%>
 <%@page import="java.util.logging.Logger"%>
 <%
-Logger logger = Logger.getLogger("announce.jsp");
+Logger logger = Logger.getLogger("question.jsp");
 
 QuestionAction board = new QuestionAction();
 int totalCount = board.getQuestionCount();

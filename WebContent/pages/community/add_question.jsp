@@ -14,6 +14,10 @@
 				<dl>
 					<dt>제목</dt>
 					<dd><input type="text" name="title" placeholder="제목을 입력하세요." class="ipt1" /></dd>
+					<dt>글쓴이</dt>
+					<dd><input type="text" name="user_name" placeholder="작성자" class="ipt1"/></dd>
+					<dt>연락처</dt>
+					<dd><input type="text" name="user_phone" placeholder="전화번호" class="ipt1"/></dd>
 				</dl>
 			</div>
 			<textarea name="ir1" id="ir1" class="board-write-cont nse_content" placeholder="내용"></textarea>
@@ -31,7 +35,7 @@
 	nhn.husky.EZCreator.createInIFrame({
 	    oAppRef: oEditors,
 	    elPlaceHolder: "ir1",
-	    sSkinURI: "/nse_files/SmartEditor2Skin.html",
+	    sSkinURI: "<%=request.getContextPath()%>/se2/SmartEditor2Skin.html",
 	    fCreator: "createSEditor2"
 	});
 	function isValidForm(clickedObj){
