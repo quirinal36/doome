@@ -12,7 +12,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import doome.broccoli.net.Config;
 import doome.broccoli.net.board.action.BoardAction;
 import doome.broccoli.net.board.action.QuestionAction;
 import doome.broccoli.net.board.bean.Board;
@@ -42,6 +44,14 @@ public class ActionWriteQuestion extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int writerId = 0;
+		HttpSession session = request.getSession();
+		try {
+			writerId = (Integer)session.getAttribute(Config.SESSION_LOGIN_USERID);
+		}catch(NullPointerException e) {
+			e.printStackTrace();
+		}
+		
 		response.setCharacterEncoding("UTF-8"); 
 		response.setContentType("text/html; charset=UTF-8");
 		
@@ -53,15 +63,20 @@ public class ActionWriteQuestion extends HttpServlet {
 		
 		final String editorParam = request.getParameter("ir1");
 		final String title = request.getParameter("title");
+		final String username = request.getParameter("user_name");
+		final String userphone = request.getParameter("user_phone");
 		
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date date = new Date();
 		
 		Board board = new Board(); 
 		board.setContent(editorParam);
-		board.setUser(1);
+		
+		board.setUser(writerId);
 		board.setTitle(title);
 		board.setWriteDate(dateFormat.format(date));
+		if(username != null)board.setUserName(username);
+		if(userphone != null)board.setUserPhone(userphone);
 		
 		QuestionAction action = new QuestionAction();
 		Boolean writeResult = false;

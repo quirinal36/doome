@@ -5,13 +5,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 import doome.broccoli.net.board.bean.Board;
 import doome.broccoli.net.board.bean.Paging;
 import doome.broccoli.net.db.DBconn;
 
 public class QuestionAction {
-
+	Logger logger = Logger.getLogger(this.getClass().getSimpleName());
+	
 	public Board getQuestion(int id) {
 		Board result = new Board();
 		DBconn db = new DBconn();
@@ -21,18 +23,20 @@ public class QuestionAction {
 			conn = db.getConnection();
 			
 			StringBuilder sb = new StringBuilder();
-			sb.append("SELECT " ); 
+			sb.append("SELECT " );
 			sb.append("    a.id,");
 			sb.append("    a.title,");
-			sb.append("    a.content,"); 
-			sb.append("    a.write_date,"); 
-			sb.append("    a.attach,"); 
-			sb.append("    a.user,"); 
-			sb.append("    b.name"); 
-			sb.append("		FROM"); 
-			sb.append("    question a,"); 
-			sb.append("    User b"); 
-			sb.append("		WHERE"); 
+			sb.append("    a.content,");
+			sb.append("    a.write_date,");
+			sb.append("    a.attach,");
+			sb.append("    a.user,");
+			sb.append("		a.user_name,");
+			sb.append("		a.user_phone,");
+			sb.append("    b.name");
+			sb.append("		FROM");
+			sb.append("    question a,");
+			sb.append("    User b");
+			sb.append("		WHERE");
 			sb.append("    a.id = ? AND a.user = b.id");
 			
 			PreparedStatement stmt = conn.prepareStatement(sb.toString());
@@ -128,8 +132,8 @@ public class QuestionAction {
 			conn = db.getConnection();
 		
 			StringBuilder query = new StringBuilder();
-			query.append("Insert into question (title, content, write_date, attach, user)")
-			.append("values (?,?,?,?,?)");
+			query.append("Insert into question (title, content, write_date, attach, user, user_name, user_phone)")
+			.append("values (?,?,?,?,?,?,?)");
 
 			PreparedStatement stmt = conn.prepareStatement(query.toString());
 			stmt.setString(1, input.getTitle());
@@ -137,6 +141,8 @@ public class QuestionAction {
 			stmt.setString(3, input.getWriteDate());
 			stmt.setString(4, input.getAttach());
 			stmt.setInt(5, input.getUser());
+			stmt.setString(6, input.getUserName());
+			stmt.setString(7, input.getUserPhone());
 
 			if(stmt.executeUpdate() > 0) {
 				result = true;
