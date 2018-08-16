@@ -16,7 +16,7 @@
 		<div id="idx_container">
 			<div id="idxA">
 				<video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-					<source src="http://www.thebroccoli.net/img/index/mov01.mp4">
+					<source src="http://www.doome.net/img/index/mov01.mp4">
 				</video>
 				<div><img src="/img/index/idxA_text.png" /></div>
 			</div>
