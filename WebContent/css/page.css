@@ -73,6 +73,38 @@
 .faq_add { padding:20px; border:5px solid #efe23b; margin-bottom:20px; }
 .faq_add > dl > dt, .faq_add > dl > dd > input:first-child { margin-bottom:12px; }
 
+/* 1:1문의 */
+#question { width:510px; min-height:342px; margin:0 auto; padding-left:340px; background:url(/img/community/question_img.png) no-repeat 0 0; }
+#question > h1 { margin-bottom:30px; font-size:36px; line-height:140%; font-weight:normal; }
+#question > h1 > span { display:block; }
+#question > h1 > strong { font-weight:600; }
+#question > a { display:inline-block; height:46px; padding:22px 20px 0 88px; border-radius:5px; background:#f8d340 url(/img/community/question_link.gif) no-repeat 0 0; font-size:16px; font-weight:600; }
+#question_process { display:block; width:100%; margin-top:40px; }
+#question_process > li { display:inline-block; padding:0 0 0 8px; background:url(/img/community/question_process.png) no-repeat 0 30px; text-align:center; font-size:14px; vertical-align:top; }
+#question_process > li:first-child { padding-left:0; background:none; }
+#question_process > li > span { display:inline-block; padding-top:80px; line-height:160%; }
+#question_process1 > span { padding-right:30px; background:url(/img/community/question_process1.png) no-repeat 50% 0; }
+#question_process2 > span { padding:30px; background:url(/img/community/question_process2.png) no-repeat 50% 0; }
+#question_process3 > span { padding-left:30px; background:url(/img/community/question_process3.png) no-repeat 50% 0; }
+
+@media screen and ( max-width:999px ) {
+#question { width:auto; min-height:auto; margin:0; padding:0 30px; background:none; text-align:center; }
+#question > h1 { font-size:26px; }
+#question > h1 > span { display:inline; }
+}
+
+@media screen and ( max-width:560px ) {
+#question > h1 { font-size:20px; }
+#question > h1 > span { display:block; }
+#question> a { font-size:14px; height:44px; padding-top:24px; }
+#question_process > li { margin-bottom:30px; }
+#question_process > li > span { padding-top:70px; background-size:50px; font-size:12px; }
+#question_process1 > span { padding:0 10px; }
+#question_process2 > span { padding:0 10px; }
+#question_process3 > span { padding:0 10px; }
+}
+
+
 /************************************** ~999 **************************************/
 @media screen and ( max-width:999px ) {
 .greet { width:92%; margin:0 auto; }
