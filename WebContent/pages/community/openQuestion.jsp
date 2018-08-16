@@ -4,6 +4,8 @@
 <%@page import="doome.broccoli.net.board.bean.Board"%>
 <%@page import="java.util.logging.Logger"%>
 <%
+Logger logger = Logger.getLogger("openQuestion");
+
 String boardNum = request.getParameter("board_num");
 int boardNumInt = 0;
 try{
@@ -14,6 +16,9 @@ try{
 
 QuestionAction action = new QuestionAction();
 Board board = action.getQuestion(boardNumInt);
+
+logger.info(board.toString());
+
 int loginUserId = -1;
 try{
 	loginUserId = (Integer)session.getAttribute(Config.SESSION_LOGIN_USERID);
@@ -34,7 +39,13 @@ try{
 				<li>
 					<dl>
 						<dt>글쓴이</dt>
-						<dd><%=board.getUser() %></dd>
+						<dd>
+						<%if(board.getUser() == 0){ %>
+							<%=board.getUserName() %>
+						<%}else{ %>
+							<%=board.getWriterName() %>
+						<%}%>
+						</dd>
 					</dl>
 				</li>
 				<li>

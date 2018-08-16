@@ -61,7 +61,15 @@ try{
             		onclick="javascript:openLink('<%=item.getId() %>')">
             		<%=item.getTitle() %>
             	</div>
-            	<div class="board-list-body-wri"><%=item.getWriterName() %></div>
+            	<div class="board-list-body-wri">
+            	<%
+            	if(item.getUser() > 0){
+            		out.print(item.getWriterName());
+            	}else{
+            		out.print(item.getUserName());
+            	}
+            	%>
+            	</div>
             	<div class="board-list-body-dat"><%=item.getWriteDate() %></div>
             </li>
             <%} %>

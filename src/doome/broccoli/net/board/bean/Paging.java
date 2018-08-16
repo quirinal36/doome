@@ -195,9 +195,9 @@ public class Paging {
 
         this.setFrom((this.getPageNo()-1) * this.getPageSize());
         if(isNowFinal) {
-        	if(totalCount < 10) {
+        	if(totalCount <= 10) {
         		this.setTo(totalCount);
-        	}else {
+        	} else {
         		this.setTo(this.getFrom() + (this.getTotalCount() - ((this.getPageSize()-1) * this.getPageNo())));
         	}
         }else {
