@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <div id="footer_wrap">
 	<div>
 		<ul>
