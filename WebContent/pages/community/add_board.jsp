@@ -1,10 +1,31 @@
+<%@page import="doome.broccoli.net.board.action.BoardAction"%>
+<%@page import="doome.broccoli.net.board.bean.Board"%>
 <%@page import="java.util.logging.Logger"%>
 <%@page import="doome.broccoli.net.Config" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+int loginId = 0;
+Object loginIdSession = session.getAttribute(Config.SESSION_LOGIN_USERID);
+if(loginIdSession != null){
+	loginId = (Integer)loginIdSession;
+}
+
+String boardNum = request.getParameter("board_num");
+int boardId = 0;
+Board board = new Board();
+
+if(boardNum !=null){
+	boardId = Integer.parseInt(boardNum);
+	board = new BoardAction().getBoard(boardId);
+}
+%>
 <!doctype html>
 <html>
 <head>
 <script type="text/javascript" src="/se2/js/HuskyEZCreator.js" charset="utf-8"></script>
+<script type="text/javascript">
+
+</script>
 </head>
 
 <body>
@@ -14,18 +35,28 @@
 				<dl>
 					<dt>제목</dt>
 					<dd>
-					<input type="text" name="title" placeholder="제목을 입력하세요." class="ipt1" />
+					<%if(board.getTitle() != null && (loginId == board.getUser())) {%>
+						<input type="text" name="title" placeholder="제목을 입력하세요." class="ipt1" value="<%=board.getTitle()%>"/>
+					<%}else{ %>
+						<input type="text" name="title" placeholder="제목을 입력하세요." class="ipt1" />
+					<%} %>
 					</dd>
 				</dl>
 			</div>
 			
 			<textarea name="ir1" id="textAreaContent" cols="150"
 					class="board-write-cont nse_content" placeholder="내용">
+					<%if(board.getContent() != null && (loginId == board.getUser())) {%>
+						<%=board.getContent() %>
+					<%} %>
 			</textarea>
 		</div>
 		<div class="bt_wrap ta-c">
-			<input type="submit" value="작성" class="bt1 bt1-green"/>
-			<input type="button" value="취소" class="bt1 bt1-black" onclick="javascript:window.close();"/>
+			<%if(boardId>0 && (loginId == board.getUser())) {%>
+				<input type="submit" value="수정" class="bt1 bt1-green"/>
+			<%}else if(loginId > 0){ %>
+				<input type="submit" value="작성" class="bt1 bt1-green"/>
+			<%} %>
 		</div>
 	</form>
 </body>

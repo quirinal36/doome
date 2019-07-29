@@ -94,7 +94,7 @@ public class ActionWriteQuestion extends HttpServlet {
 				out = response.getWriter();
 				response.setContentType("text/html");
 				out.println("<script type=\"text/javascript\">");
-				out.println("alert('글이 정상적으로 등록되지 않았습니다.');");
+				out.println("swal('글이 정상적으로 등록되지 않았습니다.');");
 				out.println("history.back();");
 				out.println("</script>");
 			} catch (IOException e) {

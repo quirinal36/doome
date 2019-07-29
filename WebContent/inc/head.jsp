@@ -9,7 +9,7 @@
 <meta name="Keywords" content="<%=Config.KEYWORDS%>" />
 <meta name="Author" content="<%=Config.TITLE%>" />
 <meta name="robots" content="index, follow" />
-<link rel="canonical" href="http://www.thebroccoli.net" />
+<link rel="canonical" href="https://www.doome.net" />
 <meta name="robots" content="index, follow" />
 
 <meta property="og:type" content="website" />
@@ -32,6 +32,6 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css" />
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="/js/common.js"></script>
-<meta name="naver-site-verification" content="81112cd0053fc6414d893da455041cda6d31a207" />
+<meta name="naver-site-verification" content="81112cd0053fc6414d893da455041cda6d31a207"/>
 
 <title><%=Config.TITLE%></title>

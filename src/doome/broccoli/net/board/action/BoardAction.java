@@ -12,6 +12,40 @@ import doome.broccoli.net.db.DBconn;
 
 public class BoardAction {
 	
+	/**
+	 * 게시글 삭제하기 
+	 * 
+	 * @param id
+	 * @return 
+	 */
+	public int deleteBoard(int id) {
+		int result = 0;
+		
+		DBconn db = new DBconn();
+		Connection conn= null;
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append("Delete from board where id=?");
+		
+		try {
+			conn = db.getConnection();
+			
+			PreparedStatement pstmt = conn.prepareStatement(sb.toString());
+			pstmt.setInt(1, id);
+			result = pstmt.executeUpdate();
+		}catch(ClassNotFoundException c) {
+			
+		}catch(SQLException s) {
+			
+		}finally {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return result;
+	}
 	public Board getBoard(int id) {
 		Board result = new Board();
 		DBconn db = new DBconn();

@@ -63,4 +63,26 @@ try{
 	$("#button_to_list").on("click", function(){
 		window.location.href = "<%=request.getContextPath()%>/page.jsp?menu_id=12";
 	});
+	$("#button_to_update").on("click", function(){
+		window.location.href = "<%=request.getContextPath()%>/page.jsp?menu_id=16&board_num=<%=boardNumInt%>";
+	});
+	$("#button_to_delete").on("click", function(){
+		if(confirm("공지사항을 삭제하시겠습니까?")){
+			
+			var param = {"num" : '<%=boardNumInt%>'};
+			$.ajax({
+				type : "POST",
+				url  : "/deleteBoard",
+				data : param,
+				success : function(data){
+					var jsonResult = JSON.parse(data);
+					var result = jsonResult.result;
+					if(result > 0){
+						alert("공지사항이 삭제되었습니다.");
+						window.location.href = "<%=request.getContextPath()%>/page.jsp?menu_id=12";
+					}
+				}
+			});
+		}
+	});
 </script>

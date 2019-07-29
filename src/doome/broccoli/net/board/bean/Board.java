@@ -90,8 +90,17 @@ public class Board {
 		result.setWriteDate(rs.getString(WRITE_DATE));
 		result.setContent(rs.getString(CONTENT_KEY));
 		result.setWriterName(rs.getString(WRITER_NAME));
-		result.setUserName(rs.getString(USER_NAME));
-		result.setUserPhone(rs.getString(USER_PHONE));
+		
+		try {
+			result.setUserName(rs.getString(USER_NAME));
+		}catch(SQLException e) {
+			
+		}
+		try{
+			result.setUserPhone(rs.getString(USER_PHONE));
+		}catch(SQLException e) {
+			
+		}
 		
 		return result;
 	}
