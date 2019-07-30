@@ -1,0 +1,130 @@
+@charset "utf-8";
+/*
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+@media all and (max-width: 1400px) {
+
+}
+*/
+
+* { margin: 0; padding: 0; border: 0; font-family: 'Noto Sans KR', sans-serif; }
+html { overflow-x: auto; height: 100%; font-size: 10px; }
+/* html:first-child select { padding-right: 6px; }  Opera Fix */
+option, x:-moz-any-link { padding-right: 4px; }	/* Firefox Fix */
+option, x:-moz-any-link, x:default { padding-right: 0; } /* Firefox Fix */
+* html #png {background: none; filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='img.png',sizingMethod='crop'); }
+
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #FFF;
+	font-weight: normal;
+	font-size: 1.2rem;
+}
+
+/* 링크(일반) */
+a:link, a:visited { color: inherit; text-decoration: none; }
+a:hover, a:active { color: inherit; text-decoration: none; }
+
+ul, ol, li { list-style: none; }
+fieldset, img { vertical-align: middle; border: none; }
+hr, caption, legend { display: none; }
+address, em { font-style: normal; }
+table { border-collapse: collapse; }
+p { margin:0px; padding:0px; }
+
+
+input, button, textarea, select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	font-size: 1.2rem;
+}
+input[type="number"] { -moz-appearance: textfield; }
+select {
+	background: url(/resources/img/comm/select_arrow.gif) no-repeat 93% 50%;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder,
+button::placeholder {
+	color: #999;
+}
+input::placeholder { color: #bbb; }
+input::-ms-input-placeholder { color: #bbb; }
+input::-webkit-input-placeholder { color: #bbb; }
+input::-moz-placeholder { color: #bbb; }
+
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bbb;
+  opacity: 1; /* Firefox */
+}
+
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #bbb;
+}
+
+input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #bbb;
+}
+
+
+/* input box color */
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 30px #fff inset;
+	-webkit-text-fill-color: #000;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	transition: background-color 5000s ease-in-out 0s;
+}
+
+
+textarea { width: 100%; min-height: 100px; padding: 10px; box-sizing: border-box; border: 1px solid rgba(0, 0, 0, 0.1); background: #fff; resize : vertical; }
+input[type="text"], input[type="password"], input[type="tel"] { border: 1px solid #ddd; background: #fff; box-sizing: border-box; }
+input[type="button"], input[type="submit"], label { font-size: 1.2rem; cursor: pointer; }
+input:focus, textarea:focus, select:focus, button:focus { outline: none; }
+input:read-only { background: #f5f5f5; }
+
+/* ie6에서 png투명픽스 */
+.iePngFix { behavior: url(/iepngfix/iepngfix.htc); }
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear { display: none; }
+
+/* input type number 에서 화살표 제거 */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+
+select {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	    -ms-appearance: none;
+	     -o-appearance: none;
+}
+select::-ms-expand {
+    display: none;
+}
+
+/* Firefox에서 input number 화살표 없애기 */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}

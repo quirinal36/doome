@@ -30,14 +30,18 @@ try{
 String menuId = request.getParameter(Menu.MENUID_KEY);
 %>
 <!doctype html>
+<script type="text/javascript">
+$(function(){
+	$("#gnb_wrap > ul > li").hover(function(){
+		$(this).find("> div").stop().slideDown();
+	}, function(){
+		$(this).find("> div").stop().hide();
+	});
+});
+</script>
 <div id="header_wrap">
 	<div>
 		<h1><a href="<%=request.getContextPath()%>/index.jsp"><img src="/img/comm/logo.png" alt="<%=Config.TITLE %>" /></a></h1>
-		<div id="gnb_wrap">
-			<jsp:include page="/inc/gnb.jsp" flush="true">
-				<jsp:param name="aaa" value="bbb"/>
-			</jsp:include>
-		</div>
 		
 		<%if(!isLogin){ %>
 		<div id="gnb_login">
@@ -68,6 +72,12 @@ String menuId = request.getParameter(Menu.MENUID_KEY);
 					</div>
 				</div>
 			</div>
+		</div>
+		
+		<div id="gnb_wrap">
+			<jsp:include page="/inc/gnb.jsp" flush="true">
+				<jsp:param name="aaa" value="bbb"/>
+			</jsp:include>
 		</div>
 	</div>
 </div>

@@ -1,13 +1,17 @@
 $(function(){
 	$("#gnb_menu img").click(function() {
+		$("html, body").css("overflow","hidden");
 		$("#gnb_menu_open").fadeIn();
 	});
 	$("#gnb_menu_open_title img").click(function() {
+		$("html, body").css("overflow","unset");
 		$("#gnb_menu_open").hide();
 	});
 	$("#gnb_menu_open span").click(function() {
-		$(this).toggleClass("gnb_menu_on");
-		$(this).find("~div").stop().slideToggle(300);
+		$("#gnb_menu_open span").removeClass("gnb_menu_on");
+		$("#gnb_menu_open span").find("~div").stop().slideUp(300);
+		$(this).addClass("gnb_menu_on");
+		$(this).find("~div").stop().slideDown(300);
 	});
 });
 function logout(){

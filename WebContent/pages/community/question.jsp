@@ -23,7 +23,7 @@ int totalCount = board.getQuestionCount();
 						
 			<ul id="question_process">
 				<li id="question_process1"><span>카카오톡 열기</span></li>
-				<li id="question_process2"><span>두메산골영농조합법인<br />검색 후 친구 추가</span></li>
+				<li id="question_process2"><span>두메산골 영농조합법인<br /> 검색 후 친구 추가</span></li>
 				<li id="question_process3"><span>궁금한 내용 문의하기</span></li>
 			</ul>
 		</div>

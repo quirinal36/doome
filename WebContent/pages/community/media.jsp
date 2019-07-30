@@ -68,7 +68,7 @@ try{
 					<%=item.getContent() %>
 				</p>
 				<div class="bt_wrap">
-				<a href="<%=item.getUrl()%>" target="_blank" class="bt1 bt1-green">원문보기</a></div>
+				<a href="<%=item.getUrl()%>" target="_blank" class="bt1 bt1-main">원문보기</a></div>
 			</div>
 		</li>
 		<%} %>
