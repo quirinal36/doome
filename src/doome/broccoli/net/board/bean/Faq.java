@@ -33,7 +33,7 @@ public class Faq {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public static Faq parsToeFaq(ResultSet input) throws SQLException {
+	public static Faq parsToFaq(ResultSet input) throws SQLException {
 		Faq result = new Faq();
 		result.setId(input.getInt(ID_KEY));
 		result.setTitle(input.getString(TITLE_KEY));

@@ -20,8 +20,8 @@ public class Config {
 	/**
 	 * 데이터베이스 사용
 	 */
-	public static final String DB_URL = "35.234.23.104";
-	public static final String PASSPHRASE = "doome0409";
+	public static final String DB_URL = "db.doome.net";
+	public static final String PASSPHRASE = "ke2116684@";
 	
 	/**
 	 * 세션 정보들

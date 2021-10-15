@@ -16,10 +16,10 @@ import doome.broccoli.net.Config;
 import doome.broccoli.net.menu.bean.Menu;
 
 public class DBconn {
-	private String userName 	= "root";
-	private String password 	= "enap0409";
+	private String userName 	= "doome";
+	private String password 	= Config.PASSPHRASE;
 	private String dbms 		= "mysql";
-	private String dbName 		= "doome";
+	private String dbName 		= "dbdoome";
 	private String serverName 	= Config.DB_URL;	
 	private int portNumber 		= 3306;
 	

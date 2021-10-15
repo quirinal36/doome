@@ -52,7 +52,7 @@ public class FAQAction {
 			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Faq");
 			ResultSet rs = stmt.executeQuery();
 			while(rs.next()) {
-				Faq faq = Faq.parsToeFaq(rs);
+				Faq faq = Faq.parsToFaq(rs);
 				list.add(faq);
 			}
 		} catch (ClassNotFoundException e) {

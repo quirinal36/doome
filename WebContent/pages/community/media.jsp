@@ -13,9 +13,6 @@ Logger logger = Logger.getLogger("announce.jsp");
 
 MediaAction action = new MediaAction();
 
-ArrayList<Media> list = action.getMedia();
-Iterator<Media> iter = list.iterator();
-
 boolean isLogin = false;
 try{
 	isLogin = (Boolean)session.getAttribute(Config.SESSION_IS_LOGIN);
@@ -23,9 +20,11 @@ try{
 	// e.printStackTrace();
 }
 %>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <!doctype html>
 
-<%if(isLogin){ %>
+
 <div class="media_list">
 	<ul>
 		<li>
@@ -52,30 +51,14 @@ try{
 		</li>
 	</ul>
 </div>
-<%} %>
+
 
 <div class="media_list">
 	<ul>
-		<%while(iter.hasNext()){
-			Media item = iter.next();
-		%>
-		<li>
-			<img src="<%=item.getImage() %>" />
-			<div>
-				<h6><%=item.getTitle() %></h6>
-				<span><%=item.getDate()%></span>
-				<p>
-					<%=item.getContent() %>
-				</p>
-				<div class="bt_wrap">
-				<a href="<%=item.getUrl()%>" target="_blank" class="bt1 bt1-main">원문보기</a></div>
-			</div>
-		</li>
-		<%} %>
+		
 	</ul>
 </div>
 <script type="text/javascript">
-
 $("#media_input").on('input',function(){
 	var url = $(this).val();	
 	var urlEncoded = encodeURIComponent(url);
@@ -89,7 +72,7 @@ $("#media_input").on('input',function(){
 	    // Update the HTML elements!
 	    var iso8601date = new Date(json.hybridGraph.articlePublishedTime);
 	    var simpleDate = iso8601date.getFullYear() + "-" + (iso8601date.getMonth()+1) + "-" + iso8601date.getDate();
-	    
+	    console.log(json);
 	    $('#media_add_title').val(json.hybridGraph.title);
 	    $('#media_add_description').val(json.hybridGraph.description);
 	    $('#media_add_icon').attr('src', json.hybridGraph.image);
