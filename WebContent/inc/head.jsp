@@ -32,6 +32,6 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css" />
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="/js/common.js"></script>
-<meta name="naver-site-verification" content="81112cd0053fc6414d893da455041cda6d31a207"/>
+<meta name="naver-site-verification" content="1df0929e7fbe2a1773145998cda9dc78303ab63f" />
 
 <title><%=Config.TITLE%></title>

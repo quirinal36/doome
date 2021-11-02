@@ -24,7 +24,7 @@ public class DBconn {
 	private int portNumber 		= 3306;
 	
 	public Connection getConnection() throws SQLException, ClassNotFoundException {
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 	    Connection conn = null;
 	    Properties connectionProps = new Properties();
 	    connectionProps.put("user", this.userName);
